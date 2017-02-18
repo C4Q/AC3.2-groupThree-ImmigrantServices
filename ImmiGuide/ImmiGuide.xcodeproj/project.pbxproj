@@ -47,6 +47,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B1CD65B1E58C51B004854AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9B1CD6591E58B21F004854AB /* SupportProgram.swift */,
+				2DA636771E58A50600D5AADE /* ReadingWritingLiteracyPrograms.swift */,
+				2DA636791E58A63400D5AADE /* Location.swift */,
+				2DA6367B1E58AC8200D5AADE /* Geolocation.swift */,
+				9B1CD6531E58A22E004854AB /* APIRequestManager.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9B1CD65C1E58C52F004854AB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9B1CD6571E58A754004854AB /* SupportProgramsViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		9B8932981E57AF4F002C13E8 = {
 			isa = PBXGroup;
 			children = (
@@ -68,14 +88,10 @@
 			children = (
 				9B8932A41E57AF4F002C13E8 /* AppDelegate.swift */,
 				9B8932A61E57AF4F002C13E8 /* ViewController.swift */,
-				2DA636771E58A50600D5AADE /* ReadingWritingLiteracyPrograms.swift */,
-				2DA636791E58A63400D5AADE /* Location.swift */,
-				2DA6367B1E58AC8200D5AADE /* Geolocation.swift */,
-				9B8932A81E57AF4F002C13E8 /* Main.storyboard */,
-				9B1CD6571E58A754004854AB /* SupportProgramsViewController.swift */,
-				9B1CD6591E58B21F004854AB /* SupportProgram.swift */,
-				9B1CD6531E58A22E004854AB /* APIRequestManager.swift */,
+				9B1CD65C1E58C52F004854AB /* Controller */,
+				9B1CD65B1E58C51B004854AB /* Model */,
 				9B8932AB1E57AF4F002C13E8 /* Assets.xcassets */,
+				9B8932A81E57AF4F002C13E8 /* Main.storyboard */,
 				9B8932AD1E57AF4F002C13E8 /* LaunchScreen.storyboard */,
 				9B8932B01E57AF50002C13E8 /* Info.plist */,
 			);

@@ -9,10 +9,10 @@
 import Foundation
 
 class ReadingWritingLiteracyPrograms {
-//    var agencyName: String
-//    var agencyLocation: Location
-//    var agencyPhoneNumber: String
-//    var ageGroup: String
+    var agencyName: String
+    var agencyLocation: Location
+    var agencyPhoneNumber: String
+    var ageGroup: String
     
     init?(agencyName: String, agencyLocation: Location, agencyPhoneNumber: String, ageGroup: String) {
         self.agencyName = agencyName
