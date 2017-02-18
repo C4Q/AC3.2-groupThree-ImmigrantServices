@@ -11,14 +11,14 @@ import Foundation
 class GED {
     let address: String
     let borough: String
-    let contact_number: String
+    let contactNumber: String
     let notes: String?
     let siteName: String
     
-    init?(address: String, borough: String, contact_number: String, notes: String?, siteName: String) {
+    init?(address: String, borough: String, contactNumber: String, notes: String?, siteName: String) {
         self.address = address
         self.borough = borough
-        self.contact_number = contact_number
+        self.contactNumber = contactNumber
         self.notes = notes
         self.siteName = siteName
     }
@@ -31,6 +31,6 @@ class GED {
         
             let notes = fromDict["notes"] as? String
         
-        self.init(address: address, borough: borough, contact_number: number, notes: notes, siteName: siteName)
+        self.init(address: address, borough: borough, contactNumber: number, notes: notes, siteName: siteName)
     }
 }
