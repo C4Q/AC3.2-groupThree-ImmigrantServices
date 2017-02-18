@@ -9,12 +9,16 @@
 import Foundation
 
 class ReadingWritingLiteracyPrograms {
+    var programType: String
+    var program: String
     var agencyName: String
-    var agencyLocation: Location
+    var agencyLocation: Location?
     var agencyPhoneNumber: String
     var ageGroup: String
     
-    init?(agencyName: String, agencyLocation: Location, agencyPhoneNumber: String, ageGroup: String) {
+    init?(programType: String, program: String, agencyName: String, agencyLocation: Location?, agencyPhoneNumber: String, ageGroup: String) {
+        self.programType = programType
+        self.program = program
         self.agencyName = agencyName
         self.agencyLocation = agencyLocation
         self.agencyPhoneNumber = agencyPhoneNumber
@@ -22,13 +26,15 @@ class ReadingWritingLiteracyPrograms {
     }
     
     convenience init?(fromDict: [String : Any]) {
-        guard let name = fromDict["agency"] as? String,
+        guard let programType = fromDict["program_type"] as? String,
+            let program = fromDict["program"] as? String,
+            let name = fromDict["agency"] as? String,
             let phoneNumber = fromDict["contact_number"] as? String,
             let ageGroup = fromDict["grade_level_age_group"] as? String else { return nil }
         
-        guard let location = Location(dict: fromDict) else { return nil }
+            let location = Location(dict: fromDict)
         
-        self.init(agencyName: name, agencyLocation: location, agencyPhoneNumber: phoneNumber, ageGroup: ageGroup)
+        self.init(programType: programType, program: program, agencyName: name, agencyLocation: location, agencyPhoneNumber: phoneNumber, ageGroup: ageGroup)
     }
     
 }

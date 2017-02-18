@@ -30,7 +30,7 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
             if let validData = data,
                 let validPrograms = SupportProgram.getSupportPrograms(from: validData){
                 self.programs = validPrograms
-               dump(self.programs)
+//               dump(self.programs)
             }
   
             
