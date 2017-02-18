@@ -1,5 +1,7 @@
 .DS_Store
-# Created by https://www.gitignore.io/api/swift
+
+
+# Created by https://www.gitignore.io/api/swift,xcode
 
 ### Swift ###
 # Xcode
@@ -70,4 +72,11 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 
-# End of https://www.gitignore.io/api/swift
+### Xcode ###
+build
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+
+# End of https://www.gitignore.io/api/swift,xcode:
