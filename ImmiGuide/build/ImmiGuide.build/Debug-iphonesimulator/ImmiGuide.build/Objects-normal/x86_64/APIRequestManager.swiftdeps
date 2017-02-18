@@ -7,18 +7,18 @@ provides-member:
 - ["C9ImmiGuide17APIRequestManager", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "Void"
-- !private "URLSession"
-- "String"
-- "Data"
-- !private "URLSessionConfiguration"
 - !private "!="
-- !private "Error"
-- !private "URL"
 - "APIRequestManager"
 - !private "print"
 - !private "URLResponse"
+- !private "Error"
+- !private "URL"
+- "Void"
+- !private "URLSession"
+- !private "URLSessionConfiguration"
 - "StringLiteralType"
+- "Data"
+- "String"
 depends-member:
 - ["C9ImmiGuide17APIRequestManager", "APIRequestManager"]
 - ["C9ImmiGuide17APIRequestManager", "Data"]
