@@ -25,15 +25,12 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
         
         supportProgramsTableView.delegate = self
         supportProgramsTableView.dataSource = self
-        
+        supportProgramsTableView.rowHeight = 100.0
         APIRequestManager.manager.getData(endPoint: apiEndPoint) { (data) in
             if let validData = data,
                 let validPrograms = SupportProgram.getSupportPrograms(from: validData){
                 self.programs = validPrograms
-//               dump(self.programs)
             }
-  
-            
         }
         
     }
@@ -53,6 +50,15 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
         cell.textLabel?.text = programCatogories[indexPath.row]
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch <#value#> {
+        case <#pattern#>:
+            <#code#>
+        default:
+            <#code#>
+        }
     }
     /*
      // MARK: - Navigation

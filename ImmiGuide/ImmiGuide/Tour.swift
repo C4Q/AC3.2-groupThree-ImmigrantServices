@@ -1,5 +1,5 @@
 //
-//  PageTour.swift
+//  Tour.swift
 //  ImmiGuide
 //
 //  Created by Annie Tung on 2/18/17.
@@ -8,12 +8,14 @@
 
 import Foundation
 
-class PageTour {
+class Tour {
     
+    let imageStr: String
     let title: String
     let description: String
     
-    init(title: String, description: String) {
+    init(imageStr: String, title: String, description: String) {
+        self.imageStr = imageStr
         self.title = title
         self.description = description
     }
