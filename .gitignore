@@ -78,5 +78,7 @@ build
 !*.xcodeproj/project.pbxproj
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
-
+*.xcuserdata/*
+*.xcuserstate
 # End of https://www.gitignore.io/api/swift,xcode:
+

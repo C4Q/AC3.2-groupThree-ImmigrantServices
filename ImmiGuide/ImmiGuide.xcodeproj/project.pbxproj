@@ -27,6 +27,7 @@
 		9C63AE191E58D6ED00CAFC4B /* Tour Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C63AE181E58D6ED00CAFC4B /* Tour Cell.swift */; };
 		9C63AE211E58F1BB00CAFC4B /* Tour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C63AE201E58F1BB00CAFC4B /* Tour.swift */; };
 		9C63AE231E58F1C800CAFC4B /* TourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C63AE221E58F1C800CAFC4B /* TourViewController.swift */; };
+		9C63AE251E58F61C00CAFC4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE241E58F61C00CAFC4B /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		9C63AE181E58D6ED00CAFC4B /* Tour Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tour Cell.swift"; sourceTree = "<group>"; };
 		9C63AE201E58F1BB00CAFC4B /* Tour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tour.swift; sourceTree = "<group>"; };
 		9C63AE221E58F1C800CAFC4B /* TourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourViewController.swift; sourceTree = "<group>"; };
+		9C63AE241E58F61C00CAFC4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				9B8932AD1E57AF4F002C13E8 /* LaunchScreen.storyboard */,
 				9C63AE121E58C3E500CAFC4B /* Font */,
 				9B8932B01E57AF50002C13E8 /* Info.plist */,
+				9C63AE241E58F61C00CAFC4B /* Assets.xcassets */,
 			);
 			path = ImmiGuide;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				9B8932AA1E57AF4F002C13E8 /* Main.storyboard in Resources */,
 				9C63AE0E1E58C3DF00CAFC4B /* Montserrat-ExtraLight.otf in Resources */,
 				9C63AE101E58C3DF00CAFC4B /* Montserrat-Medium.otf in Resources */,
+				9C63AE251E58F61C00CAFC4B /* Assets.xcassets in Resources */,
 				9C63AE0F1E58C3DF00CAFC4B /* Montserrat-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
