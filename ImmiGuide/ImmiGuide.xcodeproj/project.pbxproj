@@ -25,8 +25,10 @@
 		9C63AE101E58C3DF00CAFC4B /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE0B1E58C3DF00CAFC4B /* Montserrat-Medium.otf */; };
 		9C63AE111E58C3DF00CAFC4B /* Montserrat-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE0C1E58C3DF00CAFC4B /* Montserrat-Thin.otf */; };
 		9C63AE141E58D49300CAFC4B /* Base Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C63AE131E58D49300CAFC4B /* Base Cell.swift */; };
-		9C63AE171E58D5E500CAFC4B /* PageTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C63AE161E58D5E500CAFC4B /* PageTour.swift */; };
 		9C63AE191E58D6ED00CAFC4B /* Tour Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C63AE181E58D6ED00CAFC4B /* Tour Cell.swift */; };
+		9C63AE211E58F1BB00CAFC4B /* Tour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C63AE201E58F1BB00CAFC4B /* Tour.swift */; };
+		9C63AE231E58F1C800CAFC4B /* TourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C63AE221E58F1C800CAFC4B /* TourViewController.swift */; };
+		9C63AE251E58F61C00CAFC4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE241E58F61C00CAFC4B /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,8 +52,10 @@
 		9C63AE0B1E58C3DF00CAFC4B /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.otf"; sourceTree = "<group>"; };
 		9C63AE0C1E58C3DF00CAFC4B /* Montserrat-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.otf"; sourceTree = "<group>"; };
 		9C63AE131E58D49300CAFC4B /* Base Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Base Cell.swift"; sourceTree = "<group>"; };
-		9C63AE161E58D5E500CAFC4B /* PageTour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTour.swift; sourceTree = "<group>"; };
 		9C63AE181E58D6ED00CAFC4B /* Tour Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tour Cell.swift"; sourceTree = "<group>"; };
+		9C63AE201E58F1BB00CAFC4B /* Tour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tour.swift; sourceTree = "<group>"; };
+		9C63AE221E58F1C800CAFC4B /* TourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourViewController.swift; sourceTree = "<group>"; };
+		9C63AE241E58F61C00CAFC4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +76,8 @@
 				2DA636771E58A50600D5AADE /* ReadingWritingLiteracyPrograms.swift */,
 				2DA636791E58A63400D5AADE /* Location.swift */,
 				2DA6367B1E58AC8200D5AADE /* Geolocation.swift */,
+				9C63AE201E58F1BB00CAFC4B /* Tour.swift */,
 				9B1CD6531E58A22E004854AB /* APIRequestManager.swift */,
-				9C63AE161E58D5E500CAFC4B /* PageTour.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -81,6 +85,7 @@
 		9B1CD65C1E58C52F004854AB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9C63AE221E58F1C800CAFC4B /* TourViewController.swift */,
 				9B1CD6571E58A754004854AB /* SupportProgramsViewController.swift */,
 			);
 			name = Controller;
@@ -114,7 +119,7 @@
 				9B8932AD1E57AF4F002C13E8 /* LaunchScreen.storyboard */,
 				9C63AE121E58C3E500CAFC4B /* Font */,
 				9B8932B01E57AF50002C13E8 /* Info.plist */,
-				9B1CD6671E58EE36004854AB /* Assets.xcassets */,
+				9C63AE241E58F61C00CAFC4B /* Assets.xcassets */,
 			);
 			path = ImmiGuide;
 			sourceTree = "<group>";
@@ -207,7 +212,7 @@
 				9B8932AA1E57AF4F002C13E8 /* Main.storyboard in Resources */,
 				9C63AE0E1E58C3DF00CAFC4B /* Montserrat-ExtraLight.otf in Resources */,
 				9C63AE101E58C3DF00CAFC4B /* Montserrat-Medium.otf in Resources */,
-				9B1CD6681E58EE36004854AB /* Assets.xcassets in Resources */,
+				9C63AE251E58F61C00CAFC4B /* Assets.xcassets in Resources */,
 				9C63AE0F1E58C3DF00CAFC4B /* Montserrat-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,10 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C63AE171E58D5E500CAFC4B /* PageTour.swift in Sources */,
 				9C63AE141E58D49300CAFC4B /* Base Cell.swift in Sources */,
 				9B1CD6541E58A22E004854AB /* APIRequestManager.swift in Sources */,
 				9B1CD6581E58A754004854AB /* SupportProgramsViewController.swift in Sources */,
+				9C63AE211E58F1BB00CAFC4B /* Tour.swift in Sources */,
 				9B1CD6641E58EBFF004854AB /* SupportProgramTableViewCell.swift in Sources */,
 				2DA636781E58A50600D5AADE /* ReadingWritingLiteracyPrograms.swift in Sources */,
 				2DA6367A1E58A63400D5AADE /* Location.swift in Sources */,
@@ -230,6 +235,7 @@
 				9B8932A71E57AF4F002C13E8 /* ViewController.swift in Sources */,
 				2DA6367C1E58AC8200D5AADE /* Geolocation.swift in Sources */,
 				9C63AE191E58D6ED00CAFC4B /* Tour Cell.swift in Sources */,
+				9C63AE231E58F1C800CAFC4B /* TourViewController.swift in Sources */,
 				9B8932A51E57AF4F002C13E8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
