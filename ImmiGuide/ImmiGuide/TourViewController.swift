@@ -35,6 +35,11 @@ class TourViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return collection
     }()
     
+//    lazy var getStartedButton: UIButton = {
+//       let button = UIButton()
+//        
+//    }()
+    
     // MARK: - Methods
     
     func setupTourData() {
