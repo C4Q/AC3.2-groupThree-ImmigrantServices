@@ -8,53 +8,60 @@
 
 import UIKit
 
-enum SupportPrograms: String {
+class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    case domesticViolence = "Domestic Violence Program"
-    case legalAssistance = "Legal Assistance Program"
-    case immigrantServices = "Immigration Services,Immigrant Support Services"
-    case nda = "Immigration Services,Immigrant Support Services,NDA Programs"
-    case refugeeAssistance = "Immigrant/Refugee Assistance"
     
-}
-/*
-{
-    ":@computed_region_92fq_4b7q": "18",
-    ":@computed_region_efsh_h5xi": "17616",
-    ":@computed_region_f5dn_yrer": "1",
-    ":@computed_region_sbqj_enih": "37",
-    ":@computed_region_yeji_bk3q": "2",
-    "agency": "New York Legal Assistance Group (NYLAG)",
-    "borough_community": "Brooklyn",
-    "contact_number": "212.613.5000",
-    "grade_level_age_group": "All Ages",
-    "location_1": {
-        "type": "Point",
-        "coordinates": [
-        -73.98919274272059,
-        40.606424326705934
-        ]
-    },
-*/
-class SupportProgramsViewController: UIViewController {
+    @IBOutlet weak var contanierView: UIView!
+    @IBOutlet weak var supportProgramsTableView: UITableView!
     
-    let apiEndPoint = "https://data.cityofnewyork.us/resource/tm2y-4xcp.json?$$app_token=nm76DTR92XyaW6KqlXQewFfXn"
-
+    let apiEndPoint = "https://data.cityofnewyork.us/resource/tm2y-4xcp.json"
+    //let apiEndPoint = "https://data.cityofnewyork.us/resource/tm2y-4xcp.json?$$app_token=nm76DTR92XyaW6KqlXQewFfXn"
+    
+    var programs: [SupportProgram] = []
+    let programCatogories: [String] = ["Legal Services", SupportProgramType.domesticViolence.rawValue, SupportProgramType.immigratFamilies.rawValue, SupportProgramType.ndaImmigrants.rawValue]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        supportProgramsTableView.delegate = self
+        supportProgramsTableView.dataSource = self
+        
+        APIRequestManager.manager.getData(endPoint: apiEndPoint) { (data) in
+            if let validData = data,
+                let validPrograms = SupportProgram.getSupportPrograms(from: validData){
+                self.programs = validPrograms
+               dump(self.programs)
+            }
+  
+            
+        }
+        
     }
-
-
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return programCatogories.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = supportProgramsTableView.dequeueReusableCell(withIdentifier: "supportPraogramCellIdentifier", for: indexPath) as! SupportProgramTableViewCell
+        
+        cell.textLabel?.text = programCatogories[indexPath.row]
+        
+        return cell
+    }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
