@@ -12,6 +12,11 @@
 		9B8932AA1E57AF4F002C13E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8932A81E57AF4F002C13E8 /* Main.storyboard */; };
 		9B8932AC1E57AF4F002C13E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B8932AB1E57AF4F002C13E8 /* Assets.xcassets */; };
 		9B8932AF1E57AF4F002C13E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8932AD1E57AF4F002C13E8 /* LaunchScreen.storyboard */; };
+		9C63AE0D1E58C3DF00CAFC4B /* Montserrat-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE081E58C3DF00CAFC4B /* Montserrat-Black.otf */; };
+		9C63AE0E1E58C3DF00CAFC4B /* Montserrat-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE091E58C3DF00CAFC4B /* Montserrat-ExtraLight.otf */; };
+		9C63AE0F1E58C3DF00CAFC4B /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE0A1E58C3DF00CAFC4B /* Montserrat-Light.otf */; };
+		9C63AE101E58C3DF00CAFC4B /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE0B1E58C3DF00CAFC4B /* Montserrat-Medium.otf */; };
+		9C63AE111E58C3DF00CAFC4B /* Montserrat-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE0C1E58C3DF00CAFC4B /* Montserrat-Thin.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		9B8932AB1E57AF4F002C13E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B8932AE1E57AF4F002C13E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B8932B01E57AF50002C13E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C63AE081E58C3DF00CAFC4B /* Montserrat-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.otf"; sourceTree = "<group>"; };
+		9C63AE091E58C3DF00CAFC4B /* Montserrat-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.otf"; sourceTree = "<group>"; };
+		9C63AE0A1E58C3DF00CAFC4B /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
+		9C63AE0B1E58C3DF00CAFC4B /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.otf"; sourceTree = "<group>"; };
+		9C63AE0C1E58C3DF00CAFC4B /* Montserrat-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +67,24 @@
 				9B8932A41E57AF4F002C13E8 /* AppDelegate.swift */,
 				9B8932A61E57AF4F002C13E8 /* ViewController.swift */,
 				9B8932A81E57AF4F002C13E8 /* Main.storyboard */,
-				9B8932AB1E57AF4F002C13E8 /* Assets.xcassets */,
 				9B8932AD1E57AF4F002C13E8 /* LaunchScreen.storyboard */,
+				9B8932AB1E57AF4F002C13E8 /* Assets.xcassets */,
+				9C63AE121E58C3E500CAFC4B /* Font */,
 				9B8932B01E57AF50002C13E8 /* Info.plist */,
 			);
 			path = ImmiGuide;
+			sourceTree = "<group>";
+		};
+		9C63AE121E58C3E500CAFC4B /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				9C63AE081E58C3DF00CAFC4B /* Montserrat-Black.otf */,
+				9C63AE0A1E58C3DF00CAFC4B /* Montserrat-Light.otf */,
+				9C63AE0B1E58C3DF00CAFC4B /* Montserrat-Medium.otf */,
+				9C63AE0C1E58C3DF00CAFC4B /* Montserrat-Thin.otf */,
+				9C63AE091E58C3DF00CAFC4B /* Montserrat-ExtraLight.otf */,
+			);
+			name = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,7 +119,7 @@
 				TargetAttributes = {
 					9B8932A01E57AF4F002C13E8 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = G6ZU47QNTF;
+						DevelopmentTeam = 9F7X637BX9;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -124,9 +147,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C63AE0D1E58C3DF00CAFC4B /* Montserrat-Black.otf in Resources */,
+				9C63AE111E58C3DF00CAFC4B /* Montserrat-Thin.otf in Resources */,
 				9B8932AF1E57AF4F002C13E8 /* LaunchScreen.storyboard in Resources */,
 				9B8932AC1E57AF4F002C13E8 /* Assets.xcassets in Resources */,
 				9B8932AA1E57AF4F002C13E8 /* Main.storyboard in Resources */,
+				9C63AE0E1E58C3DF00CAFC4B /* Montserrat-ExtraLight.otf in Resources */,
+				9C63AE101E58C3DF00CAFC4B /* Montserrat-Medium.otf in Resources */,
+				9C63AE0F1E58C3DF00CAFC4B /* Montserrat-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +232,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -248,7 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -261,7 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = G6ZU47QNTF;
+				DEVELOPMENT_TEAM = 9F7X637BX9;
 				INFOPLIST_FILE = ImmiGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.madushanilekamwasamliyanage.ImmiGuide;
@@ -274,7 +302,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = G6ZU47QNTF;
+				DEVELOPMENT_TEAM = 9F7X637BX9;
 				INFOPLIST_FILE = ImmiGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.madushanilekamwasamliyanage.ImmiGuide;
@@ -302,6 +330,7 @@
 				9B8932B51E57AF50002C13E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
