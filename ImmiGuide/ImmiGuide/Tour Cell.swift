@@ -22,9 +22,22 @@ class TourCell: BaseCell {
         return im
     }()
     
-    var tour: PageTour? {
+    var tour: Tour? {
         didSet {
-            
+            guard let tourData = tour else { return }
+            // do something
         }
     }
+    
+    func setupCell() {
+        
+        self.addSubview(imageView)
+        let _ = [
+            imageView.leftAnchor.constraint(equalTo: leftAnchor),
+            imageView.rightAnchor.constraint(equalTo: rightAnchor),
+            imageView.topAnchor.constraint(equalTo: topAnchor),
+            imageView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            ].map {$0.isActive = true}
+    }
+
 }
