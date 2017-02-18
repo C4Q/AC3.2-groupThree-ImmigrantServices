@@ -8,12 +8,12 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - !private "StringLiteralType"
-- "String"
-- "Location"
+- "AssignmentPrecedence"
 - !private "UnicodeScalarType"
 - "CastingPrecedence"
 - "Geolocation"
-- "AssignmentPrecedence"
+- "String"
+- "Location"
 depends-member:
 - !private ["Ps9AnyObject", "Geolocation"]
 - !private ["Ps9AnyObject", "borough"]
