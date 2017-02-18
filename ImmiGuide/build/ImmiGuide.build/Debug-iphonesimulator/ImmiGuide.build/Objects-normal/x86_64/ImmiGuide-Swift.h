@@ -140,6 +140,7 @@ SWIFT_CLASS("_TtC9ImmiGuide11AppDelegate")
 
 SWIFT_CLASS("_TtC9ImmiGuide29SupportProgramsViewController")
 @interface SupportProgramsViewController : UIViewController
+@property (nonatomic, readonly, copy) NSString * _Nonnull apiEndPoint;
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

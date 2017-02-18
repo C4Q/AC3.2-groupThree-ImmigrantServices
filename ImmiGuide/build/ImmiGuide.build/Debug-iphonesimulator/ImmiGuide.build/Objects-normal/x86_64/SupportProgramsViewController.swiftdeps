@@ -1,221 +1,232 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
-- "SupportPrograms"
 - "SupportProgramsViewController"
 provides-nominal:
-- "O9ImmiGuide15SupportPrograms"
 - "C9ImmiGuide29SupportProgramsViewController"
 provides-member:
-- ["O9ImmiGuide15SupportPrograms", ""]
 - ["C9ImmiGuide29SupportProgramsViewController", ""]
 provides-dynamic-lookup:
 - "apiEndPoint"
 - "viewDidLoad"
 depends-top-level:
-- "StringLiteralType"
-- "SupportPrograms"
-- "String"
-- "SupportProgramsViewController"
 - "UIViewController"
-- "=="
-- !private "~="
+- !private "APIRequestManager"
+- "StringLiteralType"
+- "SupportProgram"
+- "SupportProgramsViewController"
+- !private "AssignmentPrecedence"
+- !private "dump"
 depends-member:
+- ["C9ImmiGuide17APIRequestManager", "deinit"]
+- !private ["C9ImmiGuide17APIRequestManager", "getData"]
+- !private ["C9ImmiGuide17APIRequestManager", "manager"]
+- !private ["Ps9AnyObject", "APIRequestManager"]
+- !private ["Ps9AnyObject", "SupportProgram"]
 - ["Ps9AnyObject", "apiEndPoint"]
+- !private ["Ps9AnyObject", "dump"]
+- !private ["Ps9AnyObject", "getData"]
+- !private ["Ps9AnyObject", "getSupportPrograms"]
 - ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "manager"]
+- ["Ps9AnyObject", "programs"]
 - ["Ps9AnyObject", "viewDidLoad"]
 - ["Ps9AnyObject", ""]
-- !private ["Ps17BitwiseOperations", "hashValue"]
-- !private ["Sb", "_getBuiltinLogicValue"]
-- ["Sb", "deinit"]
+- ["Sa", "deinit"]
+- !private ["Ps7CVarArg", "APIRequestManager"]
+- !private ["Ps7CVarArg", "SupportProgram"]
 - ["Ps7CVarArg", "apiEndPoint"]
-- !private ["Ps7CVarArg", "hashValue"]
+- !private ["Ps7CVarArg", "dump"]
 - ["Ps7CVarArg", "init"]
+- ["Ps7CVarArg", "programs"]
 - ["Ps7CVarArg", "viewDidLoad"]
 - ["Ps7CVarArg", ""]
-- !private ["Vs11ClosedRange", "deinit"]
-- !private ["Ps10Comparable", "hashValue"]
 - ["Ps10Comparable", "init"]
-- !private ["Vs20CountableClosedRange", "deinit"]
-- !private ["Vs14CountableRange", "deinit"]
+- !private ["Ps28CustomDebugStringConvertible", "APIRequestManager"]
+- !private ["Ps28CustomDebugStringConvertible", "SupportProgram"]
 - ["Ps28CustomDebugStringConvertible", "apiEndPoint"]
+- !private ["Ps28CustomDebugStringConvertible", "dump"]
 - ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "programs"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - ["Ps28CustomDebugStringConvertible", ""]
-- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "hashValue"]
 - ["Ps29CustomPlaygroundQuickLookable", "init"]
-- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
-- !private ["Ps17CustomReflectable", "hashValue"]
 - ["Ps17CustomReflectable", "init"]
-- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "APIRequestManager"]
+- !private ["Ps23CustomStringConvertible", "SupportProgram"]
 - ["Ps23CustomStringConvertible", "apiEndPoint"]
-- !private ["Ps23CustomStringConvertible", "hashValue"]
+- !private ["Ps23CustomStringConvertible", "dump"]
 - ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "programs"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", ""]
-- ["Ps9Equatable", "RawValue"]
-- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
-- ["Ps9Equatable", "_toAnyHashable"]
+- !private ["V10Foundation4Data", "deinit"]
+- !private ["Ps9Equatable", "APIRequestManager"]
+- !private ["Ps9Equatable", "SupportProgram"]
 - ["Ps9Equatable", "apiEndPoint"]
-- ["Ps9Equatable", "hashValue"]
+- !private ["Ps9Equatable", "dump"]
 - ["Ps9Equatable", "init"]
-- ["Ps9Equatable", "rawValue"]
+- ["Ps9Equatable", "programs"]
 - ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", ""]
-- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
 - ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
-- !private ["Ps27ExpressibleByIntegerLiteral", "hashValue"]
 - ["Ps32ExpressibleByStringInterpolation", "init"]
 - ["Ps26ExpressibleByStringLiteral", "init"]
 - ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
-- ["Ps8Hashable", "RawValue"]
-- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
-- ["Ps8Hashable", "_toAnyHashable"]
+- !private ["Ps8Hashable", "APIRequestManager"]
+- !private ["Ps8Hashable", "SupportProgram"]
 - ["Ps8Hashable", "apiEndPoint"]
-- ["Ps8Hashable", "hashValue"]
+- !private ["Ps8Hashable", "dump"]
 - ["Ps8Hashable", "init"]
-- ["Ps8Hashable", "rawValue"]
+- ["Ps8Hashable", "programs"]
 - ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", ""]
-- ["Si", "deinit"]
-- !private ["Si", "hashValue"]
-- !private ["Ps7Integer", "hashValue"]
-- !private ["Ps17IntegerArithmetic", "hashValue"]
-- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
 - ["Ps25LosslessStringConvertible", "init"]
-- !private ["Ps10MirrorPath", "hashValue"]
 - ["Ps10MirrorPath", "init"]
 - ["CSo7NSCoder", "deinit"]
+- !private ["PSo8NSCoding", "APIRequestManager"]
+- !private ["PSo8NSCoding", "SupportProgram"]
 - ["PSo8NSCoding", "apiEndPoint"]
+- !private ["PSo8NSCoding", "dump"]
 - ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "programs"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", ""]
 - ["PSo9NSCopying", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "APIRequestManager"]
+- !private ["PSo26NSExtensionRequestHandling", "SupportProgram"]
 - ["PSo26NSExtensionRequestHandling", "apiEndPoint"]
+- !private ["PSo26NSExtensionRequestHandling", "dump"]
 - !private ["PSo26NSExtensionRequestHandling", "init"]
+- ["PSo26NSExtensionRequestHandling", "programs"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
 - ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSObject", "APIRequestManager"]
+- ["CSo8NSObject", "SupportProgram"]
 - ["CSo8NSObject", "apiEndPoint"]
+- !private ["CSo8NSObject", "dump"]
 - ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "programs"]
 - ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "APIRequestManager"]
+- !private ["PSo16NSObjectProtocol", "SupportProgram"]
 - ["PSo16NSObjectProtocol", "apiEndPoint"]
+- !private ["PSo16NSObjectProtocol", "dump"]
 - ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "programs"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
 - ["PSo14NSSecureCoding", "init"]
 - ["CSo8NSString", "init"]
 - ["Sq", "deinit"]
-- !private ["Vs5Range", "deinit"]
-- ["Ps16RawRepresentable", "RawValue"]
-- ["Ps16RawRepresentable", "_toAnyHashable"]
-- ["Ps16RawRepresentable", "hashValue"]
-- ["Ps16RawRepresentable", "init"]
-- ["Ps16RawRepresentable", "rawValue"]
-- ["Ps16RawRepresentable", ""]
-- !private ["Ps13SignedInteger", "hashValue"]
-- !private ["Ps12SignedNumber", "hashValue"]
-- !private ["Ps10Strideable", "hashValue"]
 - ["SS", "deinit"]
 - ["SS", "init"]
-- ["O9ImmiGuide15SupportPrograms", "RawValue"]
-- ["O9ImmiGuide15SupportPrograms", "_toAnyHashable"]
-- ["O9ImmiGuide15SupportPrograms", "deinit"]
-- ["O9ImmiGuide15SupportPrograms", "domesticViolence"]
-- ["O9ImmiGuide15SupportPrograms", "hashValue"]
-- ["O9ImmiGuide15SupportPrograms", "immigrantServices"]
-- ["O9ImmiGuide15SupportPrograms", "init"]
-- ["O9ImmiGuide15SupportPrograms", "legalAssistance"]
-- ["O9ImmiGuide15SupportPrograms", "nda"]
-- ["O9ImmiGuide15SupportPrograms", "rawValue"]
-- ["O9ImmiGuide15SupportPrograms", "refugeeAssistance"]
+- !private ["C9ImmiGuide14SupportProgram", "getSupportPrograms"]
+- !private ["C9ImmiGuide29SupportProgramsViewController", "APIRequestManager"]
+- ["C9ImmiGuide29SupportProgramsViewController", "SupportProgram"]
 - ["C9ImmiGuide29SupportProgramsViewController", "apiEndPoint"]
 - ["C9ImmiGuide29SupportProgramsViewController", "deinit"]
+- !private ["C9ImmiGuide29SupportProgramsViewController", "dump"]
 - ["C9ImmiGuide29SupportProgramsViewController", "init"]
+- ["C9ImmiGuide29SupportProgramsViewController", "programs"]
 - ["C9ImmiGuide29SupportProgramsViewController", "viewDidLoad"]
 - ["Ps16TextOutputStream", "init"]
 - ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo21UIAppearanceContainer", "APIRequestManager"]
+- !private ["PSo21UIAppearanceContainer", "SupportProgram"]
 - ["PSo21UIAppearanceContainer", "apiEndPoint"]
+- !private ["PSo21UIAppearanceContainer", "dump"]
 - !private ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "programs"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo18UIContentContainer", "APIRequestManager"]
+- !private ["PSo18UIContentContainer", "SupportProgram"]
 - ["PSo18UIContentContainer", "apiEndPoint"]
+- !private ["PSo18UIContentContainer", "dump"]
 - !private ["PSo18UIContentContainer", "init"]
+- ["PSo18UIContentContainer", "programs"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", ""]
+- !private ["PSo18UIFocusEnvironment", "APIRequestManager"]
+- !private ["PSo18UIFocusEnvironment", "SupportProgram"]
 - ["PSo18UIFocusEnvironment", "apiEndPoint"]
+- !private ["PSo18UIFocusEnvironment", "dump"]
 - !private ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "programs"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", ""]
+- !private ["CSo11UIResponder", "APIRequestManager"]
+- ["CSo11UIResponder", "SupportProgram"]
 - ["CSo11UIResponder", "apiEndPoint"]
+- !private ["CSo11UIResponder", "dump"]
 - ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "programs"]
 - ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo30UIResponderStandardEditActions", "APIRequestManager"]
+- !private ["PSo30UIResponderStandardEditActions", "SupportProgram"]
 - ["PSo30UIResponderStandardEditActions", "apiEndPoint"]
+- !private ["PSo30UIResponderStandardEditActions", "dump"]
 - !private ["PSo30UIResponderStandardEditActions", "init"]
+- ["PSo30UIResponderStandardEditActions", "programs"]
 - ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
 - ["PSo30UIResponderStandardEditActions", ""]
+- !private ["PSo16UIStateRestoring", "APIRequestManager"]
+- !private ["PSo16UIStateRestoring", "SupportProgram"]
 - ["PSo16UIStateRestoring", "apiEndPoint"]
+- !private ["PSo16UIStateRestoring", "dump"]
 - !private ["PSo16UIStateRestoring", "init"]
+- ["PSo16UIStateRestoring", "programs"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", ""]
+- !private ["PSo18UITraitEnvironment", "APIRequestManager"]
+- !private ["PSo18UITraitEnvironment", "SupportProgram"]
 - ["PSo18UITraitEnvironment", "apiEndPoint"]
+- !private ["PSo18UITraitEnvironment", "dump"]
 - !private ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "programs"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", ""]
+- !private ["CSo16UIViewController", "APIRequestManager"]
+- ["CSo16UIViewController", "SupportProgram"]
 - ["CSo16UIViewController", "apiEndPoint"]
 - ["CSo16UIViewController", "deinit"]
+- !private ["CSo16UIViewController", "dump"]
 - ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "programs"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", ""]
-- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
-- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "hashValue"]
 - ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
 - ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
 - ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
 - ["Ps35_HasCustomAnyHashableRepresentation", "init"]
-- ["Ps9_Hashable", "RawValue"]
-- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
-- ["Ps9_Hashable", "_toAnyHashable"]
+- !private ["Ps9_Hashable", "APIRequestManager"]
+- !private ["Ps9_Hashable", "SupportProgram"]
 - ["Ps9_Hashable", "apiEndPoint"]
-- ["Ps9_Hashable", "hashValue"]
+- !private ["Ps9_Hashable", "dump"]
 - ["Ps9_Hashable", "init"]
-- ["Ps9_Hashable", "rawValue"]
+- ["Ps9_Hashable", "programs"]
 - ["Ps9_Hashable", "viewDidLoad"]
 - ["Ps9_Hashable", ""]
-- !private ["Ps14_Incrementable", "hashValue"]
-- !private ["Ps8_Integer", "hashValue"]
-- !private ["Ps18_IntegerArithmetic", "hashValue"]
-- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
-- !private ["Ps21_ObjectiveCBridgeable", "hashValue"]
 - ["Ps21_ObjectiveCBridgeable", "init"]
-- !private ["Vs26_OptionalNilComparisonType", "deinit"]
-- !private ["Ps14_SignedInteger", "hashValue"]
-- !private ["Ps11_Strideable", "hashValue"]
 depends-nominal:
+- "C9ImmiGuide17APIRequestManager"
 - "Ps9AnyObject"
-- !private "Ps17BitwiseOperations"
-- "Sb"
+- "Sa"
 - "Ps7CVarArg"
-- !private "Vs11ClosedRange"
 - "Ps10Comparable"
-- !private "Vs20CountableClosedRange"
-- !private "Vs14CountableRange"
 - "Ps28CustomDebugStringConvertible"
 - "Ps29CustomPlaygroundQuickLookable"
 - "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
+- !private "V10Foundation4Data"
 - "Ps9Equatable"
-- !private "Ps27ExpressibleByBooleanLiteral"
 - "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
-- !private "Ps27ExpressibleByIntegerLiteral"
 - "Ps32ExpressibleByStringInterpolation"
 - "Ps26ExpressibleByStringLiteral"
 - "Ps33ExpressibleByUnicodeScalarLiteral"
 - "Ps8Hashable"
-- "Si"
-- !private "Ps7Integer"
-- !private "Ps17IntegerArithmetic"
 - "Ps25LosslessStringConvertible"
 - "Ps10MirrorPath"
 - "CSo7NSCoder"
@@ -228,13 +239,8 @@ depends-nominal:
 - "PSo14NSSecureCoding"
 - "CSo8NSString"
 - "Sq"
-- !private "Vs5Range"
-- "Ps16RawRepresentable"
-- !private "Ps13SignedInteger"
-- !private "Ps12SignedNumber"
-- !private "Ps10Strideable"
 - "SS"
-- "O9ImmiGuide15SupportPrograms"
+- !private "C9ImmiGuide14SupportProgram"
 - "C9ImmiGuide29SupportProgramsViewController"
 - "Ps16TextOutputStream"
 - "Ps20TextOutputStreamable"
@@ -246,21 +252,13 @@ depends-nominal:
 - "PSo16UIStateRestoring"
 - "PSo18UITraitEnvironment"
 - "CSo16UIViewController"
-- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
 - "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
-- !private "Ps35_ExpressibleByBuiltinIntegerLiteral"
 - "Ps34_ExpressibleByBuiltinStringLiteral"
 - "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
 - "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
 - "Ps35_HasCustomAnyHashableRepresentation"
 - "Ps9_Hashable"
-- !private "Ps14_Incrementable"
-- !private "Ps8_Integer"
-- !private "Ps18_IntegerArithmetic"
 - "Ps21_ObjectiveCBridgeable"
-- !private "Vs26_OptionalNilComparisonType"
-- !private "Ps14_SignedInteger"
-- !private "Ps11_Strideable"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
@@ -273,4 +271,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-interface-hash: "760497795ed1f18fb4f9671f9c25d17f"
+interface-hash: "602a0ad8e5c06472b44243edd00d21be"
