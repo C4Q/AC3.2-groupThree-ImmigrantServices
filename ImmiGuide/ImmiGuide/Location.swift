@@ -10,7 +10,7 @@ import Foundation
 
 class Location {
     var borough: String
-    var location: String
+    var location: String?
     var state: String
     var zip: String
     var geolocation: Geolocation
@@ -19,7 +19,7 @@ class Location {
         return "\(location) \n \(borough), \(state) \(zip)"
     }
     
-    init?(borough: String , location: String, state: String, zip: String, geolocation: Geolocation) {
+    init?(borough: String , location: String?, state: String, zip: String, geolocation: Geolocation) {
         self.borough = borough
         self.location = location
         self.state = state
@@ -28,12 +28,13 @@ class Location {
     }
     
     convenience init?(dict: [String : Any]) {
-        guard let borough = dict["location_1_city"] as? String,
-            let location = dict["location_1_location"] as? String,
+        guard  let location = dict["location_1_location"] as? String,
+            let borough = dict["location_1_city"] as? String,
             let state = dict["location_1_state"] as? String,
             let zip = dict["location_1_zip"] as? String,
             let geo = dict["location_1"] as? [String : Any] else { return nil }
         
+
         guard let geolocation = Geolocation(geoDict: geo) else { return nil }
         
         self.init(borough: borough , location: location, state: state, zip: zip, geolocation: geolocation)
