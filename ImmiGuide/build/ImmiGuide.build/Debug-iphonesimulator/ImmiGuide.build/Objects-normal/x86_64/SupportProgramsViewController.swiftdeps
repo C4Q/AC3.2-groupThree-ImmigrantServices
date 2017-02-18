@@ -1,30 +1,46 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
 - "SupportPrograms"
+- "SupportProgramsViewController"
 provides-nominal:
 - "O9ImmiGuide15SupportPrograms"
+- "C9ImmiGuide29SupportProgramsViewController"
 provides-member:
 - ["O9ImmiGuide15SupportPrograms", ""]
+- ["C9ImmiGuide29SupportProgramsViewController", ""]
 provides-dynamic-lookup:
+- "apiEndPoint"
+- "viewDidLoad"
 depends-top-level:
-- !private "~="
-- "=="
-- "String"
 - "StringLiteralType"
 - "SupportPrograms"
+- "String"
+- "SupportProgramsViewController"
+- "UIViewController"
+- "=="
+- !private "~="
 depends-member:
+- ["Ps9AnyObject", "apiEndPoint"]
 - ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
 - !private ["Ps17BitwiseOperations", "hashValue"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - ["Sb", "deinit"]
+- ["Ps7CVarArg", "apiEndPoint"]
 - !private ["Ps7CVarArg", "hashValue"]
 - ["Ps7CVarArg", "init"]
+- ["Ps7CVarArg", "viewDidLoad"]
+- ["Ps7CVarArg", ""]
 - !private ["Vs11ClosedRange", "deinit"]
 - !private ["Ps10Comparable", "hashValue"]
 - ["Ps10Comparable", "init"]
 - !private ["Vs20CountableClosedRange", "deinit"]
 - !private ["Vs14CountableRange", "deinit"]
+- ["Ps28CustomDebugStringConvertible", "apiEndPoint"]
 - ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "hashValue"]
 - ["Ps29CustomPlaygroundQuickLookable", "init"]
@@ -32,14 +48,19 @@ depends-member:
 - !private ["Ps17CustomReflectable", "hashValue"]
 - ["Ps17CustomReflectable", "init"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps23CustomStringConvertible", "apiEndPoint"]
 - !private ["Ps23CustomStringConvertible", "hashValue"]
 - ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
 - ["Ps9Equatable", "RawValue"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - ["Ps9Equatable", "_toAnyHashable"]
+- ["Ps9Equatable", "apiEndPoint"]
 - ["Ps9Equatable", "hashValue"]
 - ["Ps9Equatable", "init"]
 - ["Ps9Equatable", "rawValue"]
+- ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", ""]
 - !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
 - ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
@@ -50,9 +71,11 @@ depends-member:
 - ["Ps8Hashable", "RawValue"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - ["Ps8Hashable", "_toAnyHashable"]
+- ["Ps8Hashable", "apiEndPoint"]
 - ["Ps8Hashable", "hashValue"]
 - ["Ps8Hashable", "init"]
 - ["Ps8Hashable", "rawValue"]
+- ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", ""]
 - ["Si", "deinit"]
 - !private ["Si", "hashValue"]
@@ -62,13 +85,27 @@ depends-member:
 - ["Ps25LosslessStringConvertible", "init"]
 - !private ["Ps10MirrorPath", "hashValue"]
 - ["Ps10MirrorPath", "init"]
+- ["CSo7NSCoder", "deinit"]
+- ["PSo8NSCoding", "apiEndPoint"]
 - ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
 - ["PSo9NSCopying", "init"]
+- ["PSo26NSExtensionRequestHandling", "apiEndPoint"]
+- !private ["PSo26NSExtensionRequestHandling", "init"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
 - ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "apiEndPoint"]
 - ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", "apiEndPoint"]
 - ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
 - ["PSo14NSSecureCoding", "init"]
 - ["CSo8NSString", "init"]
+- ["Sq", "deinit"]
 - !private ["Vs5Range", "deinit"]
 - ["Ps16RawRepresentable", "RawValue"]
 - ["Ps16RawRepresentable", "_toAnyHashable"]
@@ -92,8 +129,44 @@ depends-member:
 - ["O9ImmiGuide15SupportPrograms", "nda"]
 - ["O9ImmiGuide15SupportPrograms", "rawValue"]
 - ["O9ImmiGuide15SupportPrograms", "refugeeAssistance"]
+- ["C9ImmiGuide29SupportProgramsViewController", "apiEndPoint"]
+- ["C9ImmiGuide29SupportProgramsViewController", "deinit"]
+- ["C9ImmiGuide29SupportProgramsViewController", "init"]
+- ["C9ImmiGuide29SupportProgramsViewController", "viewDidLoad"]
 - ["Ps16TextOutputStream", "init"]
 - ["Ps20TextOutputStreamable", "init"]
+- ["PSo21UIAppearanceContainer", "apiEndPoint"]
+- !private ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- ["PSo18UIContentContainer", "apiEndPoint"]
+- !private ["PSo18UIContentContainer", "init"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- ["PSo18UIFocusEnvironment", "apiEndPoint"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- ["CSo11UIResponder", "apiEndPoint"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- ["PSo30UIResponderStandardEditActions", "apiEndPoint"]
+- !private ["PSo30UIResponderStandardEditActions", "init"]
+- ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- ["PSo16UIStateRestoring", "apiEndPoint"]
+- !private ["PSo16UIStateRestoring", "init"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- ["PSo18UITraitEnvironment", "apiEndPoint"]
+- !private ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- ["CSo16UIViewController", "apiEndPoint"]
+- ["CSo16UIViewController", "deinit"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "hashValue"]
@@ -104,9 +177,11 @@ depends-member:
 - ["Ps9_Hashable", "RawValue"]
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
 - ["Ps9_Hashable", "_toAnyHashable"]
+- ["Ps9_Hashable", "apiEndPoint"]
 - ["Ps9_Hashable", "hashValue"]
 - ["Ps9_Hashable", "init"]
 - ["Ps9_Hashable", "rawValue"]
+- ["Ps9_Hashable", "viewDidLoad"]
 - ["Ps9_Hashable", ""]
 - !private ["Ps14_Incrementable", "hashValue"]
 - !private ["Ps8_Integer", "hashValue"]
@@ -143,13 +218,16 @@ depends-nominal:
 - !private "Ps17IntegerArithmetic"
 - "Ps25LosslessStringConvertible"
 - "Ps10MirrorPath"
+- "CSo7NSCoder"
 - "PSo8NSCoding"
 - "PSo9NSCopying"
+- "PSo26NSExtensionRequestHandling"
 - "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - "PSo14NSSecureCoding"
 - "CSo8NSString"
+- "Sq"
 - !private "Vs5Range"
 - "Ps16RawRepresentable"
 - !private "Ps13SignedInteger"
@@ -157,8 +235,17 @@ depends-nominal:
 - !private "Ps10Strideable"
 - "SS"
 - "O9ImmiGuide15SupportPrograms"
+- "C9ImmiGuide29SupportProgramsViewController"
 - "Ps16TextOutputStream"
 - "Ps20TextOutputStreamable"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- "PSo18UIFocusEnvironment"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- "CSo16UIViewController"
 - !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
 - "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
 - !private "Ps35_ExpressibleByBuiltinIntegerLiteral"
@@ -186,4 +273,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-interface-hash: "96f6774823e89c886990d673ca77a386"
+interface-hash: "760497795ed1f18fb4f9671f9c25d17f"
