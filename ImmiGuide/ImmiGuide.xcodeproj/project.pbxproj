@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B1CD6541E58A22E004854AB /* APIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1CD6531E58A22E004854AB /* APIRequestManager.swift */; };
 		9B8932A51E57AF4F002C13E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8932A41E57AF4F002C13E8 /* AppDelegate.swift */; };
 		9B8932A71E57AF4F002C13E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8932A61E57AF4F002C13E8 /* ViewController.swift */; };
 		9B8932AA1E57AF4F002C13E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8932A81E57AF4F002C13E8 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B1CD6531E58A22E004854AB /* APIRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestManager.swift; sourceTree = "<group>"; };
 		9B8932A11E57AF4F002C13E8 /* ImmiGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImmiGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B8932A41E57AF4F002C13E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B8932A61E57AF4F002C13E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				9B8932A41E57AF4F002C13E8 /* AppDelegate.swift */,
 				9B8932A61E57AF4F002C13E8 /* ViewController.swift */,
 				9B8932A81E57AF4F002C13E8 /* Main.storyboard */,
+				9B1CD6531E58A22E004854AB /* APIRequestManager.swift */,
 				9B8932AB1E57AF4F002C13E8 /* Assets.xcassets */,
 				9B8932AD1E57AF4F002C13E8 /* LaunchScreen.storyboard */,
 				9B8932B01E57AF50002C13E8 /* Info.plist */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B1CD6541E58A22E004854AB /* APIRequestManager.swift in Sources */,
 				9B8932A71E57AF4F002C13E8 /* ViewController.swift in Sources */,
 				9B8932A51E57AF4F002C13E8 /* AppDelegate.swift in Sources */,
 			);
@@ -302,6 +306,7 @@
 				9B8932B51E57AF50002C13E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
