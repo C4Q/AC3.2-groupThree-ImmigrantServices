@@ -23,8 +23,8 @@ class Geolocation {
         guard let type = geoDict["type"] as? String,
             let geoArr = geoDict["coordinates"] as? [Double] else { return nil }
         
-        guard let latitude = geoArr.first,
-            let longitude = geoArr.last else { return nil }
+        guard let latitude = geoArr.last,
+            let longitude = geoArr.first else { return nil }
         
         self.init(type: type, latitude: latitude, longitude: longitude)
     }
