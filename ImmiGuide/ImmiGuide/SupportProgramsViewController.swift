@@ -33,8 +33,16 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
             if let validData = data,
                 let validPrograms = SupportProgram.getSupportPrograms(from: validData){
                 self.programs = validPrograms
+              
+              DispatchQueue.main.async {
+                self.supportProgramsTableView.reloadData()
+                //          self.animateTableView()
+                self.animateCells()
+              }
             }
         }
+      
+      
         
     }
     
@@ -93,5 +101,28 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
             }
         }
      }
+  
+  // MARK: Animation
+  
+  func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    cell.alpha = 0
+    UIView.animate(withDuration: 1.5, delay: 0.2 * Double(indexPath.row), options: [], animations: {
+      cell.alpha = 1.0
+    }, completion: nil)
+  }
+  
+  func animateCells() {
+    let allVisibleCells = self.supportProgramsTableView.visibleCells
     
+    for (index, cell) in allVisibleCells.enumerated() {
+      cell.transform = CGAffineTransform(translationX: 100.0, y: 0)
+      cell.alpha = 0
+      UIView.animate(withDuration: 1.5, delay: 0.2 * Double(index), options: .curveEaseInOut, animations: {
+        cell.alpha = 1.0
+        cell.transform = .identity
+      }, completion: nil)
+    }
+  }
+
+  
 }
