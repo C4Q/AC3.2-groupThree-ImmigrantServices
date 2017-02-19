@@ -13,6 +13,7 @@ class TourViewController: UIViewController, UICollectionViewDelegate, UICollecti
     // MARK: - Properties
     
     var tourData: [Tour] = []
+    var animator: UIViewPropertyAnimator = UIViewPropertyAnimator(duration: 3.0, curve: UIViewAnimationCurve.linear, animations: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,16 +77,6 @@ class TourViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return collection
     }()
     
-//    let getStartedButton: UIButton = {
-//        let button = UIButton(type: .system)
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//        button.setTitle("Get Started", for: .normal)
-//        button.layer.cornerRadius = 20
-//        button.backgroundColor = .white
-//        button.addTarget(self, action: #selector(showHomeScreen), for: .touchUpInside)
-//        return button
-//    }()
-    
     lazy var pageController: UIPageControl = {
         let pageControl = UIPageControl()
         pageControl.translatesAutoresizingMaskIntoConstraints = false
@@ -95,11 +86,24 @@ class TourViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return pageControl
     }()
     
+    lazy var getStartedButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Get Started", for: .normal)
+        button.layer.cornerRadius = 20
+        button.backgroundColor = .white
+        button.addTarget(self, action: #selector(showHomeScreen), for: .touchUpInside)
+        return button
+    }()
+    
     // MARK: - Collection View
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let currentPage = Int(targetContentOffset.pointee.x / view.frame.width)
         pageController.currentPage = currentPage
+        if currentPage == tourData.count {
+            getStartedButton.isHidden = false 
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
