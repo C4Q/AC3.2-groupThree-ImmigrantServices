@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Lottie
+import SnapKit
 
 class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -123,6 +125,19 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
       }, completion: nil)
     }
   }
+  
+  func animateFamilyIcon() {
+    
+//    circleAnimationView.play()
+//    familyImageView.alpha = 0
+//    UIView.animate(withDuration: 0.4, delay: 0.6, options: .curveEaseIn, animations: {
+//      self.familyImageView.alpha = 1.0
+//    }, completion: nil)
+  }
+  
+  // MARK: Views
+  
+  
 
   
 }
