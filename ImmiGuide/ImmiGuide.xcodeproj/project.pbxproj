@@ -23,6 +23,7 @@
 		9C63AE0F1E58C3DF00CAFC4B /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE0A1E58C3DF00CAFC4B /* Montserrat-Light.otf */; };
 		9C63AE101E58C3DF00CAFC4B /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE0B1E58C3DF00CAFC4B /* Montserrat-Medium.otf */; };
 		9C63AE111E58C3DF00CAFC4B /* Montserrat-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE0C1E58C3DF00CAFC4B /* Montserrat-Thin.otf */; };
+		9CBC3DE51E592B1D000B2AF1 /* TourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC3DE41E592B1D000B2AF1 /* TourViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		9C63AE0A1E58C3DF00CAFC4B /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
 		9C63AE0B1E58C3DF00CAFC4B /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.otf"; sourceTree = "<group>"; };
 		9C63AE0C1E58C3DF00CAFC4B /* Montserrat-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.otf"; sourceTree = "<group>"; };
+		9CBC3DE41E592B1D000B2AF1 /* TourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TourViewController.swift; path = ../../../../../Desktop/TourViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				9B1CD6571E58A754004854AB /* SupportProgramsViewController.swift */,
+				9CBC3DE41E592B1D000B2AF1 /* TourViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -100,7 +103,6 @@
 				9B8932A61E57AF4F002C13E8 /* ViewController.swift */,
 				9B1CD65C1E58C52F004854AB /* Controller */,
 				9B1CD65B1E58C51B004854AB /* Model */,
-				9B8932AB1E57AF4F002C13E8 /* Assets.xcassets */,
 				9B8932A81E57AF4F002C13E8 /* Main.storyboard */,
 				9B8932AD1E57AF4F002C13E8 /* LaunchScreen.storyboard */,
 				9B8932AB1E57AF4F002C13E8 /* Assets.xcassets */,
@@ -207,6 +209,7 @@
 				9B1CD65A1E58B21F004854AB /* SupportProgram.swift in Sources */,
 				9B8932A71E57AF4F002C13E8 /* ViewController.swift in Sources */,
 				2DA6367C1E58AC8200D5AADE /* Geolocation.swift in Sources */,
+				9CBC3DE51E592B1D000B2AF1 /* TourViewController.swift in Sources */,
 				9B8932A51E57AF4F002C13E8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
