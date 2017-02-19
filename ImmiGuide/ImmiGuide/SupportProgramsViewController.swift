@@ -18,7 +18,7 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
     //let apiEndPoint = "https://data.cityofnewyork.us/resource/tm2y-4xcp.json?$$app_token=nm76DTR92XyaW6KqlXQewFfXn"
     
     var programs: [SupportProgram] = []
-    let programCatogories: [String] = ["Legal Services", SupportProgramType.domesticViolence.rawValue, SupportProgramType.immigratFamilies.rawValue, SupportProgramType.ndaImmigrants.rawValue]
+    let programCatogories: [String] = ["Legal Services", SupportProgramType.domesticViolence.rawValue, SupportProgramType.immigrantFamilies.rawValue, SupportProgramType.ndaImmigrants.rawValue]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,14 +52,38 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
         return cell
     }
 
-    /*
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "programListSegueIdentifier" {
+            if let spltc = segue.destination as? SupportProgramListViewController,
+                let cell = sender as? SupportProgramTableViewCell,
+                let indexPath = supportProgramsTableView.indexPath(for: cell) {
+                switch programCatogories[indexPath.row] {
+                case "Legal Services":
+                   spltc.programList = programs.filter({ (program) -> Bool in
+                       program.program == SupportProgramType.legalServices.rawValue || program.program == SupportProgramType.legalAssistance.rawValue
+                    })
+                    dump(spltc.programList)
+                case SupportProgramType.domesticViolence.rawValue:
+                    spltc.programList = programs.filter({ (program) -> Bool in
+                        program.program == SupportProgramType.domesticViolence.rawValue
+                    })
+                case SupportProgramType.immigrantFamilies.rawValue:
+                    spltc.programList = programs.filter({ (program) -> Bool in
+                        program.program == SupportProgramType.immigrantFamilies.rawValue
+                    })
+                case SupportProgramType.ndaImmigrants.rawValue:
+                    spltc.programList = programs.filter({ (program) -> Bool in
+                        program.program == SupportProgramType.ndaImmigrants.rawValue
+                    })
+                default:
+                    break
+                }
+            }
+        }
      }
-     */
     
 }
