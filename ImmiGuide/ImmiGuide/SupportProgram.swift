@@ -46,7 +46,7 @@ enum ServiceType: String {
 enum SupportProgramType: String {
     case legalServices = "Legal Services"
     case domesticViolence = "Domestic Violence Program"
-    case immigratFamilies = "Services - Immigrant Families"
+    case immigrantFamilies = "Services - Immigrant Families"
     case legalAssistance = "Legal Assistance Program"
     case ndaImmigrants = "NDA Immigrants"
     case youthServices = "Legal Services - Immigrant Youth"

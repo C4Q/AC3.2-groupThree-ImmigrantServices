@@ -15,10 +15,16 @@ enum Borough: String {
 class APIRequestManager {
     static let appToken = "nm76DTR92XyaW6KqlXQewFfXn"
     static let literacyProgramsAPIEndPoint = "https://data.cityofnewyork.us/resource/vmdh-6fvj.json"
+    static let gedAPIEndPoint = "https://data.cityofnewyork.us/resource/jfsi-vq8f.json"
     
     static func makeLiteracyEndPointWithQuery(borough: String) -> String {
         let boroughQuery = "?borough_community=\(borough)"
         return literacyProgramsAPIEndPoint + boroughQuery
+    }
+    
+    static func makeGEDEndPointWithQuery(borough: String) -> String {
+        let boroughQuery = "?borough=\(borough)"
+        return gedAPIEndPoint + boroughQuery
     }
     
     static let manager = APIRequestManager()
@@ -32,13 +38,13 @@ class APIRequestManager {
             if error != nil {
                 print("Error durring session: \(error)")
             }
-            if let response = response {
-                print(response)
-            }
+       
             guard let validData = data else {return}
             callBack(validData)
             }.resume()
     }
+    
+    
     
     
     
