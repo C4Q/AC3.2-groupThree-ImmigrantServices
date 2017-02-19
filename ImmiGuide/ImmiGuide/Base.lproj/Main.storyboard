@@ -326,13 +326,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amx-a8-yih">
-                                                    <rect key="frame" x="8" y="37" width="359" height="80"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYX-8B-lVE">
-                                                    <rect key="frame" x="8" y="125" width="359" height="21"/>
+                                                    <rect key="frame" x="8" y="37" width="359" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -343,23 +337,38 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UP9-yS-V2S">
+                                                    <rect key="frame" x="323" y="66" width="30" height="30"/>
+                                                    <state key="normal" title="Map"/>
+                                                    <connections>
+                                                        <action selector="didTapOpenMap:" destination="j9K-Ow-66f" eventType="touchUpInside" id="TlH-XE-CfY"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vay-RV-Nsy">
+                                                    <rect key="frame" x="0.0" y="124" width="375" height="30"/>
+                                                    <state key="normal" title="Phone Number"/>
+                                                    <connections>
+                                                        <action selector="contactNumberButton:" destination="j9K-Ow-66f" eventType="touchUpInside" id="khk-vF-h7r"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="mZZ-Ni-2cx" firstAttribute="top" secondItem="3zj-9n-umW" secondAttribute="top" constant="8" id="2Pq-zr-TML"/>
                                                 <constraint firstItem="Amx-a8-yih" firstAttribute="leading" secondItem="3zj-9n-umW" secondAttribute="leading" constant="8" id="50w-1t-2Jg"/>
-                                                <constraint firstItem="bYX-8B-lVE" firstAttribute="top" secondItem="Amx-a8-yih" secondAttribute="bottom" constant="8" id="9Rf-XQ-30Q"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="UP9-yS-V2S" secondAttribute="trailing" constant="14" id="9a7-fR-TvL"/>
                                                 <constraint firstItem="mZZ-Ni-2cx" firstAttribute="leading" secondItem="3zj-9n-umW" secondAttribute="leading" constant="8" id="EjH-yl-Fc1"/>
-                                                <constraint firstAttribute="trailing" secondItem="bYX-8B-lVE" secondAttribute="trailing" constant="8" id="UFD-kv-ZyK"/>
+                                                <constraint firstItem="Vay-RV-Nsy" firstAttribute="leading" secondItem="3zj-9n-umW" secondAttribute="leading" id="XLe-nd-Drc"/>
+                                                <constraint firstItem="Vay-RV-Nsy" firstAttribute="top" secondItem="Amx-a8-yih" secondAttribute="bottom" constant="66.5" id="Yxy-ae-VaT"/>
                                                 <constraint firstItem="Amx-a8-yih" firstAttribute="top" secondItem="mZZ-Ni-2cx" secondAttribute="bottom" constant="8" id="kRY-zM-hNO"/>
                                                 <constraint firstAttribute="trailing" secondItem="mZZ-Ni-2cx" secondAttribute="trailing" constant="8" id="lA4-DE-Oru"/>
-                                                <constraint firstItem="bYX-8B-lVE" firstAttribute="leading" secondItem="3zj-9n-umW" secondAttribute="leading" constant="8" id="qYf-3n-vnb"/>
+                                                <constraint firstAttribute="trailing" secondItem="Vay-RV-Nsy" secondAttribute="trailing" id="ov6-Re-l4I"/>
+                                                <constraint firstItem="UP9-yS-V2S" firstAttribute="centerY" secondItem="3zj-9n-umW" secondAttribute="centerY" id="qwH-Xz-Zbk"/>
                                                 <constraint firstAttribute="trailing" secondItem="Amx-a8-yih" secondAttribute="trailing" constant="8" id="rNh-sV-xRO"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="bYX-8B-lVE" secondAttribute="bottom" constant="8" id="vhB-xH-0Z5"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="addressLabel" destination="Amx-a8-yih" id="l6H-Dd-X31"/>
-                                            <outlet property="contactNumberLabel" destination="bYX-8B-lVE" id="Zzb-P5-2GI"/>
+                                            <outlet property="phoneNumberLabel" destination="Vay-RV-Nsy" id="4KE-oe-PUT"/>
                                             <outlet property="siteNameLabel" destination="mZZ-Ni-2cx" id="ze7-Nc-jlW"/>
                                         </connections>
                                     </tableViewCell>

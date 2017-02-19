@@ -38,6 +38,7 @@ class SupportProgramListViewController: UIViewController, UITableViewDataSource,
         
     }
     
+    
     // MARK: - Table view data source
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -63,26 +64,25 @@ class SupportProgramListViewController: UIViewController, UITableViewDataSource,
             let description = index.location.description
             cell.siteNameLabel.text = index.siteName
             cell.addressLabel.text = description
-            cell.contactNumberLabel.text = "Contact: \(index.contactNumber)"
+            cell.phoneNumberLabel.setTitle("Contact: \(index.contactNumber)", for: .normal)
         } else if !categoryChosen.isEmpty {
             let site = categoryChosen[indexPath.row]
             let description = site.agencyLocation?.description
             cell.siteNameLabel.text = site.agencyName
             cell.addressLabel.text = description
-            cell.contactNumberLabel.text = "Contact: \(site.agencyPhoneNumber)"
+            cell.phoneNumberLabel.setTitle("Contact: \(site.agencyPhoneNumber)", for: .normal)
         } else if !gedLocation.isEmpty {
             let site = gedLocation[indexPath.row]
             let description = site.description
             cell.siteNameLabel.text = site.siteName
             cell.addressLabel.text = description
-            cell.contactNumberLabel.text = "Contact: \(site.contactNumber)"
+            cell.phoneNumberLabel.setTitle("Contact: \(site.contactNumber)", for: .normal)
         }
     
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
         if !programList.isEmpty {
             let index = programList[indexPath.row]
             let geoLocation = index.location.geolocation
@@ -112,11 +112,8 @@ class SupportProgramListViewController: UIViewController, UITableViewDataSource,
             guard let placemark = placemarkArr?[0] else { return }
             guard let lat = placemark.location?.coordinate.latitude,
                 let long = placemark.location?.coordinate.longitude else { return }
-           
-            completionHandler((lat, long))
+            completionHandler((lat: lat, long: long))
         }
-        dump("\(gedLocation.address), New York, USA")
-        
     }
 
     
