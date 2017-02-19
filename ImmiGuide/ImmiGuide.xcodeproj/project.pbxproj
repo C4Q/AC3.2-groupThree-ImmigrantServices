@@ -14,12 +14,8 @@
 		2DC845881E58EFD500E0A6EB /* ProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC845871E58EFD500E0A6EB /* ProgramsViewController.swift */; };
 		2DC8458A1E58F6A900E0A6EB /* GED.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC845891E58F6A900E0A6EB /* GED.swift */; };
 		2DC8458C1E58FE9C00E0A6EB /* GEDTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC8458B1E58FE9C00E0A6EB /* GEDTableViewCell.swift */; };
-
-		2DC8458E1E59157700E0A6EB /* ProgramDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC8458D1E59157700E0A6EB /* ProgramDetailsViewController.swift */; };
-		2DC845901E59297600E0A6EB /* DeatilsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC8458F1E59297600E0A6EB /* DeatilsTableViewCell.swift */; };
+		2DC845961E5A1C3800E0A6EB /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC845951E5A1C3800E0A6EB /* Translation.swift */; };
 		4D7B67A68BBB6F17B54FCFE9 /* Pods_ImmiGuide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5280B6E262A709D6029516BB /* Pods_ImmiGuide.framework */; };
-
-
 		9B1CD6541E58A22E004854AB /* APIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1CD6531E58A22E004854AB /* APIRequestManager.swift */; };
 		9B1CD6581E58A754004854AB /* SupportProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1CD6571E58A754004854AB /* SupportProgramsViewController.swift */; };
 		9B1CD65A1E58B21F004854AB /* SupportProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1CD6591E58B21F004854AB /* SupportProgram.swift */; };
@@ -51,13 +47,9 @@
 		2DC845871E58EFD500E0A6EB /* ProgramsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramsViewController.swift; sourceTree = "<group>"; };
 		2DC845891E58F6A900E0A6EB /* GED.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GED.swift; sourceTree = "<group>"; };
 		2DC8458B1E58FE9C00E0A6EB /* GEDTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GEDTableViewCell.swift; sourceTree = "<group>"; };
-
-		2DC8458D1E59157700E0A6EB /* ProgramDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramDetailsViewController.swift; sourceTree = "<group>"; };
-		2DC8458F1E59297600E0A6EB /* DeatilsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeatilsTableViewCell.swift; sourceTree = "<group>"; };
+		2DC845951E5A1C3800E0A6EB /* Translation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		5280B6E262A709D6029516BB /* Pods_ImmiGuide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImmiGuide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6245EB85FAAC33A747535239 /* Pods-ImmiGuide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmiGuide.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImmiGuide/Pods-ImmiGuide.release.xcconfig"; sourceTree = "<group>"; };
-
-
 		9B1CD6531E58A22E004854AB /* APIRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestManager.swift; sourceTree = "<group>"; };
 		9B1CD6571E58A754004854AB /* SupportProgramsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportProgramsViewController.swift; sourceTree = "<group>"; };
 		9B1CD6591E58B21F004854AB /* SupportProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportProgram.swift; sourceTree = "<group>"; };
@@ -121,6 +113,7 @@
 				2DA6367B1E58AC8200D5AADE /* Geolocation.swift */,
 				9C63AE201E58F1BB00CAFC4B /* Tour.swift */,
 				9B1CD6531E58A22E004854AB /* APIRequestManager.swift */,
+				2DC845951E5A1C3800E0A6EB /* Translation.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -344,6 +337,7 @@
 				2DA6367C1E58AC8200D5AADE /* Geolocation.swift in Sources */,
 				9C63AE191E58D6ED00CAFC4B /* Tour Cell.swift in Sources */,
 				9B8932A51E57AF4F002C13E8 /* AppDelegate.swift in Sources */,
+				2DC845961E5A1C3800E0A6EB /* Translation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
