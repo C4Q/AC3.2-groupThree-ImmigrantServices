@@ -125,8 +125,6 @@
 			children = (
 				9B8932A41E57AF4F002C13E8 /* AppDelegate.swift */,
 				9B8932A61E57AF4F002C13E8 /* ViewController.swift */,
-				2DC845851E58EFC600E0A6EB /* ProgramTableViewCell.swift */,
-				2DC8458B1E58FE9C00E0A6EB /* GEDTableViewCell.swift */,
 				9C63AE151E58D49900CAFC4B /* View */,
 				9B1CD65C1E58C52F004854AB /* Controller */,
 				9B1CD65B1E58C51B004854AB /* Model */,
@@ -158,6 +156,8 @@
 				9C63AE181E58D6ED00CAFC4B /* Tour Cell.swift */,
 				9B1CD6631E58EBFF004854AB /* SupportProgramTableViewCell.swift */,
 				9B7AD2EA1E590697008BA7A8 /* ProgramListTableViewCell.swift */,
+				2DC8458B1E58FE9C00E0A6EB /* GEDTableViewCell.swift */,
+				2DC845851E58EFC600E0A6EB /* ProgramTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -240,9 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
 				2DC8458A1E58F6A900E0A6EB /* GED.swift in Sources */,
-				9C63AE171E58D5E500CAFC4B /* PageTour.swift in Sources */,
 				9C63AE141E58D49300CAFC4B /* Base Cell.swift in Sources */,
 				9B1CD6541E58A22E004854AB /* APIRequestManager.swift in Sources */,
 				2DC8458C1E58FE9C00E0A6EB /* GEDTableViewCell.swift in Sources */,
