@@ -23,7 +23,7 @@ class TourViewController: UIViewController, UICollectionViewDelegate, UICollecti
         setupPageController()
         setupButton()
     }
-
+    
     // MARK: - Methods
     
     func setupCollectionView() {
@@ -112,7 +112,7 @@ class TourViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let currentPage = Int(targetContentOffset.pointee.x / view.frame.width)
         pageController.currentPage = currentPage
         if currentPage == tourData.count {
-            getStartedButton.isHidden = false 
+            getStartedButton.isHidden = false
         }
     }
     
