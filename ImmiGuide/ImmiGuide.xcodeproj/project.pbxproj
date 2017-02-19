@@ -164,6 +164,8 @@
 				9C63AE181E58D6ED00CAFC4B /* Tour Cell.swift */,
 				9B1CD6631E58EBFF004854AB /* SupportProgramTableViewCell.swift */,
 				9B7AD2EA1E590697008BA7A8 /* ProgramListTableViewCell.swift */,
+				2DC8458B1E58FE9C00E0A6EB /* GEDTableViewCell.swift */,
+				2DC845851E58EFC600E0A6EB /* ProgramTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
