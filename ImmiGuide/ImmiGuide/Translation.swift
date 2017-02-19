@@ -38,7 +38,10 @@ class Translation {
         "Spanish" : [
             "GED" : "GED",
             "Adolescent Literacy" : "Literatura de Adolescentes",
-            "grades 6 to 8" : "Los Grados 6 a 8"
+            "grades 6 to 8" : "Los Grados 6 a 8",
+            "Adult Literacy" : "Leer, Escribir y Hablar en Inglés",
+            "At least 16 Years Old or Older" : "Al menos 16 años de edad o más",
+            "English as a Second Language" : "Inglés como Segundo Idioma",
             
             
         ]
