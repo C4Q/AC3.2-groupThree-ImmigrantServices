@@ -6,6 +6,7 @@
 //  Copyright © 2017 Madushani Lekam Wasam Liyanage. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class TourCell: BaseCell {
@@ -81,4 +82,3 @@ class TourCell: BaseCell {
         }
     }
 }
-
