@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Lottie
+import SnapKit
 
 class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -22,6 +24,9 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViewHierarchy()
+        configureConstraints()
+        animateFamilyIcon()
         
         supportProgramsTableView.delegate = self
         supportProgramsTableView.dataSource = self
@@ -123,6 +128,70 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
       }, completion: nil)
     }
   }
+  
+  func animateFamilyIcon() {
+    circleAnimationView.play()
+    familyImageView.alpha = 0
+    UIView.animate(withDuration: 0.4, delay: 0.6, options: .curveEaseIn, animations: {
+      self.familyImageView.alpha = 1.0
+    }, completion: nil)
+  }
+  
+  // MARK: Setup
+  func setupViewHierarchy() {
+    view.addSubview(circleAndFamilyView)
+    view.addSubview(familyImageView)
+    view.addSubview(circleAnimationView)
+  }
+  
+  func configureConstraints() {
+    self.edgesForExtendedLayout = []
+    circleAndFamilyView.snp.makeConstraints { (view) in
+      view.top.leading.trailing.equalToSuperview()
+      view.bottom.equalTo(supportProgramsTableView.snp.top)
+    }
+    
+    circleAnimationView.snp.makeConstraints { (view) in
+      view.centerX.equalTo(circleAndFamilyView.snp.centerX)
+      view.centerY.equalTo(circleAndFamilyView.snp.centerY)
+      view.height.width.equalTo(300)
+    }
+    
+    familyImageView.snp.makeConstraints { (view) in
+      view.height.equalTo(circleAnimationView.snp.height).multipliedBy(0.5)
+      view.width.equalTo(circleAnimationView.snp.width).multipliedBy(0.5)
+      view.centerX.equalTo(circleAndFamilyView.snp.centerX)
+      view.centerY.equalTo(circleAndFamilyView.snp.centerY)
+    }
+
+  }
+  // MARK: Lazy Vars
+  //Views
+  internal lazy var circleAndFamilyView: UIView = {
+    let view: UIView = UIView()
+    view.translatesAutoresizingMaskIntoConstraints = false
+    view.backgroundColor = .white
+    return view
+  }()
+  
+  internal lazy var circleAnimationView: LAAnimationView = {
+    var view: LAAnimationView = LAAnimationView()
+    
+    view = LAAnimationView.animationNamed("Circle")
+    view.contentMode = .scaleAspectFill
+    
+    return view
+  }()
+  
+  internal lazy var familyImageView: UIImageView = {
+    let image = #imageLiteral(resourceName: "Familyy")
+    let imageView = UIImageView(image: image)
+    imageView.contentMode = .scaleAspectFit
+    
+    return imageView
+    
+  }()
+  
 
   
 }
