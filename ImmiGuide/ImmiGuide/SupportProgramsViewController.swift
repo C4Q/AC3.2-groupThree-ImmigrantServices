@@ -41,7 +41,6 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
               
               DispatchQueue.main.async {
                 self.supportProgramsTableView.reloadData()
-                //          self.animateTableView()
                 self.animateCells()
               }
             }
@@ -158,13 +157,14 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     familyImageView.snp.makeConstraints { (view) in
-      view.height.equalTo(circleAnimationView.snp.height).multipliedBy(0.5)
-      view.width.equalTo(circleAnimationView.snp.width).multipliedBy(0.5)
+      view.height.equalTo(circleAnimationView.snp.height).multipliedBy(0.4)
+      view.width.equalTo(circleAnimationView.snp.width).multipliedBy(0.4)
       view.centerX.equalTo(circleAndFamilyView.snp.centerX)
       view.centerY.equalTo(circleAndFamilyView.snp.centerY)
     }
 
   }
+  
   // MARK: Lazy Vars
   //Views
   internal lazy var circleAndFamilyView: UIView = {
@@ -184,7 +184,7 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
   }()
   
   internal lazy var familyImageView: UIImageView = {
-    let image = #imageLiteral(resourceName: "Familyy")
+    let image = #imageLiteral(resourceName: "Family")
     let imageView = UIImageView(image: image)
     imageView.contentMode = .scaleAspectFit
     

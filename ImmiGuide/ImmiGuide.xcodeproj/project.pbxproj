@@ -36,7 +36,6 @@
 		9C63AE251E58F61C00CAFC4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE241E58F61C00CAFC4B /* Assets.xcassets */; };
 		9CBC3DED1E59665C000B2AF1 /* TourPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC3DEC1E59665C000B2AF1 /* TourPageViewController.swift */; };
 		CCECACAD1E5A1A3000E86E60 /* Circle.json in Resources */ = {isa = PBXBuildFile; fileRef = CCECACAC1E5A1A3000E86E60 /* Circle.json */; };
-		CCECACAF1E5A1BFA00E86E60 /* BookAndPen.json in Resources */ = {isa = PBXBuildFile; fileRef = CCECACAE1E5A1BF900E86E60 /* BookAndPen.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,7 +72,6 @@
 		9C63AE241E58F61C00CAFC4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		9CBC3DEC1E59665C000B2AF1 /* TourPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourPageViewController.swift; sourceTree = "<group>"; };
 		CCECACAC1E5A1A3000E86E60 /* Circle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Circle.json; sourceTree = "<group>"; };
-		CCECACAE1E5A1BF900E86E60 /* BookAndPen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BookAndPen.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,7 +162,6 @@
 				9B8932B01E57AF50002C13E8 /* Info.plist */,
 				9C63AE241E58F61C00CAFC4B /* Assets.xcassets */,
 				CCECACAC1E5A1A3000E86E60 /* Circle.json */,
-				CCECACAE1E5A1BF900E86E60 /* BookAndPen.json */,
 			);
 			path = ImmiGuide;
 			sourceTree = "<group>";
@@ -260,7 +257,6 @@
 				9B8932AF1E57AF4F002C13E8 /* LaunchScreen.storyboard in Resources */,
 				9B8932AA1E57AF4F002C13E8 /* Main.storyboard in Resources */,
 				9C63AE0E1E58C3DF00CAFC4B /* Montserrat-ExtraLight.otf in Resources */,
-				CCECACAF1E5A1BFA00E86E60 /* BookAndPen.json in Resources */,
 				9C63AE101E58C3DF00CAFC4B /* Montserrat-Medium.otf in Resources */,
 				9C63AE251E58F61C00CAFC4B /* Assets.xcassets in Resources */,
 				9C63AE0F1E58C3DF00CAFC4B /* Montserrat-Light.otf in Resources */,
