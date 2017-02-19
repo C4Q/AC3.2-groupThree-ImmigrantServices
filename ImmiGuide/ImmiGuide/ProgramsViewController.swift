@@ -83,7 +83,6 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
     func sortRWBy() {
         let categories = dict.keys.sorted()
         for cat in categories {
-            print(cat)
             let filteredByAgeArr = rwLocations.filter{$0.program == cat}
             filteredAgeDict[cat] = filteredByAgeArr
         }
