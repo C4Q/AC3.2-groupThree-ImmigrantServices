@@ -16,7 +16,7 @@
 		2DC8458C1E58FE9C00E0A6EB /* GEDTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC8458B1E58FE9C00E0A6EB /* GEDTableViewCell.swift */; };
 		2DC8458E1E59157700E0A6EB /* ProgramDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC8458D1E59157700E0A6EB /* ProgramDetailsViewController.swift */; };
 		2DC845901E59297600E0A6EB /* DeatilsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC8458F1E59297600E0A6EB /* DeatilsTableViewCell.swift */; };
-		2DC845921E59339600E0A6EB /* TourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC845911E59339600E0A6EB /* TourViewController.swift */; };
+		2DC845941E59383000E0A6EB /* TourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC845931E59383000E0A6EB /* TourViewController.swift */; };
 		9B1CD6541E58A22E004854AB /* APIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1CD6531E58A22E004854AB /* APIRequestManager.swift */; };
 		9B1CD6581E58A754004854AB /* SupportProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1CD6571E58A754004854AB /* SupportProgramsViewController.swift */; };
 		9B1CD65A1E58B21F004854AB /* SupportProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1CD6591E58B21F004854AB /* SupportProgram.swift */; };
@@ -27,7 +27,7 @@
 		9B8932A71E57AF4F002C13E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8932A61E57AF4F002C13E8 /* ViewController.swift */; };
 		9B8932AA1E57AF4F002C13E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8932A81E57AF4F002C13E8 /* Main.storyboard */; };
 		9B8932AF1E57AF4F002C13E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8932AD1E57AF4F002C13E8 /* LaunchScreen.storyboard */; };
-		9B9A26891E5934E7001E93ED /* TourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9A26881E5934E7001E93ED /* TourViewController.swift */; };
+
 		9C63AE0D1E58C3DF00CAFC4B /* Montserrat-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE081E58C3DF00CAFC4B /* Montserrat-Black.otf */; };
 		9C63AE0E1E58C3DF00CAFC4B /* Montserrat-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE091E58C3DF00CAFC4B /* Montserrat-ExtraLight.otf */; };
 		9C63AE0F1E58C3DF00CAFC4B /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE0A1E58C3DF00CAFC4B /* Montserrat-Light.otf */; };
@@ -49,7 +49,7 @@
 		2DC8458B1E58FE9C00E0A6EB /* GEDTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GEDTableViewCell.swift; sourceTree = "<group>"; };
 		2DC8458D1E59157700E0A6EB /* ProgramDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramDetailsViewController.swift; sourceTree = "<group>"; };
 		2DC8458F1E59297600E0A6EB /* DeatilsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeatilsTableViewCell.swift; sourceTree = "<group>"; };
-		2DC845911E59339600E0A6EB /* TourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourViewController.swift; sourceTree = "<group>"; };
+		2DC845931E59383000E0A6EB /* TourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourViewController.swift; sourceTree = "<group>"; };
 		9B1CD6531E58A22E004854AB /* APIRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestManager.swift; sourceTree = "<group>"; };
 		9B1CD6571E58A754004854AB /* SupportProgramsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportProgramsViewController.swift; sourceTree = "<group>"; };
 		9B1CD6591E58B21F004854AB /* SupportProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportProgram.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 				9B7AD2E81E59050D008BA7A8 /* SupportProgramListViewController.swift */,
 				2DC845871E58EFD500E0A6EB /* ProgramsViewController.swift */,
 				2DC8458D1E59157700E0A6EB /* ProgramDetailsViewController.swift */,
-				2DC845911E59339600E0A6EB /* TourViewController.swift */,
+				2DC845931E59383000E0A6EB /* TourViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -252,6 +252,7 @@
 				9C63AE141E58D49300CAFC4B /* Base Cell.swift in Sources */,
 				9B1CD6541E58A22E004854AB /* APIRequestManager.swift in Sources */,
 				2DC8458C1E58FE9C00E0A6EB /* GEDTableViewCell.swift in Sources */,
+				2DC845941E59383000E0A6EB /* TourViewController.swift in Sources */,
 				9B9A26891E5934E7001E93ED /* TourViewController.swift in Sources */,
 				9B1CD6581E58A754004854AB /* SupportProgramsViewController.swift in Sources */,
 				9C63AE211E58F1BB00CAFC4B /* Tour.swift in Sources */,
@@ -262,7 +263,6 @@
 				9B7AD2E91E59050D008BA7A8 /* SupportProgramListViewController.swift in Sources */,
 				2DC845881E58EFD500E0A6EB /* ProgramsViewController.swift in Sources */,
 				9B1CD65A1E58B21F004854AB /* SupportProgram.swift in Sources */,
-				2DC845921E59339600E0A6EB /* TourViewController.swift in Sources */,
 				9B8932A71E57AF4F002C13E8 /* ViewController.swift in Sources */,
 				2DC845861E58EFC600E0A6EB /* ProgramTableViewCell.swift in Sources */,
 				2DA6367C1E58AC8200D5AADE /* Geolocation.swift in Sources */,
