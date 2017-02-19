@@ -298,7 +298,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OAq-lA-aKh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Support" id="2zi-q9-ABp"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mbi-Yn-wEZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Mbi-Yn-wEZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -317,7 +317,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="blZ-jr-gAG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item 2" id="2vD-8w-WzN"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MFM-ME-lm4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="MFM-ME-lm4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -336,7 +336,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ITm-xt-Wrg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="elb-yl-tOb"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ADO-wc-xpH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ADO-wc-xpH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
