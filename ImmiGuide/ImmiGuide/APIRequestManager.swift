@@ -38,9 +38,7 @@ class APIRequestManager {
             if error != nil {
                 print("Error durring session: \(error)")
             }
-            if let response = response {
-                print(response)
-            }
+       
             guard let validData = data else {return}
             callBack(validData)
             }.resume()
