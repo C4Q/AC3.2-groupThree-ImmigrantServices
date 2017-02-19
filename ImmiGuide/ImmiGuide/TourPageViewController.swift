@@ -41,7 +41,9 @@ class TourPageViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func showHomeScreen() {
-        self.performSegue(withIdentifier: "TabBar", sender: self)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let tabBarVC = storyboard.instantiateViewController(withIdentifier: "TabBar")
+        self.present(tabBarVC, animated: true, completion: nil)
     }
     
     func setupTourData() {
