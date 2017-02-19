@@ -87,9 +87,7 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
             let filteredByAgeArr = rwLocations.filter{$0.program == cat}
             filteredAgeDict[cat] = filteredByAgeArr
         }
-        
         self.programsTableView.reloadData()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -132,7 +130,7 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
             let category = cat[indexPath.row]
             cell = programsTableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
             if let cell = cell as? ProgramTableViewCell {
-            if let languageDict = Translation.programVC["English"] as? [String : String],
+            if let languageDict = Translation.programVC["Spanish"] as? [String : String],
                 let labelTextName = languageDict[category] {
                 cell.nameOfProgram.text = labelTextName
                     DispatchQueue.main.async {
