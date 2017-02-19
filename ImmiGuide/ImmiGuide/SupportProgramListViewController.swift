@@ -15,12 +15,12 @@ class SupportProgramListViewController: UIViewController, UITableViewDataSource,
     @IBOutlet weak var programListTableView: UITableView!
     @IBOutlet weak var mapView: MKMapView!
     
-    var programList: [SupportProgram] = []
     let initialLocation = CLLocation(latitude: 40.7128, longitude: -74.0059)
     let regionRadius: CLLocationDistance = 1000
     
-    var categoryChosen: [ReadingWritingLiteracyPrograms]!
-    var gedLocation: [GED]!
+    var programList: [SupportProgram] = []
+    var categoryChosen: [ReadingWritingLiteracyPrograms] = []
+    var gedLocation: [GED] = []
     
     
     override func viewDidLoad() {
@@ -38,6 +38,7 @@ class SupportProgramListViewController: UIViewController, UITableViewDataSource,
         
     }
     
+    
     // MARK: - Table view data source
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -45,30 +46,76 @@ class SupportProgramListViewController: UIViewController, UITableViewDataSource,
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return programList.count
+        if !programList.isEmpty {
+            return programList.count
+        } else if !categoryChosen.isEmpty {
+            return categoryChosen.count
+        } else if !gedLocation.isEmpty {
+            return gedLocation.count
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "programIdentifier", for: indexPath) as! ProgramListTableViewCell
         
-        let index = programList[indexPath.row]
-        let description = index.location.description
-        cell.siteNameLabel.text = index.siteName
-        cell.addressLabel.text = description
-        cell.contactNumberLabel.text = "Contact: \(index.contactNumber)"
-   
+        if !programList.isEmpty {
+            let index = programList[indexPath.row]
+            let description = index.location.description
+            cell.siteNameLabel.text = index.siteName
+            cell.addressLabel.text = description
+            cell.phoneNumberLabel.setTitle("Contact: \(index.contactNumber)", for: .normal)
+        } else if !categoryChosen.isEmpty {
+            let site = categoryChosen[indexPath.row]
+            let description = site.agencyLocation?.description
+            cell.siteNameLabel.text = site.agencyName
+            cell.addressLabel.text = description
+            cell.phoneNumberLabel.setTitle("Contact: \(site.agencyPhoneNumber)", for: .normal)
+        } else if !gedLocation.isEmpty {
+            let site = gedLocation[indexPath.row]
+            let description = site.description
+            cell.siteNameLabel.text = site.siteName
+            cell.addressLabel.text = description
+            cell.phoneNumberLabel.setTitle("Contact: \(site.contactNumber)", for: .normal)
+        }
+    
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let index = programList[indexPath.row]
-        let geoLocation = index.location.geolocation
-        let lat = geoLocation.latitude
-        let long = geoLocation.longitude
-
-        addPin(at: index.siteName, lat: lat, long: long)
-        
+        if !programList.isEmpty {
+            let index = programList[indexPath.row]
+            let geoLocation = index.location.geolocation
+            let lat = geoLocation.latitude
+            let long = geoLocation.longitude
+            addPin(at: index.siteName, lat: lat, long: long)
+        } else if  !categoryChosen.isEmpty {
+            let index = categoryChosen[indexPath.row]
+            let geoLocation = index.agencyLocation?.geolocation
+            guard let lat = geoLocation?.latitude,
+                let long = geoLocation?.longitude else { return }
+            addPin(at: index.agencyName, lat: lat, long: long)
+        } else if !gedLocation.isEmpty {
+            let index = gedLocation[indexPath.row]
+            getGeoFor(gedLocation: index, completionHandler: { (cordinates) -> (Void) in
+                DispatchQueue.main.async {
+                    self.addPin(at: index.siteName, lat: cordinates.0, long: cordinates.1)
+                    self.mapView.reloadInputViews()
+                }
+            })
+        }
     }
+    
+    func getGeoFor(gedLocation: GED, completionHandler: @escaping ((lat: Double, long: Double)) -> (Void))  {
+        let geo = CLGeocoder()
+        geo.geocodeAddressString("\(gedLocation.address)") { (placemarkArr, error) in
+            guard let placemark = placemarkArr?[0] else { return }
+            guard let lat = placemark.location?.coordinate.latitude,
+                let long = placemark.location?.coordinate.longitude else { return }
+            completionHandler((lat: lat, long: long))
+        }
+    }
+
     
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
