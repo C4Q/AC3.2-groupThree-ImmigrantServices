@@ -18,7 +18,8 @@
 		9B1CD6581E58A754004854AB /* SupportProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1CD6571E58A754004854AB /* SupportProgramsViewController.swift */; };
 		9B1CD65A1E58B21F004854AB /* SupportProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1CD6591E58B21F004854AB /* SupportProgram.swift */; };
 		9B1CD6641E58EBFF004854AB /* SupportProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1CD6631E58EBFF004854AB /* SupportProgramTableViewCell.swift */; };
-		9B1CD6681E58EE36004854AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B1CD6671E58EE36004854AB /* Assets.xcassets */; };
+		9B7AD2E91E59050D008BA7A8 /* SupportProgramListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7AD2E81E59050D008BA7A8 /* SupportProgramListViewController.swift */; };
+		9B7AD2EB1E590697008BA7A8 /* ProgramListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7AD2EA1E590697008BA7A8 /* ProgramListTableViewCell.swift */; };
 		9B8932A51E57AF4F002C13E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8932A41E57AF4F002C13E8 /* AppDelegate.swift */; };
 		9B8932A71E57AF4F002C13E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8932A61E57AF4F002C13E8 /* ViewController.swift */; };
 		9B8932AA1E57AF4F002C13E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8932A81E57AF4F002C13E8 /* Main.storyboard */; };
@@ -47,7 +48,8 @@
 		9B1CD6571E58A754004854AB /* SupportProgramsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportProgramsViewController.swift; sourceTree = "<group>"; };
 		9B1CD6591E58B21F004854AB /* SupportProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportProgram.swift; sourceTree = "<group>"; };
 		9B1CD6631E58EBFF004854AB /* SupportProgramTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportProgramTableViewCell.swift; sourceTree = "<group>"; };
-		9B1CD6671E58EE36004854AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B7AD2E81E59050D008BA7A8 /* SupportProgramListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportProgramListViewController.swift; sourceTree = "<group>"; };
+		9B7AD2EA1E590697008BA7A8 /* ProgramListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramListTableViewCell.swift; sourceTree = "<group>"; };
 		9B8932A11E57AF4F002C13E8 /* ImmiGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImmiGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B8932A41E57AF4F002C13E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B8932A61E57AF4F002C13E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			children = (
 				9C63AE221E58F1C800CAFC4B /* TourViewController.swift */,
 				9B1CD6571E58A754004854AB /* SupportProgramsViewController.swift */,
+				9B7AD2E81E59050D008BA7A8 /* SupportProgramListViewController.swift */,
 				2DC845871E58EFD500E0A6EB /* ProgramsViewController.swift */,
 			);
 			name = Controller;
@@ -154,6 +157,7 @@
 				9C63AE131E58D49300CAFC4B /* Base Cell.swift */,
 				9C63AE181E58D6ED00CAFC4B /* Tour Cell.swift */,
 				9B1CD6631E58EBFF004854AB /* SupportProgramTableViewCell.swift */,
+				9B7AD2EA1E590697008BA7A8 /* ProgramListTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -245,8 +249,10 @@
 				9B1CD6581E58A754004854AB /* SupportProgramsViewController.swift in Sources */,
 				9C63AE211E58F1BB00CAFC4B /* Tour.swift in Sources */,
 				9B1CD6641E58EBFF004854AB /* SupportProgramTableViewCell.swift in Sources */,
+				9B7AD2EB1E590697008BA7A8 /* ProgramListTableViewCell.swift in Sources */,
 				2DA636781E58A50600D5AADE /* ReadingWritingLiteracyPrograms.swift in Sources */,
 				2DA6367A1E58A63400D5AADE /* Location.swift in Sources */,
+				9B7AD2E91E59050D008BA7A8 /* SupportProgramListViewController.swift in Sources */,
 				2DC845881E58EFD500E0A6EB /* ProgramsViewController.swift in Sources */,
 				9B1CD65A1E58B21F004854AB /* SupportProgram.swift in Sources */,
 				9B8932A71E57AF4F002C13E8 /* ViewController.swift in Sources */,
