@@ -21,7 +21,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aiC-Jz-vbn"/>
+                    <navigationItem key="navigationItem" id="aiC-Jz-vbn">
+                        <barButtonItem key="backBarButtonItem" title=" " id="efc-jU-uvT"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmN-lI-ad5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,7 +118,9 @@
                             <constraint firstItem="QZc-yD-U1u" firstAttribute="top" secondItem="xO3-od-0Hr" secondAttribute="bottom" id="m4u-4P-aIr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="AQo-3t-EI3"/>
+                    <navigationItem key="navigationItem" id="AQo-3t-EI3">
+                        <barButtonItem key="backBarButtonItem" title=" " id="2hH-A7-qRK"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="programsTableView" destination="UZb-Ws-iia" id="A3a-sd-Hcu"/>
                     </connections>
@@ -187,7 +191,9 @@
                             <constraint firstItem="hmE-P5-9jX" firstAttribute="top" secondItem="uMg-pn-gHa" secondAttribute="bottom" id="x3V-dQ-WYF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="GuT-w3-Dlq"/>
+                    <navigationItem key="navigationItem" id="GuT-w3-Dlq">
+                        <barButtonItem key="backBarButtonItem" title=" " id="vcX-1S-cTO"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="contanierView" destination="C9x-QB-Epd" id="rth-2v-nGb"/>
                         <outlet property="supportProgramsTableView" destination="uMg-pn-gHa" id="nyS-nl-EtL"/>
@@ -229,9 +235,11 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OAq-lA-aKh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="HOME" image="Home" selectedImage="Home" id="2zi-q9-ABp"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Mbi-Yn-wEZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" backIndicatorImage="Delete" backIndicatorTransitionMaskImage="Delete" id="Mbi-Yn-wEZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -248,18 +256,24 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="blZ-jr-gAG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="EDUCATION" image="Education" selectedImage="Education" id="2vD-8w-WzN"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="MFM-ME-lm4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="Delete" backIndicatorTransitionMaskImage="Delete" id="MFM-ME-lm4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="di4-t2-Ta3">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="vAW-Pu-enr" kind="relationship" relationship="rootViewController" id="sys-2l-6qu"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bc9-1Y-vS5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="210" y="133"/>
+            <point key="canvasLocation" x="209" y="133"/>
         </scene>
         <!--PROFILE-->
         <scene sceneID="QvH-dg-DIP">
@@ -267,9 +281,11 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ITm-xt-Wrg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="PROFILE" image="Profile" selectedImage="Profile" id="elb-yl-tOb"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ADO-wc-xpH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" backIndicatorImage="Delete" backIndicatorTransitionMaskImage="Delete" id="ADO-wc-xpH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -358,7 +374,9 @@
                             <constraint firstItem="kBe-Lb-JuC" firstAttribute="top" secondItem="sLJ-fZ-WSl" secondAttribute="bottom" id="osB-6B-cOe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ZY5-Cj-2BT"/>
+                    <navigationItem key="navigationItem" id="ZY5-Cj-2BT">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Spc-vu-d2u"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="sLJ-fZ-WSl" id="4fe-Bz-DPS"/>
                         <outlet property="programListTableView" destination="kBe-Lb-JuC" id="ev0-4l-cfl"/>
@@ -370,6 +388,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Delete" width="25" height="25"/>
         <image name="Education" width="25" height="25"/>
         <image name="Home" width="25" height="25"/>
         <image name="Profile" width="25" height="25"/>
