@@ -10,12 +10,14 @@ import UIKit
 
 private let cellID = "cellID"
 private let gedCellID = "GEDCell"
+private let segueID  = "SegueToProgramDetails"
 
 class ProgramsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var gedLocations = [GED]()
     var rwLocations = [ReadingWritingLiteracyPrograms]()
     var dict = [String : String]()
+    var filteredAgeDict = [String : [ReadingWritingLiteracyPrograms]]()
     
     @IBOutlet weak var programsTableView: UITableView!
     
@@ -61,6 +63,7 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
                 }
                 DispatchQueue.main.async {
                     self.getCategoriesAndRefresh()
+                    self.sortRWBy()
                 }
             }
             catch {
@@ -75,7 +78,18 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
             let age = loc.ageGroup
             dict[program] = age
         }
+    }
+    
+    func sortRWBy() {
+        let categories = dict.keys.sorted()
+        for cat in categories {
+            print(cat)
+            let filteredByAgeArr = rwLocations.filter{$0.program == cat}
+            filteredAgeDict[cat] = filteredByAgeArr
+        }
+        
         self.programsTableView.reloadData()
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -129,7 +143,20 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
         
     }
-    
+  
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let selected = sender as? ProgramTableViewCell,
+            let indexPath = programsTableView.indexPath(for: selected),
+            let dest = segue.destination as? ProgramDetailsViewController {
+            let cat = dict.keys.sorted()
+            let category = cat[indexPath.row]
+            guard let chosen = filteredAgeDict[category] else { return }
+            dest.categoryChosen = chosen
+        } else if let _ = sender as? GEDTableViewCell,
+            let dest = segue.destination as? ProgramDetailsViewController {
+            dest.gedLocation = self.gedLocations
+        }
+    }
     
     
 }
