@@ -78,6 +78,7 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
             let age = loc.ageGroup
             dict[program] = age
         }
+        dump(dict)
     }
     
     func sortRWBy() {
@@ -88,7 +89,7 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
         }
         
         self.programsTableView.reloadData()
-
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -122,17 +123,25 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
         case 0:
             cell = programsTableView.dequeueReusableCell(withIdentifier: gedCellID, for: indexPath)
             if let cell = cell as? GEDTableViewCell {
-                cell.gedLabel.text = "GED"
+                guard let languageDict = Translation.programVC["English"] as? [String : String],
+                    let labelText = languageDict["GED"] else { return cell }
+                cell.gedLabel.text = labelText
             }
         case 1:
             let cat = dict.keys.sorted()
             let category = cat[indexPath.row]
             cell = programsTableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
             if let cell = cell as? ProgramTableViewCell {
-                DispatchQueue.main.async {
-                    cell.nameOfProgram.text = category
-                    if  let age = self.dict[category] {
-                        cell.subtitleProgram.text = age
+            if let languageDict = Translation.programVC["English"] as? [String : String],
+                let labelTextName = languageDict[category] {
+                cell.nameOfProgram.text = labelTextName
+                    DispatchQueue.main.async {
+                        dump(self.dict)
+                        if  let age = self.dict[category] {
+                            if let ageText = languageDict[age] {
+                            cell.subtitleProgram.text = ageText
+                            }
+                        }
                     }
                 }
             }
@@ -140,9 +149,8 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
             break
         }
         return cell
-        
     }
-  
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let selected = sender as? ProgramTableViewCell,
             let indexPath = programsTableView.indexPath(for: selected),

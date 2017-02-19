@@ -41,12 +41,22 @@ class Translation {
             "grades 6 to 8" : "Los Grados 6 a 8",
             "Adult Literacy" : "Leer, Escribir y Hablar en Inglés",
             "At least 16 Years Old or Older" : "Al menos 16 años de edad o más",
-            "English as a Second Language" : "Inglés como Segundo Idioma",
-            
-            
+            "ESOL" : "Inglés como Segundo Idioma",
+            "ESOL/Civics" : "ESOL/ Civics",
+            "Family Literacy" : "Leer, Escribir y Hablar en Inglés para Familias",
+            "A parent 16 Years Old or Older" : "Un padre de familia de 16 años o más"
+        ],
+        "English" : [
+            "GED" : "GED",
+            "Adolescent Literacy" : "Adolescent Literacy",
+            "grades 6 to 8" : "grades 6 to 8",
+            "Adult Literacy" :  "Adult Literacy",
+            "At least 16 Years Old or Older" : "At least 16 Years Old or Older",
+            "ESOL" : "ESOL",
+            "ESOL/Civics" : "ESOL/Civics",
+            "Family Literacy" : "Family Literacy",
+            "A parent 16 Years Old or Older" : "A parent 16 Years Old or Older"
         ]
     ]
-    
-    
     
 }
