@@ -52,14 +52,6 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch <#value#> {
-        case <#pattern#>:
-            <#code#>
-        default:
-            <#code#>
-        }
-    }
     /*
      // MARK: - Navigation
      
