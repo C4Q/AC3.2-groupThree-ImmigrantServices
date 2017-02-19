@@ -147,13 +147,13 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let selected = sender as? ProgramTableViewCell,
             let indexPath = programsTableView.indexPath(for: selected),
-            let dest = segue.destination as? ProgramDetailsViewController {
+            let dest = segue.destination as? SupportProgramListViewController {
             let cat = dict.keys.sorted()
             let category = cat[indexPath.row]
             guard let chosen = filteredAgeDict[category] else { return }
             dest.categoryChosen = chosen
         } else if let _ = sender as? GEDTableViewCell,
-            let dest = segue.destination as? ProgramDetailsViewController {
+            let dest = segue.destination as? SupportProgramListViewController {
             dest.gedLocation = self.gedLocations
         }
     }

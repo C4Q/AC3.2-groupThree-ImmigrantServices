@@ -19,6 +19,9 @@ class SupportProgramListViewController: UIViewController, UITableViewDataSource,
     let initialLocation = CLLocation(latitude: 40.7128, longitude: -74.0059)
     let regionRadius: CLLocationDistance = 1000
     
+    var categoryChosen: [ReadingWritingLiteracyPrograms]!
+    var gedLocation: [GED]!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
