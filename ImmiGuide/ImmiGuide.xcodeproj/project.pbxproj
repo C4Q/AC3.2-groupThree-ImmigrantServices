@@ -37,7 +37,7 @@
 		9C63AE251E58F61C00CAFC4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE241E58F61C00CAFC4B /* Assets.xcassets */; };
 		9CBC3DED1E59665C000B2AF1 /* TourPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC3DEC1E59665C000B2AF1 /* TourPageViewController.swift */; };
 		9CBC3DEF1E5A29FA000B2AF1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC3DEE1E5A29FA000B2AF1 /* ProfileViewController.swift */; };
-		9CBC3DF11E5A2DAB000B2AF1 /* SettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC3DF01E5A2DAB000B2AF1 /* SettingCollectionViewCell.swift */; }
+		9CBC3DF11E5A2DAB000B2AF1 /* SettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC3DF01E5A2DAB000B2AF1 /* SettingCollectionViewCell.swift */ };
 		CCECACAD1E5A1A3000E86E60 /* Circle.json in Resources */ = {isa = PBXBuildFile; fileRef = CCECACAC1E5A1A3000E86E60 /* Circle.json */; };
 /* End PBXBuildFile section */
 
