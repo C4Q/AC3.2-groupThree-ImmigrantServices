@@ -24,6 +24,9 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViewHierarchy()
+        configureConstraints()
+        animateFamilyIcon()
         
         supportProgramsTableView.delegate = self
         supportProgramsTableView.dataSource = self
@@ -38,14 +41,10 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
               
               DispatchQueue.main.async {
                 self.supportProgramsTableView.reloadData()
-                //          self.animateTableView()
                 self.animateCells()
               }
             }
-        }
-      
-      
-        
+        } 
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -59,21 +58,23 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = supportProgramsTableView.dequeueReusableCell(withIdentifier: "supportPraogramCellIdentifier", for: indexPath) as! SupportProgramTableViewCell
-//        cell.layer.cornerRadius = 25.0
-//        cell.layer.borderWidth = 2.0
-//        cell.layer.borderColor = UIColor.blue.cgColor
+        //        cell.layer.cornerRadius = 25.0
+        //        cell.layer.borderWidth = 2.0
+        //        cell.layer.borderColor = UIColor.blue.cgColor
         cell.titleLabel.layer.cornerRadius = 25.0
         cell.titleLabel.layer.borderWidth = 2.0
-       cell.titleLabel.layer.borderColor = UIColor.blue.cgColor
-        cell.titleLabel.text = programCatogories[indexPath.row]
-       
+        cell.titleLabel.layer.borderColor = UIColor.blue.cgColor
+        let labelName = programCatogories[indexPath.row]
+        guard let languageDict = Translation.supportVC["Spanish"] as? [String : String],
+            let labelNameInLanguage = languageDict[labelName] else { return cell }
+            cell.titleLabel.text = labelNameInLanguage
         return cell
     }
     
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "programListSegueIdentifier" {
             if let spltc = segue.destination as? SupportProgramListViewController,
@@ -81,8 +82,8 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
                 let indexPath = supportProgramsTableView.indexPath(for: cell) {
                 switch programCatogories[indexPath.row] {
                 case "Legal Services":
-                   spltc.programList = programs.filter({ (program) -> Bool in
-                       program.program == SupportProgramType.legalServices.rawValue || program.program == SupportProgramType.legalAssistance.rawValue
+                    spltc.programList = programs.filter({ (program) -> Bool in
+                        program.program == SupportProgramType.legalServices.rawValue || program.program == SupportProgramType.legalAssistance.rawValue
                     })
                     dump(spltc.programList)
                 case SupportProgramType.domesticViolence.rawValue:
@@ -102,42 +103,91 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
                 }
             }
         }
-     }
+    }
+    
+    // MARK: Animation
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.alpha = 0
+        UIView.animate(withDuration: 1.5, delay: 0.2 * Double(indexPath.row), options: [], animations: {
+            cell.alpha = 1.0
+        }, completion: nil)
+    }
+    
+    func animateCells() {
+        let allVisibleCells = self.supportProgramsTableView.visibleCells
+        
+        for (index, cell) in allVisibleCells.enumerated() {
+            cell.transform = CGAffineTransform(translationX: 100.0, y: 0)
+            cell.alpha = 0
+            UIView.animate(withDuration: 1.5, delay: 0.2 * Double(index), options: .curveEaseInOut, animations: {
+                cell.alpha = 1.0
+                cell.transform = .identity
+            }, completion: nil)
+        }
+   }
   
-  // MARK: Animation
-  
-  func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-    cell.alpha = 0
-    UIView.animate(withDuration: 1.5, delay: 0.2 * Double(indexPath.row), options: [], animations: {
-      cell.alpha = 1.0
+  func animateFamilyIcon() {
+    circleAnimationView.play()
+    familyImageView.alpha = 0
+    UIView.animate(withDuration: 0.4, delay: 0.6, options: .curveEaseIn, animations: {
+      self.familyImageView.alpha = 1.0
     }, completion: nil)
   }
   
-  func animateCells() {
-    let allVisibleCells = self.supportProgramsTableView.visibleCells
-    
-    for (index, cell) in allVisibleCells.enumerated() {
-      cell.transform = CGAffineTransform(translationX: 100.0, y: 0)
-      cell.alpha = 0
-      UIView.animate(withDuration: 1.5, delay: 0.2 * Double(index), options: .curveEaseInOut, animations: {
-        cell.alpha = 1.0
-        cell.transform = .identity
-      }, completion: nil)
+  // MARK: Setup
+  func setupViewHierarchy() {
+    view.addSubview(circleAndFamilyView)
+    view.addSubview(familyImageView)
+    view.addSubview(circleAnimationView)
+  }
+  
+  func configureConstraints() {
+    self.edgesForExtendedLayout = []
+    circleAndFamilyView.snp.makeConstraints { (view) in
+      view.top.leading.trailing.equalToSuperview()
+      view.bottom.equalTo(supportProgramsTableView.snp.top)
     }
-  }
-  
-  func animateFamilyIcon() {
     
-//    circleAnimationView.play()
-//    familyImageView.alpha = 0
-//    UIView.animate(withDuration: 0.4, delay: 0.6, options: .curveEaseIn, animations: {
-//      self.familyImageView.alpha = 1.0
-//    }, completion: nil)
+    circleAnimationView.snp.makeConstraints { (view) in
+      view.centerX.equalTo(circleAndFamilyView.snp.centerX)
+      view.centerY.equalTo(circleAndFamilyView.snp.centerY)
+      view.height.width.equalTo(300)
+    }
+    
+    familyImageView.snp.makeConstraints { (view) in
+      view.height.equalTo(circleAnimationView.snp.height).multipliedBy(0.4)
+      view.width.equalTo(circleAnimationView.snp.width).multipliedBy(0.4)
+      view.centerX.equalTo(circleAndFamilyView.snp.centerX)
+      view.centerY.equalTo(circleAndFamilyView.snp.centerY)
+    }
+
   }
   
-  // MARK: Views
+  // MARK: Lazy Vars
+  //Views
+  internal lazy var circleAndFamilyView: UIView = {
+    let view: UIView = UIView()
+    view.translatesAutoresizingMaskIntoConstraints = false
+    view.backgroundColor = .white
+    return view
+  }()
   
+  internal lazy var circleAnimationView: LAAnimationView = {
+    var view: LAAnimationView = LAAnimationView()
+    
+    view = LAAnimationView.animationNamed("Circle")
+    view.contentMode = .scaleAspectFill
+    
+    return view
+  }()
   
-
-  
+  internal lazy var familyImageView: UIImageView = {
+    let image = #imageLiteral(resourceName: "Family")
+    let imageView = UIImageView(image: image)
+    imageView.contentMode = .scaleAspectFit
+    
+    return imageView
+    
+  }()
 }
