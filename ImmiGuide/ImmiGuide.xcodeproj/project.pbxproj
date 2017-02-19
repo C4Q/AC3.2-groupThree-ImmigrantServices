@@ -16,6 +16,7 @@
 		2DC8458C1E58FE9C00E0A6EB /* GEDTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC8458B1E58FE9C00E0A6EB /* GEDTableViewCell.swift */; };
 		2DC8458E1E59157700E0A6EB /* ProgramDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC8458D1E59157700E0A6EB /* ProgramDetailsViewController.swift */; };
 		2DC845901E59297600E0A6EB /* DeatilsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC8458F1E59297600E0A6EB /* DeatilsTableViewCell.swift */; };
+		2DC845921E59339600E0A6EB /* TourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC845911E59339600E0A6EB /* TourViewController.swift */; };
 		9B1CD6541E58A22E004854AB /* APIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1CD6531E58A22E004854AB /* APIRequestManager.swift */; };
 		9B1CD6581E58A754004854AB /* SupportProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1CD6571E58A754004854AB /* SupportProgramsViewController.swift */; };
 		9B1CD65A1E58B21F004854AB /* SupportProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1CD6591E58B21F004854AB /* SupportProgram.swift */; };
@@ -35,7 +36,6 @@
 		9C63AE191E58D6ED00CAFC4B /* Tour Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C63AE181E58D6ED00CAFC4B /* Tour Cell.swift */; };
 		9C63AE211E58F1BB00CAFC4B /* Tour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C63AE201E58F1BB00CAFC4B /* Tour.swift */; };
 		9C63AE251E58F61C00CAFC4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE241E58F61C00CAFC4B /* Assets.xcassets */; };
-		9CBC3DE71E592D62000B2AF1 /* TourViewController 20-32-16-424.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC3DE61E592D62000B2AF1 /* TourViewController 20-32-16-424.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +48,7 @@
 		2DC8458B1E58FE9C00E0A6EB /* GEDTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GEDTableViewCell.swift; sourceTree = "<group>"; };
 		2DC8458D1E59157700E0A6EB /* ProgramDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramDetailsViewController.swift; sourceTree = "<group>"; };
 		2DC8458F1E59297600E0A6EB /* DeatilsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeatilsTableViewCell.swift; sourceTree = "<group>"; };
+		2DC845911E59339600E0A6EB /* TourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourViewController.swift; sourceTree = "<group>"; };
 		9B1CD6531E58A22E004854AB /* APIRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestManager.swift; sourceTree = "<group>"; };
 		9B1CD6571E58A754004854AB /* SupportProgramsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportProgramsViewController.swift; sourceTree = "<group>"; };
 		9B1CD6591E58B21F004854AB /* SupportProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportProgram.swift; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		9C63AE181E58D6ED00CAFC4B /* Tour Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tour Cell.swift"; sourceTree = "<group>"; };
 		9C63AE201E58F1BB00CAFC4B /* Tour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tour.swift; sourceTree = "<group>"; };
 		9C63AE241E58F61C00CAFC4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		9CBC3DE61E592D62000B2AF1 /* TourViewController 20-32-16-424.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TourViewController 20-32-16-424.swift"; path = "../../../../../Desktop/TourViewController 20-32-16-424.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,11 +100,11 @@
 		9B1CD65C1E58C52F004854AB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9CBC3DE61E592D62000B2AF1 /* TourViewController 20-32-16-424.swift */,
 				9B1CD6571E58A754004854AB /* SupportProgramsViewController.swift */,
 				9B7AD2E81E59050D008BA7A8 /* SupportProgramListViewController.swift */,
 				2DC845871E58EFD500E0A6EB /* ProgramsViewController.swift */,
 				2DC8458D1E59157700E0A6EB /* ProgramDetailsViewController.swift */,
+				2DC845911E59339600E0A6EB /* TourViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -252,7 +252,6 @@
 				2DC8458C1E58FE9C00E0A6EB /* GEDTableViewCell.swift in Sources */,
 				9B1CD6581E58A754004854AB /* SupportProgramsViewController.swift in Sources */,
 				9C63AE211E58F1BB00CAFC4B /* Tour.swift in Sources */,
-				9CBC3DE71E592D62000B2AF1 /* TourViewController 20-32-16-424.swift in Sources */,
 				9B1CD6641E58EBFF004854AB /* SupportProgramTableViewCell.swift in Sources */,
 				9B7AD2EB1E590697008BA7A8 /* ProgramListTableViewCell.swift in Sources */,
 				2DA636781E58A50600D5AADE /* ReadingWritingLiteracyPrograms.swift in Sources */,
@@ -260,11 +259,11 @@
 				9B7AD2E91E59050D008BA7A8 /* SupportProgramListViewController.swift in Sources */,
 				2DC845881E58EFD500E0A6EB /* ProgramsViewController.swift in Sources */,
 				9B1CD65A1E58B21F004854AB /* SupportProgram.swift in Sources */,
+				2DC845921E59339600E0A6EB /* TourViewController.swift in Sources */,
 				9B8932A71E57AF4F002C13E8 /* ViewController.swift in Sources */,
 				2DC845861E58EFC600E0A6EB /* ProgramTableViewCell.swift in Sources */,
 				2DA6367C1E58AC8200D5AADE /* Geolocation.swift in Sources */,
 				9C63AE191E58D6ED00CAFC4B /* Tour Cell.swift in Sources */,
-				9C63AE231E58F1C800CAFC4B /* TourViewController.swift in Sources */,
 				2DC8458E1E59157700E0A6EB /* ProgramDetailsViewController.swift in Sources */,
 				2DC845901E59297600E0A6EB /* DeatilsTableViewCell.swift in Sources */,
 				9B8932A51E57AF4F002C13E8 /* AppDelegate.swift in Sources */,
