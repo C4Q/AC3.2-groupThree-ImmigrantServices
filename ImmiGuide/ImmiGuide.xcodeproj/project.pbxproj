@@ -26,6 +26,7 @@
 		9B8932A71E57AF4F002C13E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8932A61E57AF4F002C13E8 /* ViewController.swift */; };
 		9B8932AA1E57AF4F002C13E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8932A81E57AF4F002C13E8 /* Main.storyboard */; };
 		9B8932AF1E57AF4F002C13E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8932AD1E57AF4F002C13E8 /* LaunchScreen.storyboard */; };
+		9B9A26891E5934E7001E93ED /* TourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9A26881E5934E7001E93ED /* TourViewController.swift */; };
 		9C63AE0D1E58C3DF00CAFC4B /* Montserrat-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE081E58C3DF00CAFC4B /* Montserrat-Black.otf */; };
 		9C63AE0E1E58C3DF00CAFC4B /* Montserrat-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE091E58C3DF00CAFC4B /* Montserrat-ExtraLight.otf */; };
 		9C63AE0F1E58C3DF00CAFC4B /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE0A1E58C3DF00CAFC4B /* Montserrat-Light.otf */; };
@@ -35,7 +36,6 @@
 		9C63AE191E58D6ED00CAFC4B /* Tour Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C63AE181E58D6ED00CAFC4B /* Tour Cell.swift */; };
 		9C63AE211E58F1BB00CAFC4B /* Tour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C63AE201E58F1BB00CAFC4B /* Tour.swift */; };
 		9C63AE251E58F61C00CAFC4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE241E58F61C00CAFC4B /* Assets.xcassets */; };
-		9CBC3DE71E592D62000B2AF1 /* TourViewController 20-32-16-424.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC3DE61E592D62000B2AF1 /* TourViewController 20-32-16-424.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +60,7 @@
 		9B8932A91E57AF4F002C13E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B8932AE1E57AF4F002C13E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B8932B01E57AF50002C13E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B9A26881E5934E7001E93ED /* TourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourViewController.swift; sourceTree = "<group>"; };
 		9C63AE081E58C3DF00CAFC4B /* Montserrat-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.otf"; sourceTree = "<group>"; };
 		9C63AE091E58C3DF00CAFC4B /* Montserrat-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.otf"; sourceTree = "<group>"; };
 		9C63AE0A1E58C3DF00CAFC4B /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		9C63AE181E58D6ED00CAFC4B /* Tour Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tour Cell.swift"; sourceTree = "<group>"; };
 		9C63AE201E58F1BB00CAFC4B /* Tour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tour.swift; sourceTree = "<group>"; };
 		9C63AE241E58F61C00CAFC4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		9CBC3DE61E592D62000B2AF1 /* TourViewController 20-32-16-424.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TourViewController 20-32-16-424.swift"; path = "../../../../../Desktop/TourViewController 20-32-16-424.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 		9B1CD65C1E58C52F004854AB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9CBC3DE61E592D62000B2AF1 /* TourViewController 20-32-16-424.swift */,
+				9B9A26881E5934E7001E93ED /* TourViewController.swift */,
 				9B1CD6571E58A754004854AB /* SupportProgramsViewController.swift */,
 				9B7AD2E81E59050D008BA7A8 /* SupportProgramListViewController.swift */,
 				2DC845871E58EFD500E0A6EB /* ProgramsViewController.swift */,
@@ -164,8 +164,6 @@
 				9C63AE181E58D6ED00CAFC4B /* Tour Cell.swift */,
 				9B1CD6631E58EBFF004854AB /* SupportProgramTableViewCell.swift */,
 				9B7AD2EA1E590697008BA7A8 /* ProgramListTableViewCell.swift */,
-				2DC8458B1E58FE9C00E0A6EB /* GEDTableViewCell.swift */,
-				2DC845851E58EFC600E0A6EB /* ProgramTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -202,7 +200,7 @@
 				TargetAttributes = {
 					9B8932A01E57AF4F002C13E8 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 9F7X637BX9;
+						DevelopmentTeam = G6ZU47QNTF;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -252,9 +250,9 @@
 				9C63AE141E58D49300CAFC4B /* Base Cell.swift in Sources */,
 				9B1CD6541E58A22E004854AB /* APIRequestManager.swift in Sources */,
 				2DC8458C1E58FE9C00E0A6EB /* GEDTableViewCell.swift in Sources */,
+				9B9A26891E5934E7001E93ED /* TourViewController.swift in Sources */,
 				9B1CD6581E58A754004854AB /* SupportProgramsViewController.swift in Sources */,
 				9C63AE211E58F1BB00CAFC4B /* Tour.swift in Sources */,
-				9CBC3DE71E592D62000B2AF1 /* TourViewController 20-32-16-424.swift in Sources */,
 				9B1CD6641E58EBFF004854AB /* SupportProgramTableViewCell.swift in Sources */,
 				9B7AD2EB1E590697008BA7A8 /* ProgramListTableViewCell.swift in Sources */,
 				2DA636781E58A50600D5AADE /* ReadingWritingLiteracyPrograms.swift in Sources */,
@@ -266,7 +264,6 @@
 				2DC845861E58EFC600E0A6EB /* ProgramTableViewCell.swift in Sources */,
 				2DA6367C1E58AC8200D5AADE /* Geolocation.swift in Sources */,
 				9C63AE191E58D6ED00CAFC4B /* Tour Cell.swift in Sources */,
-				9C63AE231E58F1C800CAFC4B /* TourViewController.swift in Sources */,
 				2DC8458E1E59157700E0A6EB /* ProgramDetailsViewController.swift in Sources */,
 				2DC845901E59297600E0A6EB /* DeatilsTableViewCell.swift in Sources */,
 				9B8932A51E57AF4F002C13E8 /* AppDelegate.swift in Sources */,
@@ -392,7 +389,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9F7X637BX9;
+				DEVELOPMENT_TEAM = G6ZU47QNTF;
 				INFOPLIST_FILE = ImmiGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.madushanilekamwasamliyanage.ImmiGuide;
@@ -405,7 +402,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9F7X637BX9;
+				DEVELOPMENT_TEAM = G6ZU47QNTF;
 				INFOPLIST_FILE = ImmiGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.madushanilekamwasamliyanage.ImmiGuide;
