@@ -11,8 +11,7 @@ fileprivate let cellID = "cellID"
 
 class ProgramDetailsViewController: UIViewController {
     
-    var categoryChosen: [ReadingWritingLiteracyPrograms]!
-    var gedLocation: [GED]!
+    
     
     @IBOutlet weak var tableView: UITableView!
     

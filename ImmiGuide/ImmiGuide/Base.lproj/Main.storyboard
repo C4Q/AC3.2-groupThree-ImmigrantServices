@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="w3f-ns-2K3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="w3f-ns-2K3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -74,7 +74,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="gedLabel" destination="80j-qR-12L" id="Llb-Ze-xcs"/>
-                                            <segue destination="bKk-mi-MBk" kind="show" identifier="SegueToProgramDetails" id="FJA-Wn-ncx"/>
+                                            <segue destination="eMu-we-wqJ" kind="show" identifier="SegueToProgramDetails" id="z77-YL-rbu"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" rowHeight="64" id="8v9-wP-USl" customClass="ProgramTableViewCell" customModule="ImmiGuide" customModuleProvider="target">
@@ -109,7 +109,7 @@
                                         <connections>
                                             <outlet property="nameOfProgram" destination="QCd-6y-twY" id="vXo-5N-kEH"/>
                                             <outlet property="subtitleProgram" destination="9i4-Kq-sg9" id="JDY-14-rhJ"/>
-                                            <segue destination="bKk-mi-MBk" kind="show" identifier="SegueToProgramDetails" id="h3I-HH-nH5"/>
+                                            <segue destination="eMu-we-wqJ" kind="show" identifier="SegueToProgramDetails" id="QyZ-z5-6hn"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -134,59 +134,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Usf-7b-jpI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1408.8" y="132.68365817091455"/>
-        </scene>
-        <!--Program Details View Controller-->
-        <scene sceneID="O4u-PH-VvK">
-            <objects>
-                <viewController id="bKk-mi-MBk" customClass="ProgramDetailsViewController" customModule="ImmiGuide" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fH9-Xz-mnT"/>
-                        <viewControllerLayoutGuide type="bottom" id="QoW-g3-q8i"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yhZ-sH-8qB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q4f-rF-ZhU">
-                                <rect key="frame" x="0.0" y="64" width="375" height="200"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Q4f-rF-ZhU" secondAttribute="height" multiplier="15:8" id="gfG-qX-hEt"/>
-                                </constraints>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j9E-Rs-1T1">
-                                <rect key="frame" x="0.0" y="272" width="375" height="346"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" rowHeight="76" id="Vxy-jM-9aX" customClass="DeatilsTableViewCell" customModule="ImmiGuide" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="76"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vxy-jM-9aX" id="EIX-oK-gXf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="j9E-Rs-1T1" secondAttribute="trailing" id="MjE-v1-o26"/>
-                            <constraint firstItem="Q4f-rF-ZhU" firstAttribute="leading" secondItem="yhZ-sH-8qB" secondAttribute="leading" id="MrM-TU-40l"/>
-                            <constraint firstItem="j9E-Rs-1T1" firstAttribute="leading" secondItem="yhZ-sH-8qB" secondAttribute="leading" id="P2j-zs-xy3"/>
-                            <constraint firstItem="QoW-g3-q8i" firstAttribute="top" secondItem="j9E-Rs-1T1" secondAttribute="bottom" id="Wbw-FH-vhI"/>
-                            <constraint firstItem="j9E-Rs-1T1" firstAttribute="top" secondItem="Q4f-rF-ZhU" secondAttribute="bottom" constant="8" id="kew-G5-Cer"/>
-                            <constraint firstAttribute="trailing" secondItem="Q4f-rF-ZhU" secondAttribute="trailing" id="xqF-kV-PjA"/>
-                            <constraint firstItem="Q4f-rF-ZhU" firstAttribute="top" secondItem="fH9-Xz-mnT" secondAttribute="bottom" id="ztZ-tu-5iu"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="tableView" destination="j9E-Rs-1T1" id="Mdl-mU-HgO"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Uxi-ZU-eGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2408.8000000000002" y="132.68365817091455"/>
         </scene>
         <!--Support Programs View Controller-->
         <scene sceneID="Qdn-TK-LLU">
@@ -442,6 +389,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="h3I-HH-nH5"/>
+        <segue reference="QyZ-z5-6hn"/>
     </inferredMetricsTieBreakers>
 </document>
