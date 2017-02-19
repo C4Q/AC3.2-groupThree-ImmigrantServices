@@ -136,7 +136,6 @@ class SupportProgramListViewController: UIViewController, UITableViewDataSource,
         self.mapView.reloadInputViews()
     }
     
-    
     /*
      // MARK: - Navigation
      
