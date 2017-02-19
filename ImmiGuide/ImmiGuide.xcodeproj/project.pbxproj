@@ -10,6 +10,10 @@
 		2DA636781E58A50600D5AADE /* ReadingWritingLiteracyPrograms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA636771E58A50600D5AADE /* ReadingWritingLiteracyPrograms.swift */; };
 		2DA6367A1E58A63400D5AADE /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA636791E58A63400D5AADE /* Location.swift */; };
 		2DA6367C1E58AC8200D5AADE /* Geolocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA6367B1E58AC8200D5AADE /* Geolocation.swift */; };
+		2DC845861E58EFC600E0A6EB /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC845851E58EFC600E0A6EB /* ProgramTableViewCell.swift */; };
+		2DC845881E58EFD500E0A6EB /* ProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC845871E58EFD500E0A6EB /* ProgramsViewController.swift */; };
+		2DC8458A1E58F6A900E0A6EB /* GED.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC845891E58F6A900E0A6EB /* GED.swift */; };
+		2DC8458C1E58FE9C00E0A6EB /* GEDTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC8458B1E58FE9C00E0A6EB /* GEDTableViewCell.swift */; };
 		9B1CD6541E58A22E004854AB /* APIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1CD6531E58A22E004854AB /* APIRequestManager.swift */; };
 		9B1CD6581E58A754004854AB /* SupportProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1CD6571E58A754004854AB /* SupportProgramsViewController.swift */; };
 		9B1CD65A1E58B21F004854AB /* SupportProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1CD6591E58B21F004854AB /* SupportProgram.swift */; };
@@ -35,6 +39,10 @@
 		2DA636771E58A50600D5AADE /* ReadingWritingLiteracyPrograms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingWritingLiteracyPrograms.swift; sourceTree = "<group>"; };
 		2DA636791E58A63400D5AADE /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		2DA6367B1E58AC8200D5AADE /* Geolocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geolocation.swift; sourceTree = "<group>"; };
+		2DC845851E58EFC600E0A6EB /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
+		2DC845871E58EFD500E0A6EB /* ProgramsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramsViewController.swift; sourceTree = "<group>"; };
+		2DC845891E58F6A900E0A6EB /* GED.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GED.swift; sourceTree = "<group>"; };
+		2DC8458B1E58FE9C00E0A6EB /* GEDTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GEDTableViewCell.swift; sourceTree = "<group>"; };
 		9B1CD6531E58A22E004854AB /* APIRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestManager.swift; sourceTree = "<group>"; };
 		9B1CD6571E58A754004854AB /* SupportProgramsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportProgramsViewController.swift; sourceTree = "<group>"; };
 		9B1CD6591E58B21F004854AB /* SupportProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportProgram.swift; sourceTree = "<group>"; };
@@ -74,6 +82,7 @@
 			children = (
 				9B1CD6591E58B21F004854AB /* SupportProgram.swift */,
 				2DA636771E58A50600D5AADE /* ReadingWritingLiteracyPrograms.swift */,
+				2DC845891E58F6A900E0A6EB /* GED.swift */,
 				2DA636791E58A63400D5AADE /* Location.swift */,
 				2DA6367B1E58AC8200D5AADE /* Geolocation.swift */,
 				9C63AE201E58F1BB00CAFC4B /* Tour.swift */,
@@ -87,6 +96,7 @@
 			children = (
 				9C63AE221E58F1C800CAFC4B /* TourViewController.swift */,
 				9B1CD6571E58A754004854AB /* SupportProgramsViewController.swift */,
+				2DC845871E58EFD500E0A6EB /* ProgramsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -112,6 +122,8 @@
 			children = (
 				9B8932A41E57AF4F002C13E8 /* AppDelegate.swift */,
 				9B8932A61E57AF4F002C13E8 /* ViewController.swift */,
+				2DC845851E58EFC600E0A6EB /* ProgramTableViewCell.swift */,
+				2DC8458B1E58FE9C00E0A6EB /* GEDTableViewCell.swift */,
 				9C63AE151E58D49900CAFC4B /* View */,
 				9B1CD65C1E58C52F004854AB /* Controller */,
 				9B1CD65B1E58C51B004854AB /* Model */,
@@ -224,15 +236,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
+				2DC8458A1E58F6A900E0A6EB /* GED.swift in Sources */,
+				9C63AE171E58D5E500CAFC4B /* PageTour.swift in Sources */,
 				9C63AE141E58D49300CAFC4B /* Base Cell.swift in Sources */,
 				9B1CD6541E58A22E004854AB /* APIRequestManager.swift in Sources */,
+				2DC8458C1E58FE9C00E0A6EB /* GEDTableViewCell.swift in Sources */,
 				9B1CD6581E58A754004854AB /* SupportProgramsViewController.swift in Sources */,
 				9C63AE211E58F1BB00CAFC4B /* Tour.swift in Sources */,
 				9B1CD6641E58EBFF004854AB /* SupportProgramTableViewCell.swift in Sources */,
 				2DA636781E58A50600D5AADE /* ReadingWritingLiteracyPrograms.swift in Sources */,
 				2DA6367A1E58A63400D5AADE /* Location.swift in Sources */,
+				2DC845881E58EFD500E0A6EB /* ProgramsViewController.swift in Sources */,
 				9B1CD65A1E58B21F004854AB /* SupportProgram.swift in Sources */,
 				9B8932A71E57AF4F002C13E8 /* ViewController.swift in Sources */,
+				2DC845861E58EFC600E0A6EB /* ProgramTableViewCell.swift in Sources */,
 				2DA6367C1E58AC8200D5AADE /* Geolocation.swift in Sources */,
 				9C63AE191E58D6ED00CAFC4B /* Tour Cell.swift in Sources */,
 				9C63AE231E58F1C800CAFC4B /* TourViewController.swift in Sources */,
