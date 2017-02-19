@@ -13,7 +13,6 @@ class TourViewController: UIViewController, UICollectionViewDelegate, UICollecti
     // MARK: - Properties
     
     var tourData: [Tour] = []
-    var animator: UIViewPropertyAnimator = UIViewPropertyAnimator(duration: 3.0, curve: UIViewAnimationCurve.linear, animations: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,13 +50,15 @@ class TourViewController: UIViewController, UICollectionViewDelegate, UICollecti
             let pageTwo = Tour(image: tourPage2, title: "", description: "Fact here")
             let pageThree = Tour(image: tourPage3, title: "Our Mission", description: "Ready to explore?")
             tourData = [pageOne, pageTwo, pageThree]
+            print("TOUR DATA")
+            dump([pageOne, pageTwo, pageThree])
         }
     }
     
     func setupPageController() {
         collectionView.addSubview(pageController)
         let _ = [
-            pageController.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            pageController.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40),
             pageController.leftAnchor.constraint(equalTo: view.leftAnchor),
             pageController.rightAnchor.constraint(equalTo: view.rightAnchor),
             ].map{$0.isActive = true}
@@ -66,10 +67,12 @@ class TourViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func setupButton() {
         collectionView.addSubview(getStartedButton)
         let _ = [
-            getStartedButton.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            getStartedButton.leftAnchor.constraint(equalTo: view.leftAnchor),
-            getStartedButton.rightAnchor.constraint(equalTo: view.rightAnchor)
-        ]
+            getStartedButton.bottomAnchor.constraint(equalTo: pageController.topAnchor, constant: -20),
+            getStartedButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
+            getStartedButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50),
+            getStartedButton.heightAnchor.constraint(equalToConstant: 45),
+            getStartedButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.75)
+            ].map{$0.isActive = true}
     }
     
     // MARK: - Views
@@ -99,25 +102,21 @@ class TourViewController: UIViewController, UICollectionViewDelegate, UICollecti
     lazy var getStartedButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Get Started", for: .normal)
+        button.setTitle("GET STARTED", for: .normal)
+        button.titleLabel?.font = UIFont(name: "Montserrat-Light", size: 20)
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.layer.borderWidth = 1
         button.layer.cornerRadius = 20
-        button.backgroundColor = .white
+        button.layer.borderColor = UIColor.white.cgColor
+        button.backgroundColor = UIColor.clear
         button.addTarget(self, action: #selector(showHomeScreen), for: .touchUpInside)
         return button
     }()
     
     // MARK: - Collection View
     
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        let currentPage = Int(targetContentOffset.pointee.x / view.frame.width)
-        pageController.currentPage = currentPage
-        if currentPage == tourData.count {
-            getStartedButton.isHidden = false
-        }
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(tourData.count)
+        getStartedButton.isHidden = true
         return tourData.count
     }
     
@@ -131,6 +130,19 @@ class TourViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return CGSize(width: view.frame.size.width, height: view.frame.size.height)
     }
     
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let currentPage = Int(targetContentOffset.pointee.x / view.frame.width)
+        pageController.currentPage = currentPage
+        if currentPage == tourData.count - 1 {
+            getStartedButton.alpha = 0
+            getStartedButton.isHidden = false
+            UIView.animate(withDuration: 0.5) {
+                self.getStartedButton.alpha = 1
+            }
+        } else {
+            getStartedButton.isHidden = true
+        }
+    }
     
     /*
      // MARK: - Navigation
