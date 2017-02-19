@@ -6,16 +6,16 @@
 //  Copyright © 2017 Madushani Lekam Wasam Liyanage. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Tour {
     
-    let imageStr: String
+    let image: UIImage
     let title: String
     let description: String
     
-    init(imageStr: String, title: String, description: String) {
-        self.imageStr = imageStr
+    init(image: UIImage, title: String, description: String) {
+        self.image = image
         self.title = title
         self.description = description
     }
