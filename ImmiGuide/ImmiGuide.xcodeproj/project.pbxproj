@@ -239,7 +239,7 @@
 				TargetAttributes = {
 					9B8932A01E57AF4F002C13E8 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = BAQHSM59S2;
+						DevelopmentTeam = 9F7X637BX9;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -481,7 +481,7 @@
 			baseConfigurationReference = 11173EAE0C3CDD6B8A97D8F3 /* Pods-ImmiGuide.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BAQHSM59S2;
+				DEVELOPMENT_TEAM = 9F7X637BX9;
 				INFOPLIST_FILE = ImmiGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.madushanilekamwasamliyanage.ImmiGuide;
@@ -495,7 +495,7 @@
 			baseConfigurationReference = 6245EB85FAAC33A747535239 /* Pods-ImmiGuide.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BAQHSM59S2;
+				DEVELOPMENT_TEAM = 9F7X637BX9;
 				INFOPLIST_FILE = ImmiGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.madushanilekamwasamliyanage.ImmiGuide;

@@ -28,11 +28,18 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
         configureConstraints()
         animateFamilyIcon()
         
+        self.navigationController?.navigationBar.barTintColor = UIColor(red:1.00, green:0.36, blue:0.36, alpha:1.0)
+        
         supportProgramsTableView.delegate = self
         supportProgramsTableView.dataSource = self
         supportProgramsTableView.rowHeight = 100.0
-        supportProgramsTableView.separatorColor = .clear
-        supportProgramsTableView.tableFooterView = UIView()
+        //        supportProgramsTableView.separatorColor = .clear
+        //        supportProgramsTableView.tableFooterView = UIView()
+        
+        supportProgramsTableView.preservesSuperviewLayoutMargins = false
+        supportProgramsTableView.separatorInset = UIEdgeInsets.init(top: 0, left: 15, bottom: 0, right: 15)
+        supportProgramsTableView.layoutMargins = UIEdgeInsets.zero
+        supportProgramsTableView.separatorColor = UIColor.darkGray
         
         APIRequestManager.manager.getData(endPoint: apiEndPoint) { (data) in
             if let validData = data,
@@ -61,9 +68,12 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
         //        cell.layer.cornerRadius = 25.0
         //        cell.layer.borderWidth = 2.0
         //        cell.layer.borderColor = UIColor.blue.cgColor
-        cell.titleLabel.layer.cornerRadius = 25.0
-        cell.titleLabel.layer.borderWidth = 2.0
-        cell.titleLabel.layer.borderColor = UIColor.blue.cgColor
+        //        cell.titleLabel.layer.cornerRadius = 25.0
+        //        cell.titleLabel.layer.borderWidth = 2.0
+        //        cell.titleLabel.layer.borderColor = UIColor.blue.cgColor
+        
+        cell.titleLabel.font = UIFont(name: "Montserrat-Light", size: 25)
+        cell.titleLabel?.textColor = UIColor.darkGray
         let labelName = programCatogories[indexPath.row]
         guard let languageDict = Translation.supportVC["Spanish"] as? [String : String],
             let labelNameInLanguage = languageDict[labelName] else { return cell }
@@ -111,7 +121,7 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
         cell.alpha = 0
         UIView.animate(withDuration: 1.5, delay: 0.2 * Double(indexPath.row), options: [], animations: {
             cell.alpha = 1.0
-        }, completion: nil)
+            }, completion: nil)
     }
     
     func animateCells() {
@@ -123,7 +133,7 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
             UIView.animate(withDuration: 1.5, delay: 0.2 * Double(index), options: .curveEaseInOut, animations: {
                 cell.alpha = 1.0
                 cell.transform = .identity
-            }, completion: nil)
+                }, completion: nil)
         }
     }
     
@@ -132,7 +142,7 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
         familyImageView.alpha = 0
         UIView.animate(withDuration: 0.4, delay: 0.6, options: .curveEaseIn, animations: {
             self.familyImageView.alpha = 1.0
-        }, completion: nil)
+            }, completion: nil)
     }
     
     // MARK: Setup

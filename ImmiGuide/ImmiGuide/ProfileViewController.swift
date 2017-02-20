@@ -17,6 +17,8 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.barTintColor = UIColor(red:1.00, green:0.36, blue:0.36, alpha:1.0)
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         tableView.delegate = self
@@ -61,11 +63,11 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         let cell = tableView.dequeueReusableCell(withIdentifier: "MeetTheTeam", for: indexPath) as! MeetTheTeamTableViewCell
         cell.cellLabel?.text = " Meet The Team!"
         cell.cellLabel.textAlignment = .center
-        cell.cellLabel.font = UIFont(name: "Montserrat-Medium", size: 16)
-        cell.cellLabel.textColor = UIColor.gray
+        cell.cellLabel.font = UIFont(name: "Montserrat-Light", size: 20)
+        cell.cellLabel.textColor = UIColor.darkGray
         return cell
     }
-
+    
     /*
      // MARK: - Navigation
      
