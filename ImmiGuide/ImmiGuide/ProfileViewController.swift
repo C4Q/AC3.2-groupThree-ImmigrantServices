@@ -13,6 +13,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var currentLocation: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
+    let languages = ["Spain"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +38,8 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SettingCollectionViewCell.identifier, for: indexPath) as! SettingCollectionViewCell
-        cell.flagImage.image = UIImage(named: "Spain")
+        let language = languages[indexPath.item]
+        cell.flagImage.image = UIImage(named: language)
         return cell
     }
     
@@ -45,6 +47,10 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         let width = view.frame.width * 0.25
         return CGSize(width: width, height: width)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(languages[indexPath.item])
     }
     
     // MARK: - Table View
