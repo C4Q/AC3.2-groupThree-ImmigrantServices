@@ -44,7 +44,7 @@ class Translation {
             "ESOL" : "Inglés como Segundo Idioma",
             "ESOL/Civics" : "ESOL/ Civics",
             "Family Literacy" : "Leer, Escribir y Hablar en Inglés para Familias",
-            "A parent 16 Years Old or Older" : "Un padre de familia de 16 años o más"
+            "A parent 16 Years Old or Older " : "Un padre de familia de 16 años o más"
         ],
         "English" : [
             "GED" : "GED",
@@ -55,7 +55,7 @@ class Translation {
             "ESOL" : "ESOL",
             "ESOL/Civics" : "ESOL/Civics",
             "Family Literacy" : "Family Literacy",
-            "A parent 16 Years Old or Older" : "A parent 16 Years Old or Older"
+            "A parent 16 Years Old or Older " : "A parent 16 Years Old or Older"
         ]
     ]
     
