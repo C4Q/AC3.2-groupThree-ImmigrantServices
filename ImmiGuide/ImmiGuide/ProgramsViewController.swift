@@ -14,6 +14,7 @@ private let segueID  = "SegueToProgramDetails"
 
 class ProgramsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var language: String!
     var gedLocations = [GED]()
     var rwLocations = [ReadingWritingLiteracyPrograms]()
     var dict = [String : String]()
@@ -34,6 +35,12 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
         programsTableView.separatorInset = UIEdgeInsets.init(top: 0, left: 15, bottom: 0, right: 15)
         programsTableView.layoutMargins = UIEdgeInsets.zero
         programsTableView.separatorColor = UIColor.darkGray
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        language = Translation.getLanguageFromDefauls()
+        programsTableView.reloadData()
     }
     
     func getGEDData() {
@@ -131,7 +138,7 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
             let category = cat[indexPath.row]
             cell = programsTableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
             if let cell = cell as? ProgramTableViewCell {
-                if let languageDict = Translation.programVC["Spanish"] as? [String : String],
+                if let languageDict = Translation.programVC[language] as? [String : String],
                     let labelTextName = languageDict[category] {
                     
                     cell.nameOfProgram.text = labelTextName

@@ -29,12 +29,6 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
         setupViewHierarchy()
         configureConstraints()
         animateFamilyIcon()
-        let defaults = UserDefaults()
-        if let setLanguage = defaults.value(forKey: "language") as? String {
-            language = setLanguage
-            print(setLanguage)
-        }
-        
         self.navigationController?.navigationBar.barTintColor = UIColor(red:1.00, green:0.36, blue:0.36, alpha:1.0)
         
         supportProgramsTableView.delegate = self
@@ -61,6 +55,12 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        language = Translation.getLanguageFromDefauls()
+        supportProgramsTableView.reloadData()
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -82,7 +82,7 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
         cell.titleLabel.font = UIFont(name: "Montserrat-Light", size: 25)
         cell.titleLabel?.textColor = UIColor.darkGray
         let labelName = programCatogories[indexPath.row]
-        guard let languageDict = Translation.supportVC["Spanish"] as? [String : String],
+        guard let languageDict = Translation.supportVC[language] as? [String : String],
             let labelNameInLanguage = languageDict[labelName] else { return cell }
         cell.titleLabel.text = labelNameInLanguage
         return cell
