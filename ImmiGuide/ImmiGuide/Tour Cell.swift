@@ -52,7 +52,7 @@ class TourCell: BaseCell {
             imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             textView.leftAnchor.constraint(equalTo: leftAnchor),
             textView.rightAnchor.constraint(equalTo: rightAnchor),
-            textView.topAnchor.constraint(equalTo: topAnchor, constant: 50),
+            textView.topAnchor.constraint(equalTo: topAnchor, constant: 55),
             textView.bottomAnchor.constraint(equalTo: bottomAnchor)
             ].map {$0.isActive = true}
     }

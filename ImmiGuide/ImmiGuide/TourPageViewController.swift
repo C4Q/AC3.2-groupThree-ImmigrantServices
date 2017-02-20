@@ -48,7 +48,7 @@ class TourPageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func setupTourData() {
         if let tourPage1 = UIImage(named: "Tourpage1"), let tourPage2 = UIImage(named: "Tourpage2"), let tourPage3 = UIImage(named: "Flag") {
-            let pageOne = Tour(image: tourPage1, title: "ImmiGuide", description: "Find resources for...")
+            let pageOne = Tour(image: tourPage1, title: "ImmiGuide", description: "Find resources for immigration support")
             let pageTwo = Tour(image: tourPage2, title: "", description: "Fact here")
             let pageThree = Tour(image: tourPage3, title: "Our Mission", description: "Ready to explore?")
             tourData = [pageOne, pageTwo, pageThree]
@@ -106,7 +106,7 @@ class TourPageViewController: UIViewController, UICollectionViewDelegate, UIColl
         button.setTitle("GET STARTED", for: .normal)
         button.titleLabel?.font = UIFont(name: "Montserrat-Light", size: 20)
         button.setTitleColor(UIColor.white, for: .normal)
-        button.layer.borderWidth = 1
+        button.layer.borderWidth = 1.5
         button.layer.cornerRadius = 20
         button.layer.borderColor = UIColor.white.cgColor
         button.backgroundColor = UIColor.clear
@@ -137,7 +137,7 @@ class TourPageViewController: UIViewController, UICollectionViewDelegate, UIColl
         if currentPage == tourData.count - 1 {
             getStartedButton.alpha = 0
             getStartedButton.isHidden = false
-            UIView.animate(withDuration: 0.5) {
+            UIView.animate(withDuration: 1.5) {
                 self.getStartedButton.alpha = 1
             }
         } else {

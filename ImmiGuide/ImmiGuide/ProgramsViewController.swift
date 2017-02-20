@@ -29,6 +29,9 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
         self.getReadingData()
         programsTableView.estimatedRowHeight = 125
         programsTableView.rowHeight = UITableViewAutomaticDimension
+        self.navigationController?.navigationBar.titleTextAttributes =
+            ([NSForegroundColorAttributeName: UIColor.white])
+                self.navigationItem.titleView = UIImageView(image: UIImage(named: "School-52"))
         self.navigationController?.navigationBar.barTintColor = UIColor(red:1.00, green:0.36, blue:0.36, alpha:1.0)
         programsTableView.preservesSuperviewLayoutMargins = false
         programsTableView.separatorInset = UIEdgeInsets.init(top: 0, left: 15, bottom: 0, right: 15)
