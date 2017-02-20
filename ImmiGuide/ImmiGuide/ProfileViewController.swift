@@ -17,6 +17,8 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.barTintColor = UIColor(red:1.00, green:0.36, blue:0.36, alpha:1.0)
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         tableView.delegate = self
@@ -65,7 +67,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         cell.cellLabel.textColor = UIColor.gray
         return cell
     }
-
+    
     /*
      // MARK: - Navigation
      
