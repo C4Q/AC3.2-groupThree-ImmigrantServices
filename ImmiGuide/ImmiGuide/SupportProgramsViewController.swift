@@ -161,7 +161,6 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
             view.centerX.equalTo(circleAndFamilyView.snp.centerX)
             view.centerY.equalTo(circleAndFamilyView.snp.centerY)
         }
-        
     }
     
     // MARK: Lazy Vars
