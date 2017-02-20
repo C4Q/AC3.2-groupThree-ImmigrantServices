@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SnapKit
+import Lottie
 
 private let cellID = "cellID"
 private let gedCellID = "GEDCell"
@@ -35,6 +37,10 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
         programsTableView.separatorInset = UIEdgeInsets.init(top: 0, left: 15, bottom: 0, right: 15)
         programsTableView.layoutMargins = UIEdgeInsets.zero
         programsTableView.separatorColor = UIColor.darkGray
+      
+        setupViewHierarchy()
+        configureConstraints()
+        animateBookAndCircle()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -174,7 +180,8 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
             dest.gedLocation = self.gedLocations
         }
     }
-    
+  
+    // MARK: Animation
     func animateCells() {
         let allVisibleCells = self.programsTableView.visibleCells
         
@@ -187,5 +194,66 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
             }, completion: nil)
         }
     }
+
+    func animateBookAndCircle() {
+      circleAnimationView.play()
+      bookAnimationView.play()
+    }
+  
+    // MARK: Setup
+    func setupViewHierarchy() {
+      view.addSubview(circleAndBookView)
+      view.addSubview(circleAnimationView)
+      view.addSubview(bookAnimationView)
+    }
+  
+    func configureConstraints() {
+      self.edgesForExtendedLayout = []
     
+      circleAndBookView.snp.makeConstraints { (view) in
+        view.top.leading.trailing.equalToSuperview()
+        view.bottom.equalTo(programsTableView.snp.top)
+      }
+    
+      circleAnimationView.snp.makeConstraints { (view) in
+        view.centerX.equalTo(circleAndBookView.snp.centerX)
+        view.centerY.equalTo(circleAndBookView.snp.centerY)
+        view.height.width.equalTo(self.view.snp.height).multipliedBy(0.47)
+      }
+    
+      bookAnimationView.snp.makeConstraints { (view) in
+        view.height.equalTo(circleAnimationView.snp.height)
+        view.width.equalTo(circleAnimationView.snp.width)
+        view.centerX.equalTo(circleAnimationView.snp.centerX)
+        view.centerY.equalTo(circleAnimationView.snp.centerY).multipliedBy(1.2)
+      }
+    }
+  
+    // MARK: Lazy Vars
+    //Views
+    internal lazy var circleAndBookView: UIView = {
+      let view: UIView = UIView()
+      view.translatesAutoresizingMaskIntoConstraints = false
+      view.backgroundColor = .white
+      return view
+    }()
+  
+    //Animation views
+    internal lazy var bookAnimationView: LAAnimationView = {
+      var view: LAAnimationView = LAAnimationView()
+    
+      view = LAAnimationView.animationNamed("BluePenGrayBook")
+      view.contentMode = .scaleAspectFill
+    
+      return view
+    }()
+  
+    internal lazy var circleAnimationView: LAAnimationView = {
+      var view: LAAnimationView = LAAnimationView()
+    
+      view = LAAnimationView.animationNamed("GrayCircle")
+      view.contentMode = .scaleAspectFill
+    
+      return view
+    }()
 }
