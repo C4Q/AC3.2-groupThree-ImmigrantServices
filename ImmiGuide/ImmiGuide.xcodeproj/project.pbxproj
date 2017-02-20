@@ -26,6 +26,10 @@
 		9B8932A71E57AF4F002C13E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8932A61E57AF4F002C13E8 /* ViewController.swift */; };
 		9B8932AA1E57AF4F002C13E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8932A81E57AF4F002C13E8 /* Main.storyboard */; };
 		9B8932AF1E57AF4F002C13E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8932AD1E57AF4F002C13E8 /* LaunchScreen.storyboard */; };
+		9C06211F1E5A576B001768D0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C06211E1E5A576B001768D0 /* ProfileViewController.swift */; };
+		9C0621211E5A578B001768D0 /* SettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0621201E5A578B001768D0 /* SettingCollectionViewCell.swift */; };
+		9C0621231E5A64DD001768D0 /* MeetTheTeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0621221E5A64DD001768D0 /* MeetTheTeamTableViewCell.swift */; };
+		9C0621251E5A671D001768D0 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0621241E5A671D001768D0 /* TeamViewController.swift */; };
 		9C63AE0D1E58C3DF00CAFC4B /* Montserrat-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE081E58C3DF00CAFC4B /* Montserrat-Black.otf */; };
 		9C63AE0E1E58C3DF00CAFC4B /* Montserrat-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE091E58C3DF00CAFC4B /* Montserrat-ExtraLight.otf */; };
 		9C63AE0F1E58C3DF00CAFC4B /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C63AE0A1E58C3DF00CAFC4B /* Montserrat-Light.otf */; };
@@ -63,6 +67,10 @@
 		9B8932A91E57AF4F002C13E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B8932AE1E57AF4F002C13E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B8932B01E57AF50002C13E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C06211E1E5A576B001768D0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9C0621201E5A578B001768D0 /* SettingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCollectionViewCell.swift; sourceTree = "<group>"; };
+		9C0621221E5A64DD001768D0 /* MeetTheTeamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetTheTeamTableViewCell.swift; sourceTree = "<group>"; };
+		9C0621241E5A671D001768D0 /* TeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
 		9C63AE081E58C3DF00CAFC4B /* Montserrat-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.otf"; sourceTree = "<group>"; };
 		9C63AE091E58C3DF00CAFC4B /* Montserrat-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.otf"; sourceTree = "<group>"; };
 		9C63AE0A1E58C3DF00CAFC4B /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
@@ -127,6 +135,8 @@
 				9CBC3DEC1E59665C000B2AF1 /* TourPageViewController.swift */,
 				9B7AD2E81E59050D008BA7A8 /* SupportProgramListViewController.swift */,
 				2DC845871E58EFD500E0A6EB /* ProgramsViewController.swift */,
+				9C06211E1E5A576B001768D0 /* ProfileViewController.swift */,
+				9C0621241E5A671D001768D0 /* TeamViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -156,6 +166,8 @@
 				9B8932A61E57AF4F002C13E8 /* ViewController.swift */,
 				2DC845851E58EFC600E0A6EB /* ProgramTableViewCell.swift */,
 				2DC8458B1E58FE9C00E0A6EB /* GEDTableViewCell.swift */,
+				9C0621201E5A578B001768D0 /* SettingCollectionViewCell.swift */,
+				9C0621221E5A64DD001768D0 /* MeetTheTeamTableViewCell.swift */,
 				9C63AE151E58D49900CAFC4B /* View */,
 				9B1CD65C1E58C52F004854AB /* Controller */,
 				9B1CD65B1E58C51B004854AB /* Model */,
@@ -323,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DC8458A1E58F6A900E0A6EB /* GED.swift in Sources */,
+				9C0621251E5A671D001768D0 /* TeamViewController.swift in Sources */,
 				9C63AE141E58D49300CAFC4B /* Base Cell.swift in Sources */,
 				9B1CD6541E58A22E004854AB /* APIRequestManager.swift in Sources */,
 				2DC8458C1E58FE9C00E0A6EB /* GEDTableViewCell.swift in Sources */,
@@ -335,11 +348,14 @@
 				9B7AD2E91E59050D008BA7A8 /* SupportProgramListViewController.swift in Sources */,
 				2DC845881E58EFD500E0A6EB /* ProgramsViewController.swift in Sources */,
 				9CBC3DED1E59665C000B2AF1 /* TourPageViewController.swift in Sources */,
+				9C0621211E5A578B001768D0 /* SettingCollectionViewCell.swift in Sources */,
 				9B1CD65A1E58B21F004854AB /* SupportProgram.swift in Sources */,
 				9B8932A71E57AF4F002C13E8 /* ViewController.swift in Sources */,
+				9C0621231E5A64DD001768D0 /* MeetTheTeamTableViewCell.swift in Sources */,
 				2DC845861E58EFC600E0A6EB /* ProgramTableViewCell.swift in Sources */,
 				2DA6367C1E58AC8200D5AADE /* Geolocation.swift in Sources */,
 				9C63AE191E58D6ED00CAFC4B /* Tour Cell.swift in Sources */,
+				9C06211F1E5A576B001768D0 /* ProfileViewController.swift in Sources */,
 				9B8932A51E57AF4F002C13E8 /* AppDelegate.swift in Sources */,
 				2DC845961E5A1C3800E0A6EB /* Translation.swift in Sources */,
 			);
