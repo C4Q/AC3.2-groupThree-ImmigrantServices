@@ -19,9 +19,9 @@ class SettingCollectionViewCell: UICollectionViewCell {
         self.addSubview(flagImage)
         setupConstraints()
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(changeLanguage))
-        flagImage.isUserInteractionEnabled = true
-        flagImage.addGestureRecognizer(tapGesture)
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(changeLanguage(sender:)))
+//        flagImage.isUserInteractionEnabled = true
+//        flagImage.addGestureRecognizer(tapGesture)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -34,8 +34,10 @@ class SettingCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func changeLanguage() {
+    func changeLanguage(sender: Any) {
         print("language selection tapped")
+        
+        
     }
     
     lazy var flagImage: UIImageView  = {
