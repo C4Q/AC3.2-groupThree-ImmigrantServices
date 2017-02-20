@@ -10,7 +10,7 @@ import Foundation
 
 class Translation {
     enum TranslationLanguage: String {
-        case Spanish, English
+        case Spanish, English, Chinese
     }
     
     static let supportVC: [String: Any] = [
@@ -31,6 +31,15 @@ class Translation {
             SupportProgramType.ndaImmigrants.rawValue : SupportProgramType.ndaImmigrants.rawValue,
             SupportProgramType.youthServices.rawValue : SupportProgramType.youthServices.rawValue,
             SupportProgramType.refugeeAssistance.rawValue : SupportProgramType.refugeeAssistance.rawValue
+        ],
+        "Chinese" : [
+            SupportProgramType.legalServices.rawValue : "法律服務",
+            SupportProgramType.domesticViolence.rawValue : "家庭暴力",
+            SupportProgramType.immigrantFamilies.rawValue : "移民家庭",
+            SupportProgramType.legalAssistance.rawValue : "法律援助",
+            SupportProgramType.ndaImmigrants.rawValue : "鄰里開發區",
+            SupportProgramType.youthServices.rawValue : "青年服務",
+            SupportProgramType.refugeeAssistance.rawValue : "難民援助"
         ]
     ]
     
@@ -56,6 +65,17 @@ class Translation {
             "ESOL/Civics" : "ESOL/Civics",
             "Family Literacy" : "Family Literacy",
             "A parent 16 Years Old or Older " : "A parent 16 Years Old or Older"
+        ],
+        "Chinese" : [
+            "GED" : "GED",
+            "Adolescent Literacy" : "青少年文化",
+            "grades 6 to 8" : "六至八年級",
+            "Adult Literacy" :  "成人文化",
+            "At least 16 Years Old or Older" : "至少16歲或以上",
+            "ESOL" : "英語作為第二語言",
+            "ESOL/Civics" : "公民",
+            "Family Literacy" : "家庭文化",
+            "A parent 16 Years Old or Older " : "16歲或以上的父母"
         ]
     ]
     
