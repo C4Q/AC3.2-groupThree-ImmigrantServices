@@ -27,6 +27,13 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
         programsTableView.dataSource = self
         self.getGEDData()
         self.getReadingData()
+        programsTableView.estimatedRowHeight = 125
+        programsTableView.rowHeight = UITableViewAutomaticDimension
+        self.navigationController?.navigationBar.barTintColor = UIColor(red:1.00, green:0.36, blue:0.36, alpha:1.0)
+        programsTableView.preservesSuperviewLayoutMargins = false
+        programsTableView.separatorInset = UIEdgeInsets.init(top: 0, left: 15, bottom: 0, right: 15)
+        programsTableView.layoutMargins = UIEdgeInsets.zero
+        programsTableView.separatorColor = UIColor.darkGray
     }
     
     func getGEDData() {
@@ -42,6 +49,7 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
                 }
                 DispatchQueue.main.async {
                     self.programsTableView.reloadData()
+                    self.animateCells()
                 }
             }
             catch {
@@ -64,6 +72,7 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
                 DispatchQueue.main.async {
                     self.getCategoriesAndRefresh()
                     self.sortRWBy()
+                    self.animateCells()
                 }
             }
             catch {
@@ -87,15 +96,6 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
             filteredAgeDict[cat] = filteredByAgeArr
         }
         self.programsTableView.reloadData()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 75.0
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -122,20 +122,27 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
             if let cell = cell as? GEDTableViewCell {
                 guard let languageDict = Translation.programVC["English"] as? [String : String],
                     let labelText = languageDict["GED"] else { return cell }
-                cell.gedLabel.text = labelText
+                cell.gedLabel.text = ("\(labelText)/ College Prep")
+                cell.gedLabel.font = UIFont(name: "Montserrat-Light", size: 25)
+                cell.gedLabel?.textColor = UIColor.darkGray
             }
         case 1:
             let cat = dict.keys.sorted()
             let category = cat[indexPath.row]
             cell = programsTableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
             if let cell = cell as? ProgramTableViewCell {
-            if let languageDict = Translation.programVC["Spanish"] as? [String : String],
-                let labelTextName = languageDict[category] {
-                cell.nameOfProgram.text = labelTextName
+                if let languageDict = Translation.programVC["Spanish"] as? [String : String],
+                    let labelTextName = languageDict[category] {
+                    
+                    cell.nameOfProgram.text = labelTextName
+                    cell.nameOfProgram.font = UIFont(name: "Montserrat-Light", size: 25)
+                    cell.nameOfProgram?.textColor = UIColor.darkGray
+                    
                     DispatchQueue.main.async {
                         if  let age = self.dict[category] {
                             if let ageText = languageDict[age] {
-                            cell.subtitleProgram.text = ageText
+                                cell.subtitleProgram.text = ageText
+                                cell.subtitleProgram.textColor = UIColor.darkGray
                             }
                         }
                     }
@@ -161,5 +168,17 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    func animateCells() {
+        let allVisibleCells = self.programsTableView.visibleCells
+        
+        for (index, cell) in allVisibleCells.enumerated() {
+            cell.transform = CGAffineTransform(translationX: 100.0, y: 0)
+            cell.alpha = 0
+            UIView.animate(withDuration: 1.5, delay: 0.2 * Double(index), options: .curveEaseInOut, animations: {
+                cell.alpha = 1.0
+                cell.transform = .identity
+            }, completion: nil)
+        }
+    }
     
 }
