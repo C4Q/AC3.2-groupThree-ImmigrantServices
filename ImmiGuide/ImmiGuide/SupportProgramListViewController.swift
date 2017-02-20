@@ -28,6 +28,8 @@ class SupportProgramListViewController: UIViewController, UITableViewDataSource,
         
         programListTableView.delegate = self
         programListTableView.dataSource = self
+        programListTableView.estimatedRowHeight = 100.0
+        programListTableView.rowHeight = UITableViewAutomaticDimension
         mapView.delegate = self
         mapView.mapType  = .standard
         mapView.isZoomEnabled = true
@@ -64,19 +66,19 @@ class SupportProgramListViewController: UIViewController, UITableViewDataSource,
             let description = index.location.description
             cell.siteNameLabel.text = index.siteName
             cell.addressLabel.text = description
-            cell.phoneNumberLabel.setTitle("Contact: \(index.contactNumber)", for: .normal)
+            cell.phoneNumberLabel.setTitle("\(index.contactNumber)", for: .normal)
         } else if !categoryChosen.isEmpty {
             let site = categoryChosen[indexPath.row]
             let description = site.agencyLocation?.description
             cell.siteNameLabel.text = site.agencyName
             cell.addressLabel.text = description
-            cell.phoneNumberLabel.setTitle("Contact: \(site.agencyPhoneNumber)", for: .normal)
+            cell.phoneNumberLabel.setTitle("\(site.agencyPhoneNumber)", for: .normal)
         } else if !gedLocation.isEmpty {
             let site = gedLocation[indexPath.row]
             let description = site.description
             cell.siteNameLabel.text = site.siteName
             cell.addressLabel.text = description
-            cell.phoneNumberLabel.setTitle("Contact: \(site.contactNumber)", for: .normal)
+            cell.phoneNumberLabel.setTitle("\(site.contactNumber)", for: .normal)
         }
     
         return cell

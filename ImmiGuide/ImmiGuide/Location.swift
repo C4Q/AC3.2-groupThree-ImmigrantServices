@@ -16,7 +16,7 @@ class Location {
     var geolocation: Geolocation
     
     var description: String {
-        return "\(location) \n\(borough), \(state) \(zip)"
+        return "\(location) \(borough), \(state) \(zip)"
     }
     
     init?(borough: String , location: String, state: String, zip: String, geolocation: Geolocation) {
