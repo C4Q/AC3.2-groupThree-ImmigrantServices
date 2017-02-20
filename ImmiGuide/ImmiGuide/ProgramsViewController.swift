@@ -139,7 +139,6 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
                     cell.nameOfProgram?.textColor = UIColor.darkGray
                     
                     DispatchQueue.main.async {
-                        dump(self.dict)
                         if  let age = self.dict[category] {
                             if let ageText = languageDict[age] {
                                 cell.subtitleProgram.text = ageText
