@@ -50,7 +50,9 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(languages[indexPath.item])
+        let languageSelected = languages[indexPath.item]
+        let defaults = UserDefaults()
+        defaults.setValue(languageSelected, forKey: "language")
     }
     
     // MARK: - Table View

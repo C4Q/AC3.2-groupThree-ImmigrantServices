@@ -78,7 +78,6 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
             let age = loc.ageGroup
             dict[program] = age
         }
-        dump(dict)
     }
     
     func sortRWBy() {
@@ -134,7 +133,6 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
                 let labelTextName = languageDict[category] {
                 cell.nameOfProgram.text = labelTextName
                     DispatchQueue.main.async {
-                        dump(self.dict)
                         if  let age = self.dict[category] {
                             if let ageText = languageDict[age] {
                             cell.subtitleProgram.text = ageText

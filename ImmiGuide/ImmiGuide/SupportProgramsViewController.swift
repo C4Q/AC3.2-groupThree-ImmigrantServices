@@ -16,6 +16,8 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var contanierView: UIView!
     @IBOutlet weak var supportProgramsTableView: UITableView!
     
+    var language: String!
+    
     let apiEndPoint = "https://data.cityofnewyork.us/resource/tm2y-4xcp.json"
     //let apiEndPoint = "https://data.cityofnewyork.us/resource/tm2y-4xcp.json?$$app_token=nm76DTR92XyaW6KqlXQewFfXn"
     
@@ -27,6 +29,11 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
         setupViewHierarchy()
         configureConstraints()
         animateFamilyIcon()
+        let defaults = UserDefaults()
+        if let setLanguage = defaults.value(forKey: "language") as? String {
+            language = setLanguage
+            print(setLanguage)
+        }
         
         supportProgramsTableView.delegate = self
         supportProgramsTableView.dataSource = self
