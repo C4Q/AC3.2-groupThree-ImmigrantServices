@@ -6,6 +6,11 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Medium.otf">
+            <string>Montserrat-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Profile View Controller-->
         <scene sceneID="ew0-vg-Yvn">
@@ -19,12 +24,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wuQ-cP-tuR">
-                                <color key="backgroundColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flag" translatesAutoresizingMaskIntoConstraints="NO" id="w3n-nr-myz">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="Rmz-xx-PBF"/>
+                                    <constraint firstAttribute="height" constant="230" id="B6K-W0-QZ4"/>
                                 </constraints>
-                            </view>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-1" translatesAutoresizingMaskIntoConstraints="NO" id="1Oe-8z-Lsq">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="NAf-zU-rxu"/>
@@ -35,8 +39,8 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="TbP-Ny-yaK"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pin" translatesAutoresizingMaskIntoConstraints="NO" id="dGc-kK-YI1">
@@ -99,15 +103,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="lgG-10-13i" secondAttribute="trailing" id="2c4-oJ-Ida"/>
-                            <constraint firstAttribute="trailing" secondItem="wuQ-cP-tuR" secondAttribute="trailing" id="70y-Oz-K19"/>
                             <constraint firstItem="1Oe-8z-Lsq" firstAttribute="centerY" secondItem="5LX-ga-fRu" secondAttribute="centerY" constant="-50" id="9rz-0O-5xE"/>
                             <constraint firstItem="p0q-yt-aHt" firstAttribute="centerX" secondItem="1Oe-8z-Lsq" secondAttribute="centerX" id="B3u-fQ-c96"/>
-                            <constraint firstItem="wuQ-cP-tuR" firstAttribute="top" secondItem="EfB-Iq-oNq" secondAttribute="bottom" id="DD9-OU-TjN"/>
+                            <constraint firstAttribute="trailing" secondItem="w3n-nr-myz" secondAttribute="trailing" id="Doo-8i-LQc"/>
                             <constraint firstItem="1Oe-8z-Lsq" firstAttribute="centerX" secondItem="5LX-ga-fRu" secondAttribute="centerX" id="EIY-Q1-mRn"/>
                             <constraint firstAttribute="trailing" secondItem="qoU-8V-PNK" secondAttribute="trailing" id="Hho-Rk-emG"/>
                             <constraint firstItem="p0q-yt-aHt" firstAttribute="leading" secondItem="dGc-kK-YI1" secondAttribute="trailing" constant="5" id="IIx-V4-WPY"/>
                             <constraint firstItem="lgG-10-13i" firstAttribute="top" secondItem="qoU-8V-PNK" secondAttribute="bottom" id="P2U-An-mDt"/>
-                            <constraint firstItem="wuQ-cP-tuR" firstAttribute="leading" secondItem="5LX-ga-fRu" secondAttribute="leading" id="Qzb-XS-uR5"/>
+                            <constraint firstItem="w3n-nr-myz" firstAttribute="top" secondItem="EfB-Iq-oNq" secondAttribute="bottom" id="S5y-mD-1bZ"/>
+                            <constraint firstItem="w3n-nr-myz" firstAttribute="leading" secondItem="5LX-ga-fRu" secondAttribute="leading" id="WHR-HN-lGq"/>
                             <constraint firstAttribute="bottom" secondItem="lgG-10-13i" secondAttribute="bottom" id="XIp-aP-bnM"/>
                             <constraint firstItem="p0q-yt-aHt" firstAttribute="centerX" secondItem="5LX-ga-fRu" secondAttribute="centerX" id="ZeX-js-v63"/>
                             <constraint firstItem="lgG-10-13i" firstAttribute="leading" secondItem="5LX-ga-fRu" secondAttribute="leading" id="bEu-8f-wR6"/>
@@ -120,7 +124,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="aiC-Jz-vbn">
                         <barButtonItem key="backBarButtonItem" title=" " id="efc-jU-uvT"/>
-                        <barButtonItem key="rightBarButtonItem" image="Edit-64" id="qhI-yc-qeo"/>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="qoU-8V-PNK" id="tLt-gB-yaF"/>
@@ -519,8 +522,8 @@
     </scenes>
     <resources>
         <image name="Delete" width="25" height="25"/>
-        <image name="Edit-64" width="32" height="32"/>
         <image name="Education" width="25" height="25"/>
+        <image name="Flag" width="2832" height="4240"/>
         <image name="Home" width="25" height="25"/>
         <image name="Pin" width="50" height="50"/>
         <image name="Profile" width="25" height="25"/>
