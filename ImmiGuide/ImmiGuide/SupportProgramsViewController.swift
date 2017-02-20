@@ -73,6 +73,7 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
         //        cell.titleLabel.layer.borderColor = UIColor.blue.cgColor
         
         cell.titleLabel.font = UIFont(name: "Montserrat-Light", size: 25)
+        cell.titleLabel?.textColor = UIColor.darkGray
         let labelName = programCatogories[indexPath.row]
         guard let languageDict = Translation.supportVC["Spanish"] as? [String : String],
             let labelNameInLanguage = languageDict[labelName] else { return cell }

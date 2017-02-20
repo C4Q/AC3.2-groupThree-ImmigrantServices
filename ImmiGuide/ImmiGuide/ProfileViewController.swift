@@ -63,8 +63,8 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         let cell = tableView.dequeueReusableCell(withIdentifier: "MeetTheTeam", for: indexPath) as! MeetTheTeamTableViewCell
         cell.cellLabel?.text = " Meet The Team!"
         cell.cellLabel.textAlignment = .center
-        cell.cellLabel.font = UIFont(name: "Montserrat-Medium", size: 16)
-        cell.cellLabel.textColor = UIColor.gray
+        cell.cellLabel.font = UIFont(name: "Montserrat-Light", size: 20)
+        cell.cellLabel.textColor = UIColor.darkGray
         return cell
     }
     

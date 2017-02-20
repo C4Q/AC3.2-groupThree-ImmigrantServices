@@ -133,6 +133,7 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
                     let labelText = languageDict["GED"] else { return cell }
                 cell.gedLabel.text = labelText
                 cell.gedLabel.font = UIFont(name: "Montserrat-Light", size: 25)
+                cell.gedLabel?.textColor = UIColor.darkGray
             }
         case 1:
             let cat = dict.keys.sorted()
@@ -144,12 +145,14 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
                     
                     cell.nameOfProgram.text = labelTextName
                     cell.nameOfProgram.font = UIFont(name: "Montserrat-Light", size: 25)
+                    cell.nameOfProgram?.textColor = UIColor.darkGray
                     
                     DispatchQueue.main.async {
                         dump(self.dict)
                         if  let age = self.dict[category] {
                             if let ageText = languageDict[age] {
                                 cell.subtitleProgram.text = ageText
+                                cell.subtitleProgram.textColor = UIColor.darkGray
                             }
                         }
                     }
