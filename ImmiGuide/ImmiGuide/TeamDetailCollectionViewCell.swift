@@ -13,6 +13,7 @@ class TeamDetailCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     
+    let teamArray = [("Annie Tung", "https://www.linkedin.com/in/tungannie/"), ("Christopher Chavez", "https://www.linkedin.com/in/cristopher-chavez-6693b965/"), ("Eashir Arafat","https://www.linkedin.com/in/eashirarafat/"), ("Madushani Lekam Wasam Liyanage", "https://www.linkedin.com/in/madushani-lekam-wasam-liyanage-74319bb5/")]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,5 +23,7 @@ class TeamDetailCollectionViewCell: UICollectionViewCell {
     
     @IBAction func linkedInButtonTapped(_ sender: UIButton) {
         
+        
+       let view = "WebView"
     }
 }

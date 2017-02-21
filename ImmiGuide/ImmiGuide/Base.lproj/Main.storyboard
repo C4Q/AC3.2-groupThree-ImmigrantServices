@@ -158,7 +158,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="feedbackLabel" destination="1gA-hi-wb2" id="bQb-Ui-uH3"/>
-                                            <segue destination="zvq-IR-r4a" kind="show" id="lSX-dU-nQ3"/>
+                                            <segue destination="zvq-IR-r4a" kind="show" identifier="GoogleFormSegue" id="lSX-dU-nQ3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -264,7 +264,7 @@
         <!--Contact Us View Controller-->
         <scene sceneID="dwb-7P-ngP">
             <objects>
-                <viewController id="zvq-IR-r4a" customClass="ContactUsViewController" customModule="ImmiGuide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebView" id="zvq-IR-r4a" customClass="ContactUsViewController" customModule="ImmiGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mx7-lW-jsc"/>
                         <viewControllerLayoutGuide type="bottom" id="qb0-Xk-OAD"/>
