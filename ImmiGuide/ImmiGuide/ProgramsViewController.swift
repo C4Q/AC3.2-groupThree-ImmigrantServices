@@ -44,13 +44,13 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
         
         setupViewHierarchy()
         configureConstraints()
+        animateBookAndCircle()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         language = Translation.getLanguageFromDefauls()
         programsTableView.reloadData()
-        animateBookAndCircle()
         animateCells()
     }
     
