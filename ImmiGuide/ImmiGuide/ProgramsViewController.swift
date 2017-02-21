@@ -24,6 +24,17 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var programsTableView: UITableView!
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        let userDefaults = UserDefaults.standard
+        let appLanguage = userDefaults.object(forKey: TranslationLanguage.appLanguage.rawValue)
+        if let language = appLanguage as? String,
+            let languageDict = Translation.tabBarTranslation[language],
+            let firstTab = languageDict["Education"] {
+            self.navigationController?.tabBarItem.title = firstTab
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         programsTableView.delegate = self
@@ -186,7 +197,71 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
             dest.gedLocation = self.gedLocations
         }
     }
-  
+    
+    // MARK: UITabBarController Delegate
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+                let tabBarIndex = tabBarController.selectedIndex
+                switch tabBarIndex {
+                case 0:
+                    language = Translation.getLanguageFromDefauls()
+                    if let tabBars = tabBarController.customizableViewControllers {
+                        for (index,item) in tabBars.enumerated() {
+                            if let languageDict = Translation.tabBarTranslation[language],
+                                let communityTabName = languageDict["Community"],
+                                let educationTabName = languageDict["Education"],
+                                let settingsTabName = languageDict["Settings"] {
+                                if index == 0 {
+                                    item.tabBarItem.title = communityTabName
+                                } else if index == 1 {
+                                    item.tabBarItem.title = educationTabName
+                                } else if index == 2 {
+                                    item.tabBarItem.title = settingsTabName
+                                }
+                            }
+                        }
+                    }
+                case 1:
+                    language = Translation.getLanguageFromDefauls()
+                    if let tabBars = tabBarController.customizableViewControllers {
+                        for (index,item) in tabBars.enumerated() {
+                            if let languageDict = Translation.tabBarTranslation[language],
+                                let communityTabName = languageDict["Community"],
+                                let educationTabName = languageDict["Education"],
+                                let settingsTabName = languageDict["Settings"] {
+                                if index == 0 {
+                                    item.tabBarItem.title = communityTabName
+                                } else if index == 1 {
+                                    item.tabBarItem.title = educationTabName
+                                } else if index == 2 {
+                                    item.tabBarItem.title = settingsTabName
+                                }
+                            }
+                        }
+                    }
+                case 2:
+                    language = Translation.getLanguageFromDefauls()
+                    if let tabBars = tabBarController.customizableViewControllers {
+                        for (index,item) in tabBars.enumerated() {
+                            if let languageDict = Translation.tabBarTranslation[language],
+                                let communityTabName = languageDict["Community"],
+                                let educationTabName = languageDict["Education"],
+                                let settingsTabName = languageDict["Settings"] {
+                                if index == 0 {
+                                    item.tabBarItem.title = communityTabName
+                                } else if index == 1 {
+                                    item.tabBarItem.title = educationTabName
+                                } else if index == 2 {
+                                    item.tabBarItem.title = settingsTabName
+                                }
+                            }
+                        }
+                    }
+                default:
+                    break
+                }
+    }
+    
     // MARK: Animation
     func animateCells() {
         let allVisibleCells = self.programsTableView.visibleCells
@@ -197,7 +272,7 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
             UIView.animate(withDuration: 1.5, delay: 0.2 * Double(index), options: .curveEaseInOut, animations: {
                 cell.alpha = 1.0
                 cell.transform = .identity
-                }, completion: nil)
+            }, completion: nil)
         }
     }
     

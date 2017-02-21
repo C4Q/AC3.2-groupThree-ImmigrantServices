@@ -8,12 +8,23 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITableViewDelegate, UITableViewDataSource {
+class ProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITableViewDelegate, UITableViewDataSource,UITabBarControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     let imageNames = ["Spain", "china", "united-states"]
     var currentLanguage: String!
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        let userDefaults = UserDefaults.standard
+        let appLanguage = userDefaults.object(forKey: TranslationLanguage.appLanguage.rawValue)
+        if let language = appLanguage as? String,
+            let languageDict = Translation.tabBarTranslation[language],
+            let firstTab = languageDict["Settings"] {
+            self.navigationController?.tabBarItem.title = firstTab
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,8 +118,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
             return cell
         }
     }
-    
- 
+
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation

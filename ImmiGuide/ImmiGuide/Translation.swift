@@ -46,7 +46,7 @@ class Translation {
     
     static let programVC: [String : Any] = [
         TranslationLanguage.spanish.rawValue : [
-            "GED" : "GED",
+            "GED" : "GED/ Preparación para la Universidad",
             "Adolescent Literacy" : "Literatura de Adolescentes",
             "grades 6 to 8" : "Los Grados 6 a 8",
             "Adult Literacy" : "Leer, Escribir y Hablar en Inglés",
@@ -68,15 +68,33 @@ class Translation {
             "A parent 16 Years Old or Older " : "A parent 16 Years Old or Older"
         ],
         TranslationLanguage.chinese.rawValue : [
-            "GED" : "GED",
+            "GED" : "GED/大学准备",
             "Adolescent Literacy" : "青少年文化",
-            "grades 6 to 8" : "六至八年級",
+            "grades 6 to 8" : "六至八年级",
             "Adult Literacy" :  "成人文化",
-            "At least 16 Years Old or Older" : "至少16歲或以上",
-            "ESOL" : "英語作為第二語言",
+            "At least 16 Years Old or Older" : "至少16岁或以上",
+            "ESOL" : "英语作为第二语言",
             "ESOL/Civics" : "公民",
             "Family Literacy" : "家庭文化",
-            "A parent 16 Years Old or Older " : "16歲或以上的父母"
+            "A parent 16 Years Old or Older " : "16岁或以上的父母"
+        ]
+    ]
+
+    static let tabBarTranslation = [
+        TranslationLanguage.spanish.rawValue : [
+            "Community" : "Comunidad",
+            "Education" : "Educación",
+            "Settings" : "Preferencias"
+        ],
+        TranslationLanguage.english.rawValue : [
+            "Community" : "Community",
+            "Education" : "Education",
+            "Settings" : "Settings"
+        ],
+        TranslationLanguage.chinese.rawValue : [
+            "Community" : "社区",
+            "Education" : "教育",
+            "Settings" : "设置"
         ]
     ]
     

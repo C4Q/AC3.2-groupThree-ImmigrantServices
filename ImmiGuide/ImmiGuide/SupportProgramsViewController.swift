@@ -10,12 +10,23 @@ import UIKit
 import Lottie
 import SnapKit
 
-class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UITabBarControllerDelegate {
     
     @IBOutlet weak var contanierView: UIView!
     @IBOutlet weak var supportProgramsTableView: UITableView!
     
     var language: String!
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        let userDefaults = UserDefaults.standard
+        let appLanguage = userDefaults.object(forKey: TranslationLanguage.appLanguage.rawValue)
+        if let language = appLanguage as? String,
+            let languageDict = Translation.tabBarTranslation[language],
+            let firstTab = languageDict["Community"] {
+            self.navigationController?.tabBarItem.title = firstTab
+        }
+    }
     
     let apiEndPoint = "https://data.cityofnewyork.us/resource/tm2y-4xcp.json"
     //let apiEndPoint = "https://data.cityofnewyork.us/resource/tm2y-4xcp.json?$$app_token=nm76DTR92XyaW6KqlXQewFfXn"
@@ -25,12 +36,14 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-                self.navigationController?.navigationBar.titleTextAttributes =
-                    ([NSForegroundColorAttributeName: UIColor.white])
+        setupViewHierarchy()
+        configureConstraints()
+        animateFamilyIcon()
+        self.navigationController?.navigationBar.titleTextAttributes =
+            ([NSForegroundColorAttributeName: UIColor.white])
         self.navigationItem.titleView = UIImageView(image: UIImage(named: "Home-64"))
         self.navigationController?.navigationBar.barTintColor = UIColor(red:1.00, green:0.36, blue:0.36, alpha:1.0)
-        
+        self.tabBarController?.delegate = self
         supportProgramsTableView.delegate = self
         supportProgramsTableView.dataSource = self
         supportProgramsTableView.rowHeight = 100.0
@@ -133,7 +146,7 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
         cell.alpha = 0
         UIView.animate(withDuration: 1.5, delay: 0.2 * Double(indexPath.row), options: [], animations: {
             cell.alpha = 1.0
-            }, completion: nil)
+        }, completion: nil)
     }
     
     func animateCells() {
@@ -145,7 +158,7 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
             UIView.animate(withDuration: 1.5, delay: 0.2 * Double(index), options: .curveEaseInOut, animations: {
                 cell.alpha = 1.0
                 cell.transform = .identity
-                }, completion: nil)
+            }, completion: nil)
         }
     }
     
@@ -154,7 +167,7 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
         familyImageView.alpha = 0
         UIView.animate(withDuration: 0.4, delay: 0.6, options: .curveEaseIn, animations: {
             self.familyImageView.alpha = 1.0
-            }, completion: nil)
+        }, completion: nil)
     }
   
     // MARK: Setup
