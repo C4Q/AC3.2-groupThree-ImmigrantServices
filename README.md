@@ -5,7 +5,7 @@ NYC Population is about 8.5 million, and approximately 37% of the population con
 
 When we researched apps to try and solve this problem, we found that they were scattered all over. They’re hard to navigate through and they are quite expensive. There are no apps that provide information regarding Legal Services office phone numbers, or Reading & Writing Center phone numbers, or even GED program and Domestic Violence Center locations for immigrants. That’s why we came up with ImmiGuide, a mobile application that provides support to immigrants at their fingertips!
 
-![](http://giphy.com/gifs/xTiN0AnuD8rxwNG3Ha)
+![](https://media.giphy.com/media/xTiN0AnuD8rxwNG3Ha/giphy.gif)
 
 ##The app is also avilable in a few different languages, with more languages to come!
 ![ScreenShot](https://lh3.googleusercontent.com/uMpr56SCu2M9EinHSoNiR2jp-krDm37tDUcyRBZh5ekOYqkTFsRpTOofYhT7TKemdCZifUSFKznXk_9QmpqsdDzW8OPdnhEr23M7-YhewNcrOymFbq13DfwxSHQlfE7_oaI78k2eLyaIxCN1USjOE0qxZK1ODPZVBlvbVmyqVuEerKCNrB2gaxW9_5uTD-6RhIanopsoKx1IMGKxZCJmVAunDH0XWIBhvdQX8OkobFovfdHTLlrYijITWd3HCjq-1w11ZyLVNhl7P2NlmzaF5XiWGbK3jLKNw31zUjRXsOFg1Ea3BST2-uEdXG5-QSWGKrWcG5QYkpKzbVN6A3LTCAPaRKGCk05kYBWIlyUjccQVlyAnhWBGFfQ-OvY2iwjYre6swWq1aF4NBi1YMv8nv86d73cgbCpesHbt4b5j8mpYJ67HLtMskNB-rkpT2_pRR1v1bbE7ZAIe7CSE8AGGvnF-wc5QCt7qH1I8rHWej8axIbNhwBTDhsWjmLh5hd0qVFPH3O5Dj_M_KakKUK8gCg3Grw6g4m-Jre2cYBocYZ64deEWgHARbJO1CV4pG61v3-mehebZv1c8Hl9oMdo9-KQk_CZyHynjWshRcgYe_tiGDw3fH1bT=w558-h996-no)
