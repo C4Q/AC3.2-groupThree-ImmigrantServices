@@ -34,9 +34,6 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
         supportProgramsTableView.delegate = self
         supportProgramsTableView.dataSource = self
         supportProgramsTableView.rowHeight = 100.0
-        //        supportProgramsTableView.separatorColor = .clear
-        //        supportProgramsTableView.tableFooterView = UIView()
-        
         supportProgramsTableView.preservesSuperviewLayoutMargins = false
         supportProgramsTableView.separatorInset = UIEdgeInsets.init(top: 0, left: 15, bottom: 0, right: 15)
         supportProgramsTableView.layoutMargins = UIEdgeInsets.zero
@@ -77,13 +74,6 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = supportProgramsTableView.dequeueReusableCell(withIdentifier: "supportPraogramCellIdentifier", for: indexPath) as! SupportProgramTableViewCell
-        //        cell.layer.cornerRadius = 25.0
-        //        cell.layer.borderWidth = 2.0
-        //        cell.layer.borderColor = UIColor.blue.cgColor
-        //        cell.titleLabel.layer.cornerRadius = 25.0
-        //        cell.titleLabel.layer.borderWidth = 2.0
-        //        cell.titleLabel.layer.borderColor = UIColor.blue.cgColor
-        
         cell.titleLabel.font = UIFont(name: "Montserrat-Light", size: 25)
         cell.titleLabel?.textColor = UIColor.darkGray
         let labelName = programCatogories[indexPath.row]

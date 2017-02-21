@@ -8,32 +8,6 @@
 
 import Foundation
 
-/*
- {
- ":@computed_region_92fq_4b7q": "10",
- ":@computed_region_efsh_h5xi": "12080",
- ":@computed_region_f5dn_yrer": "12",
- ":@computed_region_sbqj_enih": "6",
- ":@computed_region_yeji_bk3q": "4",
- "agency": "New York Legal Assistance Group (NYLAG)",
- "borough_community": "Manhattan",
- "contact_number": "212.613.5098",
- "grade_level_age_group": "Adult",
- "location_1": {
- "type": "Point",
- "coordinates": [
- -73.99669149981281,
- 40.756840774582145
- ]
- },
- "location_1_city": "NEW YORK",
- "location_1_location": "594 Manhattan",
- "location_1_zip": "10018",
- "program": "Domestic Violence Program",
- "program_type": "Immigration Services,Immigrant Support Services",
- "site_name": "Jewish Board of Family and Children Services (JBFCS)-Genesis"
- },
- */
 enum SupportProgramModelParseError: Error {
     case results(json: Any)
 }
