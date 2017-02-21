@@ -10,7 +10,7 @@ import UIKit
 import Lottie
 import SnapKit
 
-class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITabBarControllerDelegate {
+class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var contanierView: UIView!
     @IBOutlet weak var supportProgramsTableView: UITableView!
@@ -33,8 +33,6 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
         
         supportProgramsTableView.delegate = self
         supportProgramsTableView.dataSource = self
-        self.tabBarController?.delegate = self
-      
         supportProgramsTableView.rowHeight = 100.0
         //        supportProgramsTableView.separatorColor = .clear
         //        supportProgramsTableView.tableFooterView = UIView()
