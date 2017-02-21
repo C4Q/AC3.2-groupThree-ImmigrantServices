@@ -10,7 +10,7 @@ import UIKit
 import Lottie
 import SnapKit
 
-class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITabBarControllerDelegate {
     
     
     @IBOutlet weak var contanierView: UIView!
@@ -155,8 +155,22 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
             self.familyImageView.alpha = 1.0
             }, completion: nil)
     }
-    
+  
+    // MARK: UITabBarController Delegate
+  
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+      let tabBarIndex = tabBarController.selectedIndex
+      switch tabBarIndex {
+      case 0:
+        animateFamilyIcon()
+      default:
+        break
+      }
+    }
+
+  
     // MARK: Setup
+  
     func setupViewHierarchy() {
         view.addSubview(circleAndFamilyView)
         view.addSubview(familyImageView)
@@ -173,7 +187,7 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
         circleAnimationView.snp.makeConstraints { (view) in
             view.centerX.equalTo(circleAndFamilyView.snp.centerX)
             view.centerY.equalTo(circleAndFamilyView.snp.centerY)
-            view.height.width.equalTo(300)
+            view.height.width.equalTo(self.view.snp.height).multipliedBy(0.47)
         }
         
         familyImageView.snp.makeConstraints { (view) in
@@ -185,6 +199,7 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     // MARK: Lazy Vars
+  
     //Views
     internal lazy var circleAndFamilyView: UIView = {
         let view: UIView = UIView()
