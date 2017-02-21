@@ -17,7 +17,7 @@ class TourCell: BaseCell {
         let image = UIImage(named: "Tourpage1")
         let im = UIImageView(image: image)
         im.translatesAutoresizingMaskIntoConstraints = false
-//        im.alpha = 0.90
+        im.alpha = 0.9
         im.contentMode = .scaleAspectFill
         im.clipsToBounds = true
         return im
@@ -60,10 +60,15 @@ class TourCell: BaseCell {
     private func setup(tour: Tour) {
         imageView.image = tour.image
         
-        if let boldFont = UIFont(name: "Montserrat-Medium", size: 40), let regularFont = UIFont(name: "Montserrat-Light", size: 20) {
+        if let boldFont = UIFont(name: "Montserrat-Medium", size: 41), let regularFont = UIFont(name: "Montserrat-Light", size: 21) {
             
-            let attributedString = NSMutableAttributedString(string: tour.title, attributes: [NSForegroundColorAttributeName:UIColor.white, NSFontAttributeName: boldFont])
-            let descriptionString = NSMutableAttributedString(string: "\n\n" + tour.description, attributes: [NSForegroundColorAttributeName:UIColor.white, NSFontAttributeName: regularFont])
+            let shadow = NSShadow()
+            shadow.shadowColor = UIColor.darkGray
+            shadow.shadowOffset = CGSize(width: 1, height: 1)
+            shadow.shadowBlurRadius = 8
+            
+            let attributedString = NSMutableAttributedString(string: tour.title, attributes: [NSForegroundColorAttributeName:UIColor.white, NSFontAttributeName:boldFont,NSShadowAttributeName:shadow])
+            let descriptionString = NSMutableAttributedString(string: "\n\n" + tour.description, attributes: [NSForegroundColorAttributeName:UIColor.white, NSFontAttributeName:regularFont, NSShadowAttributeName:shadow])
             
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.alignment = .center
