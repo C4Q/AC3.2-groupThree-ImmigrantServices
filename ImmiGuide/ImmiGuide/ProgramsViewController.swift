@@ -14,7 +14,7 @@ private let cellID = "cellID"
 private let gedCellID = "GEDCell"
 private let segueID  = "SegueToProgramDetails"
 
-class ProgramsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ProgramsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITabBarControllerDelegate {
     
     var language: String!
     var gedLocations = [GED]()
@@ -28,6 +28,7 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         programsTableView.delegate = self
         programsTableView.dataSource = self
+        self.tabBarController?.delegate = self
         self.getGEDData()
         self.getReadingData()
         programsTableView.estimatedRowHeight = 125
@@ -180,6 +181,17 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
             dest.gedLocation = self.gedLocations
         }
     }
+  
+    // MARK: UITabBarController Delegate
+  func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        let tabBarIndex = tabBarController.selectedIndex
+    switch tabBarIndex {
+    case 1:
+      animateBookAndCircle()
+    default:
+    break
+    }
+  }
   
     // MARK: Animation
     func animateCells() {
