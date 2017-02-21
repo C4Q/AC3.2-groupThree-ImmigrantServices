@@ -3,11 +3,11 @@
 
 NYC Population is about 8.5 million, and approximately 37% of the population consist of immigrants. Our team are all immigrants and we share similar experiences. Our parents did not have many resources available when they first arrived here, not to mention that they were not used to the technology of the time.
 
-When we researched apps to try and solve this problem, we found that they were scattered all over, hard to navigate through and quite expensive. That's why we came up with ImmiGuide, a mobile application that provides support to immigrants at their fingertips!
+With technology of today, we researched apps to try and solve this problem. We found that information is scattered all over, hard to navigate through and available apps are quite expensive. That's why we came up with ImmiGuide, a mobile application that provides resources to immigrants at their fingertips!
 
 ![](https://media.giphy.com/media/xTiN0AnuD8rxwNG3Ha/giphy.gif)
 
-## The app is easy to access and also avilable in a few different languages!
+## Our app is easy to access and also available in a few different languages!
 ![ScreenShot](https://lh3.googleusercontent.com/CowXi3rS8zVWfFIAYOImzr6sxyJr3BXuIh8kwFn7PgqXRlatH9xNx2RLG5MOsffseifoOIVuX-hFhtKvUJuHfP-XOgl0mP52Io5-4oFtxrZgv_zk7UVNliNy2RMkft0qkQtF4q11d75bFICniOnob2NP16h3zr-i2OrTytmDC2xE1tIP4T-CEstCqU07B5PJdM8cRZPfdlcQT8Y8t4XxkvxeXYgi3a9fXiDViT50GeUbqVwNikGr2gt7wo-XZo97I0qhSdUj0yoyBTy4r4746eVZZfCyGghuY5tV_peCC1yY5aD0tesUQaNzrfwY5Hr5CfLQET3GRinlm2DtWccbkwnMiNxCdSfZkef98HTpO02y2MtHes8tvB6IIH2Pnt0vQ-gCtYo3COwdYZex-Gxw1SjiIIoVxlRjlkhW9MyNf69x3vJAzG233EwkQjygfiDM0Z_LncWfU_zXYRdoJnqtaLA1jECwae_rKmRAlYFTJ89gjkgr1COLmjVNv4GnhlhjPFoQ_aT8tSj1FeFUShxLtg3zRwj_RRFZxF35BpnzZkFnR-rmH1dsp4RU-n8TQOo-CcTiF10WMLO4MOvwyhCHK57c5njLIe1J_ARtrPsbedl8xWQfjjva=w279-h498-no)
 
 ## Meet our team
