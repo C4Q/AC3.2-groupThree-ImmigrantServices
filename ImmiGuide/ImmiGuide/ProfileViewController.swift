@@ -56,14 +56,6 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         let language = Translation.languageFrom(imageName: imageName)
         currentLanguage = Translation.getLanguageFromDefauls()
         if language == currentLanguage {
-            cell.layoutIfNeeded()
-            cell.flagImage.image = UIImage(named: imageName)
-            cell.alpha = 1.0
-            
-        } else {
-            cell.layoutIfNeeded()
-            cell.flagImage.image = UIImage(named: imageName)
-            cell.flagImage.alpha = 0.40
             cell.flagImage.image = UIImage(named: imageName)
             cell.alpha = 1.0
             cell.layoutIfNeeded()
