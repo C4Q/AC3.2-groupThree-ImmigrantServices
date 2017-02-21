@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="teamCellIdentifier" id="gTV-IL-0wX" customClass="TeamDetailCollectionViewCell" customModule="ImmiGuide" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="337" height="438"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="337" height="438"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8iZ-7a-ahb">
+                        <rect key="frame" x="0.0" y="0.0" width="337" height="351"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qX8-6b-gBD">
+                        <rect key="frame" x="0.0" y="359" width="337" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VlB-AK-VKb">
+                        <rect key="frame" x="143" y="388" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="d9I-Jo-84u"/>
+                            <constraint firstAttribute="height" constant="50" id="ioK-KG-R2s"/>
+                        </constraints>
+                        <state key="normal" image="LinkedIn"/>
+                        <connections>
+                            <action selector="linkedInButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="veM-df-fAf"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="8iZ-7a-ahb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="4WK-Of-xrg"/>
+                <constraint firstItem="qX8-6b-gBD" firstAttribute="top" secondItem="8iZ-7a-ahb" secondAttribute="bottom" constant="8" id="8hB-pe-Dgu"/>
+                <constraint firstAttribute="trailing" secondItem="8iZ-7a-ahb" secondAttribute="trailing" id="Ai0-sO-2jQ"/>
+                <constraint firstItem="8iZ-7a-ahb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="MoJ-JQ-cJv"/>
+                <constraint firstItem="VlB-AK-VKb" firstAttribute="centerX" secondItem="8iZ-7a-ahb" secondAttribute="centerX" id="VRE-Eg-MCx"/>
+                <constraint firstAttribute="bottom" secondItem="VlB-AK-VKb" secondAttribute="bottom" id="XZk-8Z-eNf"/>
+                <constraint firstItem="VlB-AK-VKb" firstAttribute="top" secondItem="qX8-6b-gBD" secondAttribute="bottom" constant="8" id="a3b-yf-eZs"/>
+                <constraint firstItem="qX8-6b-gBD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cvH-XV-MDh"/>
+                <constraint firstAttribute="trailing" secondItem="qX8-6b-gBD" secondAttribute="trailing" id="gGI-Si-314"/>
+            </constraints>
+            <size key="customSize" width="337" height="438"/>
+            <connections>
+                <outlet property="imageView" destination="8iZ-7a-ahb" id="xul-ah-6p3"/>
+                <outlet property="nameLabel" destination="qX8-6b-gBD" id="9Zr-Xu-hNw"/>
+            </connections>
+            <point key="canvasLocation" x="233.5" y="302"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="LinkedIn" width="24" height="24"/>
+    </resources>
+</document>

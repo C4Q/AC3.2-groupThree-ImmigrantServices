@@ -8,12 +8,38 @@
 
 import UIKit
 
-class TeamViewController: UIViewController {
+class TeamViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    @IBOutlet weak var teamCollectionView: UICollectionView!
+    
+    let teamArray = [("Annie Tung", ""), ("Christopher Chavez", ""), ("Eshir Arafat",""), ("Madushani Lekam Wasam Liyanage", "")]
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        teamCollectionView.delegate = self
+        teamCollectionView.dataSource = self
+        
+        teamCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "teamCellIdentifier")
+        let nib = UINib(nibName: "TeamDetailCollectionViewCell", bundle:nil)
+        teamCollectionView.register(nib, forCellWithReuseIdentifier: "teamCellIdentifier")
     }
+    
+    // MARK: - Collection View Data Source
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return teamArray.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "teamCellIdentifier", for: indexPath) as! TeamDetailCollectionViewCell
+            cell.nameLabel.text = teamArray[indexPath.row].0
+            cell.imageView.image = UIImage(named: teamArray[indexPath.row].0)
+            cell.setNeedsLayout()
+            return cell
+    }
+    
     
     /*
      // MARK: - Navigation

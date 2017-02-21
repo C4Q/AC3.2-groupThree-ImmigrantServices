@@ -16,10 +16,10 @@ class TourCell: BaseCell {
     let imageView: UIImageView = {
         let image = UIImage(named: "Tourpage1")
         let im = UIImageView(image: image)
-        im.alpha = 0.75
+        im.translatesAutoresizingMaskIntoConstraints = false
+//        im.alpha = 0.90
         im.contentMode = .scaleAspectFill
         im.clipsToBounds = true
-        im.translatesAutoresizingMaskIntoConstraints = false
         return im
     }()
     
