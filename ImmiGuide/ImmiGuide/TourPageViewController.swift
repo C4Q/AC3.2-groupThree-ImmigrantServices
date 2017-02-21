@@ -71,9 +71,9 @@ class TourPageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func setupTourData() {
         if let tourPage1 = UIImage(named: "Tourpage1"), let tourPage2 = UIImage(named: "Tourpage2"), let tourPage3 = UIImage(named: "Flag") {
-            let pageOne = Tour(image: tourPage1, title: "ImmiGuide", description: "Find resources for immigration support")
-            let pageTwo = Tour(image: tourPage2, title: "", description: "Fact here")
-            let pageThree = Tour(image: tourPage3, title: "Our Mission", description: "Ready to explore?")
+            let pageOne = Tour(image: tourPage1, title: "ImmiGuide", description: "Discover local resources for Immigration support")
+            let pageTwo = Tour(image: tourPage2, title: "", description: "New York City has a population of over 8 million people, with approximately 37% of those consist of Immigrants")
+            let pageThree = Tour(image: tourPage3, title: "Our Mission", description: "\n We want to provide easy to access resources and empower Immigrants to reach their goals. \n\n Ready to explore?")
             tourData = [pageOne, pageTwo, pageThree]
             print("TOUR DATA")
             dump([pageOne, pageTwo, pageThree])

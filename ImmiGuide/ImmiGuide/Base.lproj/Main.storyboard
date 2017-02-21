@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="w3f-ns-2K3">
+
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -31,21 +32,27 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flag" translatesAutoresizingMaskIntoConstraints="NO" id="w3n-nr-myz">
+
+                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Flag" translatesAutoresizingMaskIntoConstraints="NO" id="w3n-nr-myz">
+
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="230" id="B6K-W0-QZ4"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-1" translatesAutoresizingMaskIntoConstraints="NO" id="1Oe-8z-Lsq">
-                                <rect key="frame" x="108" y="177" width="160" height="150"/>
+
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="profile-1" translatesAutoresizingMaskIntoConstraints="NO" id="1Oe-8z-Lsq">
+                                <rect key="frame" x="107.5" y="176.5" width="160" height="150"/>
+
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="NAf-zU-rxu"/>
                                     <constraint firstAttribute="height" constant="150" id="e6a-7G-ZBA"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0q-yt-aHt">
-                                <rect key="frame" x="113" y="347" width="150" height="20"/>
+
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0q-yt-aHt">
+                                <rect key="frame" x="112.5" y="346.5" width="150" height="20"/>
+
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="TbP-Ny-yaK"/>
                                     <constraint firstAttribute="height" constant="20" id="gS6-s0-ZtG"/>
@@ -54,8 +61,8 @@
                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pin" translatesAutoresizingMaskIntoConstraints="NO" id="dGc-kK-YI1">
-                                <rect key="frame" x="73" y="342" width="35" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Pin" translatesAutoresizingMaskIntoConstraints="NO" id="dGc-kK-YI1">
+                                <rect key="frame" x="72.5" y="341.5" width="35" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="QHU-G6-IPK"/>
                                     <constraint firstAttribute="width" constant="35" id="svl-XA-jdW"/>
@@ -320,9 +327,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GED" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80j-qR-12L">
-                                                    <rect key="frame" x="8" y="25" width="359" height="47"/>
+
+                                                    <rect key="frame" x="8" y="25" width="359" height="46.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -346,15 +354,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reading &amp; Writting" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCd-6y-twY">
-                                                    <rect key="frame" x="8" y="25" width="359" height="19"/>
+
+                                                    <rect key="frame" x="8" y="25" width="359" height="18.5"/>
+
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9i4-Kq-sg9">
-                                                    <rect key="frame" x="8" y="52" width="359" height="24"/>
+
+                                                    <rect key="frame" x="8" y="51.5" width="359" height="24"/>
+
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -547,11 +559,11 @@
             </objects>
             <point key="canvasLocation" x="209" y="133"/>
         </scene>
-        <!--PROFILE-->
+        <!--SETTING-->
         <scene sceneID="QvH-dg-DIP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ITm-xt-Wrg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="PROFILE" image="Settings-50" selectedImage="Settings-50" id="elb-yl-tOb"/>
+                    <tabBarItem key="tabBarItem" title="SETTING" image="Settings-50" selectedImage="Settings-50" id="elb-yl-tOb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" backIndicatorImage="Delete" backIndicatorTransitionMaskImage="Delete" id="ADO-wc-xpH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
