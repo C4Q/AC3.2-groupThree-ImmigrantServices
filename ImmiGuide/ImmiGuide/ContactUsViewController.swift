@@ -12,13 +12,13 @@ import WebKit
 class ContactUsViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
     @IBOutlet var progressView: UIProgressView!
-    var googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSc4fVNv7jHBJemmRgPOvdavjWsAZf3gZ221U6aR6BjLHK5llA/viewform"
+    var url: String!
     var webView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let myURL = URL(string: googleFormURL)
+        let myURL = URL(string: url)
         let myRequest = URLRequest(url: myURL!)
         setupWebView()
         webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)

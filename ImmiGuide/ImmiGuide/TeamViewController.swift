@@ -12,7 +12,9 @@ class TeamViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     @IBOutlet weak var teamCollectionView: UICollectionView!
     
-    let teamArray = [("Annie Tung", ""), ("Christopher Chavez", ""), ("Eshir Arafat",""), ("Madushani Lekam Wasam Liyanage", "")]
+    let teamArray = ["Annie Tung","Christopher Chavez", "Eashir Arafat", "Madushani Lekam Wasam Liyanage"]
+    let teamDict = ["Annie Tung":"https://www.linkedin.com/in/tungannie/", "Christopher Chavez": "https://www.linkedin.com/in/cristopher-chavez-6693b965/", "Eashir Arafat":"https://www.linkedin.com/in/eashirarafat/", "Madushani Lekam Wasam Liyanage":"https://www.linkedin.com/in/madushani-lekam-wasam-liyanage-74319bb5/"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         teamCollectionView.delegate = self
@@ -34,21 +36,25 @@ class TeamViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "teamCellIdentifier", for: indexPath) as! TeamDetailCollectionViewCell
-            cell.nameLabel.text = teamArray[indexPath.row].0
-            cell.imageView.image = UIImage(named: teamArray[indexPath.row].0)
+            cell.nameLabel.text = teamArray[indexPath.row]
+            cell.imageView.image = UIImage(named: teamArray[indexPath.row])
             cell.setNeedsLayout()
             return cell
     }
     
     
-    /*
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
+
+            if segue.identifier == "LinkedInSegue" {
+                if let cuvc = segue.destination as? ContactUsViewController {
+                    
+                    cuvc.url = teamDict[""]
+                }
+            }
      }
-     */
-    
+      
 }
