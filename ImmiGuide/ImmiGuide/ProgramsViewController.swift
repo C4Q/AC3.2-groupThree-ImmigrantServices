@@ -230,7 +230,7 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
       circleAnimationView.snp.makeConstraints { (view) in
         view.centerX.equalTo(circleAndBookView.snp.centerX)
         view.centerY.equalTo(circleAndBookView.snp.centerY)
-        view.height.width.equalTo(self.view.snp.height).multipliedBy(0.47)
+        view.height.width.equalTo(300)
       }
     
       bookAnimationView.snp.makeConstraints { (view) in
