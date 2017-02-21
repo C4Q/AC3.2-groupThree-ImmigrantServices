@@ -255,7 +255,7 @@
                     </view>
                     <connections>
                         <outlet property="teamCollectionView" destination="qZE-hD-SEc" id="dpZ-M5-bWh"/>
-                        <segue destination="zvq-IR-r4a" kind="show" identifier="LinkedInSegue" id="Ho3-cl-QV7"/>
+                        <segue destination="zvq-IR-r4a" kind="show" identifier="LinkedInSegue" id="G8o-vZ-Xfq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1V1-GJ-Z8Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -706,7 +706,7 @@
         <image name="profile-1" width="190" height="176"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ho3-cl-QV7"/>
+        <segue reference="G8o-vZ-Xfq"/>
         <segue reference="hQF-C9-dBB"/>
     </inferredMetricsTieBreakers>
 </document>

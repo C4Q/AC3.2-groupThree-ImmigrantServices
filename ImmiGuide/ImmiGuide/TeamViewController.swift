@@ -14,6 +14,7 @@ class TeamViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     let teamArray = ["Annie Tung","Christopher Chavez", "Eashir Arafat", "Madushani Lekam Wasam Liyanage"]
     let teamDict = ["Annie Tung":"https://www.linkedin.com/in/tungannie/", "Christopher Chavez": "https://www.linkedin.com/in/cristopher-chavez-6693b965/", "Eashir Arafat":"https://www.linkedin.com/in/eashirarafat/", "Madushani Lekam Wasam Liyanage":"https://www.linkedin.com/in/madushani-lekam-wasam-liyanage-74319bb5/"]
+    var selectedTeamMember = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,26 +36,26 @@ class TeamViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "teamCellIdentifier", for: indexPath) as! TeamDetailCollectionViewCell
-            cell.nameLabel.text = teamArray[indexPath.row]
-            cell.imageView.image = UIImage(named: teamArray[indexPath.row])
-            cell.setNeedsLayout()
-            return cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "teamCellIdentifier", for: indexPath) as! TeamDetailCollectionViewCell
+        cell.nameLabel.text = teamArray[indexPath.row]
+        cell.imageView.image = UIImage(named: teamArray[indexPath.row])
+        cell.setNeedsLayout()
+        return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedTeamMember = teamArray[indexPath.row]
+        performSegue(withIdentifier: "LinkedInSegue", sender: self)
+    }
     
+    // MARK: - Navigation
     
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-            if segue.identifier == "LinkedInSegue" {
-                if let cuvc = segue.destination as? ContactUsViewController {
-                    
-                    cuvc.url = teamDict[""]
-                }
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "LinkedInSegue" {
+            if let cuvc = segue.destination as? ContactUsViewController {
+                cuvc.url = teamDict[selectedTeamMember]
             }
-     }
-      
+        }
+    }
 }
