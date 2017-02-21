@@ -12,7 +12,6 @@ import SnapKit
 
 class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITabBarControllerDelegate {
     
-    
     @IBOutlet weak var contanierView: UIView!
     @IBOutlet weak var supportProgramsTableView: UITableView!
     
@@ -26,9 +25,6 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViewHierarchy()
-        configureConstraints()
-        animateFamilyIcon()
         
                 self.navigationController?.navigationBar.titleTextAttributes =
                     ([NSForegroundColorAttributeName: UIColor.white])
@@ -37,6 +33,8 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
         
         supportProgramsTableView.delegate = self
         supportProgramsTableView.dataSource = self
+        self.tabBarController?.delegate = self
+      
         supportProgramsTableView.rowHeight = 100.0
         //        supportProgramsTableView.separatorColor = .clear
         //        supportProgramsTableView.tableFooterView = UIView()
@@ -57,12 +55,17 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
                 }
             }
         }
+      
+        setupViewHierarchy()
+        configureConstraints()
     }
-    
+  
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         language = Translation.getLanguageFromDefauls()
         supportProgramsTableView.reloadData()
+        animateFamilyIcon()
+        animateCells()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -125,7 +128,7 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
             }
         }
     }
-    
+  
     // MARK: Animation
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -155,19 +158,6 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
             self.familyImageView.alpha = 1.0
             }, completion: nil)
     }
-  
-    // MARK: UITabBarController Delegate
-  
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-      let tabBarIndex = tabBarController.selectedIndex
-      switch tabBarIndex {
-      case 0:
-        animateFamilyIcon()
-      default:
-        break
-      }
-    }
-
   
     // MARK: Setup
   
