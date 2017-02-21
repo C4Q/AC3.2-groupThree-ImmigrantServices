@@ -38,9 +38,6 @@
                             <constraint firstAttribute="height" constant="40" id="ioK-KG-R2s"/>
                         </constraints>
                         <state key="normal" image="LinkedIn"/>
-                        <connections>
-                            <action selector="linkedInButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="veM-df-fAf"/>
-                        </connections>
                     </button>
                 </subviews>
             </view>
