@@ -8,12 +8,17 @@
 
 import Foundation
 
+
 class GED {
     let address: String
     let borough: String
     let contactNumber: String
     let notes: String?
     let siteName: String
+    
+    var description: String {
+        return "\(address) \n\(borough), New York"
+    }
     
     init?(address: String, borough: String, contactNumber: String, notes: String?, siteName: String) {
         self.address = address
@@ -34,3 +39,4 @@ class GED {
         self.init(address: address, borough: borough, contactNumber: number, notes: notes, siteName: siteName)
     }
 }
+

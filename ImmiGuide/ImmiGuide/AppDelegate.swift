@@ -15,10 +15,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        let rootVC = TourPageViewController()
-        self.window?.rootViewController = rootVC
-        self.window?.makeKeyAndVisible()
+        let userDefaults = UserDefaults.standard
+        let appLanguage = userDefaults.object(forKey: TranslationLanguage.appLanguage.rawValue)
+        if appLanguage == nil {
+            userDefaults.setValue(TranslationLanguage.english.rawValue, forKey: TranslationLanguage.appLanguage.rawValue)
+        }
+        
+        let didViewTour = userDefaults.bool(forKey: "didViewTour")
+        if didViewTour == false{
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            let rootVC = TourPageViewController()
+            self.window?.rootViewController = rootVC
+            self.window?.makeKeyAndVisible()
+        }
         
         return true
     }
