@@ -12,7 +12,9 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    let imageNames = ["Spain", "china", "united-states"]
+    var currentLanguage: String!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +34,11 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         tableView.layoutMargins = UIEdgeInsets.zero
         tableView.separatorColor = UIColor.darkGray
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        currentLanguage = Translation.getLanguageFromDefauls()
+        collectionView.reloadData()
+    }
     
     // MARK: - Collection View
     
@@ -40,20 +47,41 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return imageNames.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SettingCollectionViewCell.identifier, for: indexPath) as! SettingCollectionViewCell
-        cell.flagImage.image = UIImage(named: "Spain")
+        let imageName = imageNames[indexPath.item]
+        let language = Translation.languageFrom(imageName: imageName)
+        currentLanguage = Translation.getLanguageFromDefauls()
+        if language == currentLanguage {
+            cell.layoutIfNeeded()
+            cell.flagImage.image = UIImage(named: imageName)
+            cell.alpha = 1.0
+            
+        } else {
+            cell.layoutIfNeeded()
+            cell.flagImage.image = UIImage(named: imageName)
+            cell.flagImage.alpha = 0.40
+        }
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let imageName = imageNames[indexPath.item]
+        let language = Translation.languageFrom(imageName: imageName)
+        let defaults = UserDefaults()
+        defaults.setValue(language, forKey: TranslationLanguage.appLanguage.rawValue)
+        collectionView.reloadData()
+    }
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width = view.frame.width * 0.25
         return CGSize(width: width, height: width)
     }
+    
     
     // MARK: - Table View
     
