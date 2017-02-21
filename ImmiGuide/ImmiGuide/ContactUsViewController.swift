@@ -24,6 +24,8 @@ class ContactUsViewController: UIViewController, WKUIDelegate, WKNavigationDeleg
         webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
         webView.navigationDelegate = self
         webView.load(myRequest)
+        
+        self.navigationItem.titleView = UIImageView(image: UIImage(named: "WhiteFeedback"))
     }
     
     deinit {

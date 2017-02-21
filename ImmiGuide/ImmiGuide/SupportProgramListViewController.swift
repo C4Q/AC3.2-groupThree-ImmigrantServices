@@ -68,7 +68,7 @@ class SupportProgramListViewController: UIViewController, UITableViewDataSource,
             cell.addressLabel.text = description
             cell.phoneNumberLabel.setTitle("\(index.contactNumber)", for: .normal)
             
-            cell.siteNameLabel.font = UIFont(name: "Montserrat-Medium", size: 16)
+            cell.siteNameLabel.font = UIFont(name: "Montserrat-Medium", size: 17)
             cell.addressLabel.font = UIFont(name: "Montserrat-Light", size: 16)
             let _ = [cell.siteNameLabel, cell.addressLabel].map{$0?.textColor = UIColor.darkGray}
             
@@ -79,7 +79,7 @@ class SupportProgramListViewController: UIViewController, UITableViewDataSource,
             cell.addressLabel.text = description
             cell.phoneNumberLabel.setTitle("\(site.agencyPhoneNumber)", for: .normal)
             
-            cell.siteNameLabel.font = UIFont(name: "Montserrat-Medium", size: 16)
+            cell.siteNameLabel.font = UIFont(name: "Montserrat-Medium", size: 17)
             cell.addressLabel.font = UIFont(name: "Montserrat-Light", size: 16)
             let _ = [cell.siteNameLabel, cell.addressLabel].map{$0?.textColor = UIColor.darkGray}
             
@@ -90,7 +90,7 @@ class SupportProgramListViewController: UIViewController, UITableViewDataSource,
             cell.addressLabel.text = description
             cell.phoneNumberLabel.setTitle("\(site.contactNumber)", for: .normal)
             
-            cell.siteNameLabel.font = UIFont(name: "Montserrat-Medium", size: 16)
+            cell.siteNameLabel.font = UIFont(name: "Montserrat-Medium", size: 17)
             cell.addressLabel.font = UIFont(name: "Montserrat-Light", size: 16)
             let _ = [cell.siteNameLabel, cell.addressLabel].map{$0?.textColor = UIColor.darkGray}
         }
