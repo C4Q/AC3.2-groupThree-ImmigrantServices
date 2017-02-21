@@ -8,13 +8,14 @@
 
 import Foundation
 
+enum TranslationLanguage: String {
+    case spanish, english, chinese, appLanguage
+}
+
 class Translation {
-    enum TranslationLanguage: String {
-        case Spanish, English, Chinese
-    }
     
     static let supportVC: [String: Any] = [
-        "Spanish" : [
+        TranslationLanguage.spanish.rawValue : [
             SupportProgramType.legalServices.rawValue : "Servicios Legales",
             SupportProgramType.domesticViolence.rawValue : "Abuso Domestico",
             SupportProgramType.immigrantFamilies.rawValue : "Familias Inmigrantes",
@@ -23,7 +24,7 @@ class Translation {
             SupportProgramType.youthServices.rawValue : "Servicios Para La Juventud",
             SupportProgramType.refugeeAssistance.rawValue : "Asistencia A Los Refugiados"
         ],
-        "English" : [
+        TranslationLanguage.english.rawValue : [
             SupportProgramType.legalServices.rawValue : SupportProgramType.legalAssistance.rawValue,
             SupportProgramType.domesticViolence.rawValue : SupportProgramType.domesticViolence.rawValue,
             SupportProgramType.immigrantFamilies.rawValue : SupportProgramType.immigrantFamilies.rawValue,
@@ -32,7 +33,7 @@ class Translation {
             SupportProgramType.youthServices.rawValue : SupportProgramType.youthServices.rawValue,
             SupportProgramType.refugeeAssistance.rawValue : SupportProgramType.refugeeAssistance.rawValue
         ],
-        "Chinese" : [
+        TranslationLanguage.chinese.rawValue : [
             SupportProgramType.legalServices.rawValue : "法律服務",
             SupportProgramType.domesticViolence.rawValue : "家庭暴力",
             SupportProgramType.immigrantFamilies.rawValue : "移民家庭",
@@ -44,7 +45,7 @@ class Translation {
     ]
     
     static let programVC: [String : Any] = [
-        "Spanish" : [
+        TranslationLanguage.spanish.rawValue : [
             "GED" : "GED",
             "Adolescent Literacy" : "Literatura de Adolescentes",
             "grades 6 to 8" : "Los Grados 6 a 8",
@@ -55,7 +56,7 @@ class Translation {
             "Family Literacy" : "Leer, Escribir y Hablar en Inglés para Familias",
             "A parent 16 Years Old or Older " : "Un padre de familia de 16 años o más"
         ],
-        "English" : [
+        TranslationLanguage.english.rawValue : [
             "GED" : "GED",
             "Adolescent Literacy" : "Adolescent Literacy",
             "grades 6 to 8" : "grades 6 to 8",
@@ -66,7 +67,7 @@ class Translation {
             "Family Literacy" : "Family Literacy",
             "A parent 16 Years Old or Older " : "A parent 16 Years Old or Older"
         ],
-        "Chinese" : [
+        TranslationLanguage.chinese.rawValue : [
             "GED" : "GED",
             "Adolescent Literacy" : "青少年文化",
             "grades 6 to 8" : "六至八年級",
@@ -78,5 +79,20 @@ class Translation {
             "A parent 16 Years Old or Older " : "16歲或以上的父母"
         ]
     ]
+    
+    static let imageToLanguageDict = ["Spain" : TranslationLanguage.spanish.rawValue ,
+                                    "china" : TranslationLanguage.chinese.rawValue,
+                                    "united-states" : TranslationLanguage.english.rawValue]
+    
+    static func getLanguageFromDefauls() -> String {
+        let userDefaults = UserDefaults.standard
+        let language = userDefaults.object(forKey: TranslationLanguage.appLanguage.rawValue) as! String
+        return language
+    }
+    
+    static func languageFrom(imageName: String) -> String {
+        let language =  imageToLanguageDict[imageName]
+        return language!
+    }
     
 }

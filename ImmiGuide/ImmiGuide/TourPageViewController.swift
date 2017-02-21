@@ -64,6 +64,9 @@ class TourPageViewController: UIViewController, UICollectionViewDelegate, UIColl
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let tabBarVC = storyboard.instantiateViewController(withIdentifier: "TabBar")
         self.present(tabBarVC, animated: true, completion: nil)
+        
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(true, forKey: "didViewTour")
     }
     
     func setupTourData() {
