@@ -56,13 +56,13 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
       
         setupViewHierarchy()
         configureConstraints()
+        animateFamilyIcon()
     }
   
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         language = Translation.getLanguageFromDefauls()
         supportProgramsTableView.reloadData()
-        animateFamilyIcon()
         animateCells()
     }
     
