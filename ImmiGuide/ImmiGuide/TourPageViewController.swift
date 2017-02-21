@@ -145,10 +145,6 @@ class TourPageViewController: UIViewController, UICollectionViewDelegate, UIColl
         }
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        view.endEditing(true) 
-    }
-    
     /*
      // MARK: - Navigation
      
