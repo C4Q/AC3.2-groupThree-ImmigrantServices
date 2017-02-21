@@ -34,13 +34,13 @@ class Translation {
             SupportProgramType.refugeeAssistance.rawValue : SupportProgramType.refugeeAssistance.rawValue
         ],
         TranslationLanguage.chinese.rawValue : [
-            SupportProgramType.legalServices.rawValue : "法律服務",
+            SupportProgramType.legalServices.rawValue : "法律服务",
             SupportProgramType.domesticViolence.rawValue : "家庭暴力",
             SupportProgramType.immigrantFamilies.rawValue : "移民家庭",
             SupportProgramType.legalAssistance.rawValue : "法律援助",
-            SupportProgramType.ndaImmigrants.rawValue : "鄰里開發區",
-            SupportProgramType.youthServices.rawValue : "青年服務",
-            SupportProgramType.refugeeAssistance.rawValue : "難民援助"
+            SupportProgramType.ndaImmigrants.rawValue : "邻里开发区",
+            SupportProgramType.youthServices.rawValue : "青年服务",
+            SupportProgramType.refugeeAssistance.rawValue : "难民援助"
         ]
     ]
     
