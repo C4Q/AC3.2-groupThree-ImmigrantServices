@@ -107,11 +107,11 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "MeetTheTeam", for: indexPath) as! MeetTheTeamTableViewCell
-            cell.teamLabel?.text = " Meet The Team!"
+            cell.teamLabel?.text = " Meet The Team"
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "Feedback", for: indexPath) as! MeetTheTeamTableViewCell
-            cell.feedbackLabel?.text = " Send Us Feedback!"
+            cell.feedbackLabel?.text = " Send Us Feedback"
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "MeetTheTeam", for: indexPath) as! MeetTheTeamTableViewCell
