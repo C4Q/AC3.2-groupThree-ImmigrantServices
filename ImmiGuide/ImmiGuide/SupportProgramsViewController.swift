@@ -192,7 +192,7 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
     internal lazy var circleAnimationView: LAAnimationView = {
         var view: LAAnimationView = LAAnimationView()
         
-        view = LAAnimationView.animationNamed("Circle")
+        view = LAAnimationView.animationNamed("GrayCircle")
         view.contentMode = .scaleAspectFill
         
         return view
