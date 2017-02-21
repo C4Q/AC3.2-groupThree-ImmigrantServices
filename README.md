@@ -8,7 +8,7 @@ When we researched apps to try and solve this problem, we found that they were s
 http://www.giphy.com/gifs/xTiN0AnuD8rxwNG3Ha
 
 ##The app is also avilable in a few different languages, with more languages to come!
-![alt tag](https://goo.gl/photos/gKqvFBkERrfmYfqt6)
+![Alt text](https://goo.gl/photos/gKqvFBkERrfmYfqt6)
 App shown in Chinese:
 ![alt tag](https://goo.gl/photos/eUkJ1Pqxd7gcSysP6)
 App shown in Spanish:
