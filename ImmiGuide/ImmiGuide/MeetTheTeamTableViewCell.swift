@@ -10,7 +10,8 @@ import UIKit
 
 class MeetTheTeamTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var cellLabel: UILabel!
+    @IBOutlet weak var teamLabel: UILabel!
+    @IBOutlet weak var feedbackLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

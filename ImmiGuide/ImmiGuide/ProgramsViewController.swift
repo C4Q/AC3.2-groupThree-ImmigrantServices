@@ -24,6 +24,17 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var programsTableView: UITableView!
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        let userDefaults = UserDefaults.standard
+        let appLanguage = userDefaults.object(forKey: TranslationLanguage.appLanguage.rawValue)
+        if let language = appLanguage as? String,
+            let languageDict = Translation.tabBarTranslation[language],
+            let firstTab = languageDict["Education"] {
+            self.navigationController?.tabBarItem.title = firstTab
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         programsTableView.delegate = self
@@ -33,12 +44,15 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
         self.getReadingData()
         programsTableView.estimatedRowHeight = 125
         programsTableView.rowHeight = UITableViewAutomaticDimension
+        self.navigationController?.navigationBar.titleTextAttributes =
+            ([NSForegroundColorAttributeName: UIColor.white])
+        self.navigationItem.titleView = UIImageView(image: UIImage(named: "School-52"))
         self.navigationController?.navigationBar.barTintColor = UIColor(red:1.00, green:0.36, blue:0.36, alpha:1.0)
         programsTableView.preservesSuperviewLayoutMargins = false
         programsTableView.separatorInset = UIEdgeInsets.init(top: 0, left: 15, bottom: 0, right: 15)
         programsTableView.layoutMargins = UIEdgeInsets.zero
         programsTableView.separatorColor = UIColor.darkGray
-      
+        
         setupViewHierarchy()
         configureConstraints()
         animateBookAndCircle()
@@ -48,6 +62,7 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewWillAppear(animated)
         language = Translation.getLanguageFromDefauls()
         programsTableView.reloadData()
+        animateCells()
     }
     
     func getGEDData() {
@@ -134,7 +149,7 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
         case 0:
             cell = programsTableView.dequeueReusableCell(withIdentifier: gedCellID, for: indexPath)
             if let cell = cell as? GEDTableViewCell {
-                guard let languageDict = Translation.programVC["English"] as? [String : String],
+                guard let languageDict = Translation.programVC[language] as? [String : String],
                     let labelText = languageDict["GED"] else { return cell }
                 cell.gedLabel.text = ("\(labelText)/ College Prep")
                 cell.gedLabel.font = UIFont(name: "Montserrat-Light", size: 25)
@@ -157,6 +172,7 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
                             if let ageText = languageDict[age] {
                                 cell.subtitleProgram.text = ageText
                                 cell.subtitleProgram.textColor = UIColor.darkGray
+                                cell.subtitleProgram.font = UIFont(name: "Montserrat-Light", size: 20)
                             }
                         }
                     }
@@ -181,18 +197,71 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
             dest.gedLocation = self.gedLocations
         }
     }
-  
+    
     // MARK: UITabBarController Delegate
-  func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        let tabBarIndex = tabBarController.selectedIndex
-    switch tabBarIndex {
-    case 1:
-      animateBookAndCircle()
-    default:
-    break
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+                let tabBarIndex = tabBarController.selectedIndex
+                switch tabBarIndex {
+                case 0:
+                    language = Translation.getLanguageFromDefauls()
+                    if let tabBars = tabBarController.customizableViewControllers {
+                        for (index,item) in tabBars.enumerated() {
+                            if let languageDict = Translation.tabBarTranslation[language],
+                                let communityTabName = languageDict["Community"],
+                                let educationTabName = languageDict["Education"],
+                                let settingsTabName = languageDict["Settings"] {
+                                if index == 0 {
+                                    item.tabBarItem.title = communityTabName
+                                } else if index == 1 {
+                                    item.tabBarItem.title = educationTabName
+                                } else if index == 2 {
+                                    item.tabBarItem.title = settingsTabName
+                                }
+                            }
+                        }
+                    }
+                case 1:
+                    language = Translation.getLanguageFromDefauls()
+                    if let tabBars = tabBarController.customizableViewControllers {
+                        for (index,item) in tabBars.enumerated() {
+                            if let languageDict = Translation.tabBarTranslation[language],
+                                let communityTabName = languageDict["Community"],
+                                let educationTabName = languageDict["Education"],
+                                let settingsTabName = languageDict["Settings"] {
+                                if index == 0 {
+                                    item.tabBarItem.title = communityTabName
+                                } else if index == 1 {
+                                    item.tabBarItem.title = educationTabName
+                                } else if index == 2 {
+                                    item.tabBarItem.title = settingsTabName
+                                }
+                            }
+                        }
+                    }
+                case 2:
+                    language = Translation.getLanguageFromDefauls()
+                    if let tabBars = tabBarController.customizableViewControllers {
+                        for (index,item) in tabBars.enumerated() {
+                            if let languageDict = Translation.tabBarTranslation[language],
+                                let communityTabName = languageDict["Community"],
+                                let educationTabName = languageDict["Education"],
+                                let settingsTabName = languageDict["Settings"] {
+                                if index == 0 {
+                                    item.tabBarItem.title = communityTabName
+                                } else if index == 1 {
+                                    item.tabBarItem.title = educationTabName
+                                } else if index == 2 {
+                                    item.tabBarItem.title = settingsTabName
+                                }
+                            }
+                        }
+                    }
+                default:
+                    break
+                }
     }
-  }
-  
+    
     // MARK: Animation
     func animateCells() {
         let allVisibleCells = self.programsTableView.visibleCells
@@ -206,66 +275,66 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
             }, completion: nil)
         }
     }
-
+    
     func animateBookAndCircle() {
-      circleAnimationView.play()
-      bookAnimationView.play()
+        circleAnimationView.play()
+        bookAnimationView.play()
     }
-  
+    
     // MARK: Setup
     func setupViewHierarchy() {
-      view.addSubview(circleAndBookView)
-      view.addSubview(circleAnimationView)
-      view.addSubview(bookAnimationView)
+        view.addSubview(circleAndBookView)
+        view.addSubview(circleAnimationView)
+        view.addSubview(bookAnimationView)
     }
-  
+    
     func configureConstraints() {
-      self.edgesForExtendedLayout = []
-    
-      circleAndBookView.snp.makeConstraints { (view) in
-        view.top.leading.trailing.equalToSuperview()
-        view.bottom.equalTo(programsTableView.snp.top)
-      }
-    
-      circleAnimationView.snp.makeConstraints { (view) in
-        view.centerX.equalTo(circleAndBookView.snp.centerX)
-        view.centerY.equalTo(circleAndBookView.snp.centerY)
-        view.height.width.equalTo(self.view.snp.height).multipliedBy(0.47)
-      }
-    
-      bookAnimationView.snp.makeConstraints { (view) in
-        view.height.equalTo(circleAnimationView.snp.height)
-        view.width.equalTo(circleAnimationView.snp.width)
-        view.centerX.equalTo(circleAnimationView.snp.centerX)
-        view.centerY.equalTo(circleAnimationView.snp.centerY).multipliedBy(1.2)
-      }
+        self.edgesForExtendedLayout = []
+        
+        circleAndBookView.snp.makeConstraints { (view) in
+            view.top.leading.trailing.equalToSuperview()
+            view.bottom.equalTo(programsTableView.snp.top)
+        }
+        
+        circleAnimationView.snp.makeConstraints { (view) in
+            view.centerX.equalTo(circleAndBookView.snp.centerX)
+            view.centerY.equalTo(circleAndBookView.snp.centerY)
+            view.height.width.equalTo(self.view.snp.height).multipliedBy(0.47)
+        }
+        
+        bookAnimationView.snp.makeConstraints { (view) in
+            view.height.equalTo(circleAnimationView.snp.height)
+            view.width.equalTo(circleAnimationView.snp.width)
+            view.centerX.equalTo(circleAnimationView.snp.centerX)
+            view.centerY.equalTo(circleAnimationView.snp.centerY).multipliedBy(1.2)
+        }
     }
-  
+    
     // MARK: Lazy Vars
     //Views
     internal lazy var circleAndBookView: UIView = {
-      let view: UIView = UIView()
-      view.translatesAutoresizingMaskIntoConstraints = false
-      view.backgroundColor = .white
-      return view
+        let view: UIView = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
+        return view
     }()
-  
+    
     //Animation views
     internal lazy var bookAnimationView: LAAnimationView = {
-      var view: LAAnimationView = LAAnimationView()
-    
-      view = LAAnimationView.animationNamed("BluePenGrayBook")
-      view.contentMode = .scaleAspectFill
-    
-      return view
+        var view: LAAnimationView = LAAnimationView()
+        
+        view = LAAnimationView.animationNamed("BluePenGrayBook")
+        view.contentMode = .scaleAspectFill
+        
+        return view
     }()
-  
+    
     internal lazy var circleAnimationView: LAAnimationView = {
-      var view: LAAnimationView = LAAnimationView()
-    
-      view = LAAnimationView.animationNamed("GrayCircle")
-      view.contentMode = .scaleAspectFill
-    
-      return view
+        var view: LAAnimationView = LAAnimationView()
+        
+        view = LAAnimationView.animationNamed("GrayCircle")
+        view.contentMode = .scaleAspectFill
+        
+        return view
     }()
 }

@@ -16,10 +16,10 @@ class TourCell: BaseCell {
     let imageView: UIImageView = {
         let image = UIImage(named: "Tourpage1")
         let im = UIImageView(image: image)
-        im.alpha = 0.75
+        im.translatesAutoresizingMaskIntoConstraints = false
+        im.alpha = 0.9
         im.contentMode = .scaleAspectFill
         im.clipsToBounds = true
-        im.translatesAutoresizingMaskIntoConstraints = false
         return im
     }()
     
@@ -52,7 +52,7 @@ class TourCell: BaseCell {
             imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             textView.leftAnchor.constraint(equalTo: leftAnchor),
             textView.rightAnchor.constraint(equalTo: rightAnchor),
-            textView.topAnchor.constraint(equalTo: topAnchor, constant: 50),
+            textView.topAnchor.constraint(equalTo: topAnchor, constant: 60),
             textView.bottomAnchor.constraint(equalTo: bottomAnchor)
             ].map {$0.isActive = true}
     }
@@ -60,10 +60,15 @@ class TourCell: BaseCell {
     private func setup(tour: Tour) {
         imageView.image = tour.image
         
-        if let boldFont = UIFont(name: "Montserrat-Medium", size: 40), let regularFont = UIFont(name: "Montserrat-Light", size: 20) {
+        if let boldFont = UIFont(name: "Montserrat-Medium", size: 41), let regularFont = UIFont(name: "Montserrat-Light", size: 21) {
             
-            let attributedString = NSMutableAttributedString(string: tour.title, attributes: [NSForegroundColorAttributeName:UIColor.white, NSFontAttributeName: boldFont])
-            let descriptionString = NSMutableAttributedString(string: "\n\n\n" + tour.description, attributes: [NSForegroundColorAttributeName:UIColor.white, NSFontAttributeName: regularFont])
+            let shadow = NSShadow()
+            shadow.shadowColor = UIColor.darkGray
+            shadow.shadowOffset = CGSize(width: 1, height: 1)
+            shadow.shadowBlurRadius = 8
+            
+            let attributedString = NSMutableAttributedString(string: tour.title, attributes: [NSForegroundColorAttributeName:UIColor.white, NSFontAttributeName:boldFont,NSShadowAttributeName:shadow])
+            let descriptionString = NSMutableAttributedString(string: "\n\n" + tour.description, attributes: [NSForegroundColorAttributeName:UIColor.white, NSFontAttributeName:regularFont, NSShadowAttributeName:shadow])
             
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.alignment = .center

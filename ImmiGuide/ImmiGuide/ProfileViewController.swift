@@ -8,17 +8,30 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITableViewDelegate, UITableViewDataSource {
+class ProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITableViewDelegate, UITableViewDataSource,UITabBarControllerDelegate {
     
-    @IBOutlet weak var currentLocation: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     let imageNames = ["Spain", "china", "united-states"]
     var currentLanguage: String!
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        let userDefaults = UserDefaults.standard
+        let appLanguage = userDefaults.object(forKey: TranslationLanguage.appLanguage.rawValue)
+        if let language = appLanguage as? String,
+            let languageDict = Translation.tabBarTranslation[language],
+            let firstTab = languageDict["Settings"] {
+            self.navigationController?.tabBarItem.title = firstTab
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.titleTextAttributes =
+            ([NSForegroundColorAttributeName: UIColor.white])
+        self.navigationItem.titleView = UIImageView(image: UIImage(named: "Settings-64"))
         self.navigationController?.navigationBar.barTintColor = UIColor(red:1.00, green:0.36, blue:0.36, alpha:1.0)
         
         collectionView.delegate = self
@@ -26,7 +39,11 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         tableView.delegate = self
         tableView.dataSource = self
         self.collectionView.register(SettingCollectionViewCell.self, forCellWithReuseIdentifier: SettingCollectionViewCell.identifier)
-        currentLocation.text = "Current Location"
+        tableView.rowHeight = 75
+        tableView.preservesSuperviewLayoutMargins = false
+        tableView.separatorInset = UIEdgeInsets.init(top: 0, left: 15, bottom: 0, right: 15)
+        tableView.layoutMargins = UIEdgeInsets.zero
+        tableView.separatorColor = UIColor.darkGray
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -50,14 +67,14 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         let language = Translation.languageFrom(imageName: imageName)
         currentLanguage = Translation.getLanguageFromDefauls()
         if language == currentLanguage {
-            cell.layoutIfNeeded()
             cell.flagImage.image = UIImage(named: imageName)
             cell.alpha = 1.0
+            cell.layoutIfNeeded()
             
         } else {
-            cell.layoutIfNeeded()
             cell.flagImage.image = UIImage(named: imageName)
-            cell.flagImage.alpha = 0.40
+            cell.alpha = 0.40
+            cell.layoutIfNeeded()
         }
         return cell
     }
@@ -76,7 +93,6 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         return CGSize(width: width, height: width)
     }
     
-    
     // MARK: - Table View
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -84,26 +100,36 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MeetTheTeam", for: indexPath) as! MeetTheTeamTableViewCell
-        cell.cellLabel?.text = " Meet The Team!"
-        cell.cellLabel.textAlignment = .center
-        cell.cellLabel.font = UIFont(name: "Montserrat-Light", size: 20)
-        cell.cellLabel.textColor = UIColor.darkGray
-        return cell
+        switch indexPath.row {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MeetTheTeam", for: indexPath) as! MeetTheTeamTableViewCell
+            cell.teamLabel?.text = " Meet The Team"
+            return cell
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Feedback", for: indexPath) as! MeetTheTeamTableViewCell
+            cell.feedbackLabel?.text = " Send Us Feedback"
+            return cell
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MeetTheTeam", for: indexPath) as! MeetTheTeamTableViewCell
+            return cell
+        }
     }
-    
-    /*
+
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
+    
+        if segue.identifier == "GoogleFormSegue" {
+                if let cuvc = segue.destination as? ContactUsViewController {
+                    cuvc.url = "https://docs.google.com/forms/d/e/1FAIpQLSc4fVNv7jHBJemmRgPOvdavjWsAZf3gZ221U6aR6BjLHK5llA/viewform"
+                }
+            }
      }
-     */
+   
     
 }
