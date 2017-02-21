@@ -39,11 +39,6 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         currentLanguage = Translation.getLanguageFromDefauls()
         collectionView.reloadData()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        currentLanguage = Translation.getLanguageFromDefauls()
-        collectionView.reloadData()
-    }
     
     // MARK: - Collection View
     
