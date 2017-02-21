@@ -3,7 +3,7 @@
 
 NYC Population is about 8.5 million, and approximately 37% of the population consist of immigrants. Our team are all immigrants and we share similar experiences. Our parents did not have many resources available when they first arrived here, not to mention that they were not used to the technology of the time.
 
-When we researched apps to try and solve this problem, we found that they were scattered all over, hard to navigate through and quite expensive. That's why we came up with ImmiGuide, a mobile application that provides support to immigrants at their fingertips!
+With the technology of today, we researched apps to try and solve this problem. We found that information were scattered all over, hard to navigate through and avaialable apps are quite expensive. That's why we came up with ImmiGuide, a mobile application that provides support to immigrants at their fingertips!
 
 ![](https://media.giphy.com/media/xTiN0AnuD8rxwNG3Ha/giphy.gif)
 
