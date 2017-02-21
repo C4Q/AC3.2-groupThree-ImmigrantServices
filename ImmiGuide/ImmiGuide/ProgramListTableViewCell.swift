@@ -31,6 +31,8 @@ class ProgramListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        phoneNumberLabel.titleLabel?.font = UIFont(name: "Montserrat-Light", size: 16)
         // Initialization code
     }
     
