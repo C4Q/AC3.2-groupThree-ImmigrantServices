@@ -16,10 +16,10 @@ class TourCell: BaseCell {
     let imageView: UIImageView = {
         let image = UIImage(named: "Tourpage1")
         let im = UIImageView(image: image)
-        im.alpha = 0.75
+        im.translatesAutoresizingMaskIntoConstraints = false
+//        im.alpha = 0.90
         im.contentMode = .scaleAspectFill
         im.clipsToBounds = true
-        im.translatesAutoresizingMaskIntoConstraints = false
         return im
     }()
     
@@ -52,7 +52,7 @@ class TourCell: BaseCell {
             imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             textView.leftAnchor.constraint(equalTo: leftAnchor),
             textView.rightAnchor.constraint(equalTo: rightAnchor),
-            textView.topAnchor.constraint(equalTo: topAnchor, constant: 55),
+            textView.topAnchor.constraint(equalTo: topAnchor, constant: 50),
             textView.bottomAnchor.constraint(equalTo: bottomAnchor)
             ].map {$0.isActive = true}
     }

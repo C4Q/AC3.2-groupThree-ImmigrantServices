@@ -26,9 +26,9 @@ class TourPageViewController: UIViewController, UICollectionViewDelegate, UIColl
     // MARK: - Methods
     
     func setupCollectionView() {
+        self.view.addSubview(collectionView)
         collectionView.delegate = self
         collectionView.dataSource = self
-        view.addSubview(collectionView)
         collectionView.register(TourCell.self, forCellWithReuseIdentifier: TourCell.identifier)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         let _ = [
@@ -78,7 +78,7 @@ class TourPageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     // MARK: - Views
     
-    let collectionView: UICollectionView = {
+    lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 0
@@ -118,7 +118,7 @@ class TourPageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         getStartedButton.isHidden = true
-        return tourData.count
+        return tourData.count 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -143,6 +143,10 @@ class TourPageViewController: UIViewController, UICollectionViewDelegate, UIColl
         } else {
             getStartedButton.isHidden = true
         }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        view.endEditing(true) 
     }
     
     /*
