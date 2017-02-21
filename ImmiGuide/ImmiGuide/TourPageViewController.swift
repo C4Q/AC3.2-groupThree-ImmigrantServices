@@ -14,6 +14,7 @@ class TourPageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     var tourData: [Tour] = []
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,8 +22,27 @@ class TourPageViewController: UIViewController, UICollectionViewDelegate, UIColl
         setupCollectionView()
         setupPageController()
         setupButton()
+        loadUserDefaults()
+        
     }
     
+    func saveUserDefaults() {
+        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: "FirstTime")
+    }
+    
+    func loadUserDefaults() {
+        let defaults = UserDefaults.standard
+        if let value = defaults.value(forKey: "FirstTime") {
+            print(value)
+            showHomeScreen()
+        }
+        else {
+            defaults.set(true, forKey: "FirstTime")
+            print("FirstTime\(defaults.value(forKey: "FirstTime"))")
+        }
+        
+    }
     // MARK: - Methods
     
     func setupCollectionView() {
@@ -127,6 +147,7 @@ class TourPageViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TourCell.identifier, for: indexPath) as! TourCell
         cell.tour = tourData[indexPath.item]
+        cell.layoutIfNeeded()
         return cell
     }
     

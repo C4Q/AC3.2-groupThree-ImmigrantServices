@@ -39,6 +39,11 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         currentLanguage = Translation.getLanguageFromDefauls()
         collectionView.reloadData()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        currentLanguage = Translation.getLanguageFromDefauls()
+        collectionView.reloadData()
+    }
     
     // MARK: - Collection View
     
@@ -64,6 +69,14 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
             cell.layoutIfNeeded()
             cell.flagImage.image = UIImage(named: imageName)
             cell.flagImage.alpha = 0.40
+            cell.flagImage.image = UIImage(named: imageName)
+            cell.alpha = 1.0
+            cell.layoutIfNeeded()
+            
+        } else {
+            cell.flagImage.image = UIImage(named: imageName)
+            cell.alpha = 0.40
+            cell.layoutIfNeeded()
         }
         return cell
     }
@@ -81,7 +94,6 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         let width = view.frame.width * 0.25
         return CGSize(width: width, height: width)
     }
-    
     
     // MARK: - Table View
     
