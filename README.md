@@ -8,14 +8,14 @@ When we researched apps to try and solve this problem, we found that they were s
 http://www.giphy.com/gifs/xTiN0AnuD8rxwNG3Ha
 
 ##The app is also avilable in a few different languages, with more languages to come!
-![Alt text](https://goo.gl/photos/gKqvFBkERrfmYfqt6)
+![ScreenShot](https://goo.gl/photos/gKqvFBkERrfmYfqt6)
 App shown in Chinese:
-![alt tag](https://goo.gl/photos/eUkJ1Pqxd7gcSysP6)
+![ScreenShot](https://goo.gl/photos/eUkJ1Pqxd7gcSysP6)
 App shown in Spanish:
-![alt tag](https://goo.gl/photos/XBrQJtc1H5rFs2Tz6)
+![ScreenShot](https://goo.gl/photos/XBrQJtc1H5rFs2Tz6)
 ## Meet our team
-![alt tag](https://goo.gl/photos/guLVyWakRCwmYYqg7)
+![ScreenShot](https://goo.gl/photos/guLVyWakRCwmYYqg7)
 ##Feel free to send us feedbacks through the app!
-![alt tag](https://goo.gl/photos/KA2zW8ek5sLRQ4ph8)
+![ScreenShot](https://goo.gl/photos/KA2zW8ek5sLRQ4ph8)
 
 
