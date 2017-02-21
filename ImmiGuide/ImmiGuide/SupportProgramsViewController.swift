@@ -29,6 +29,10 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
         setupViewHierarchy()
         configureConstraints()
         animateFamilyIcon()
+        
+                self.navigationController?.navigationBar.titleTextAttributes =
+                    ([NSForegroundColorAttributeName: UIColor.white])
+        self.navigationItem.titleView = UIImageView(image: UIImage(named: "Home-64"))
         self.navigationController?.navigationBar.barTintColor = UIColor(red:1.00, green:0.36, blue:0.36, alpha:1.0)
         
         supportProgramsTableView.delegate = self
