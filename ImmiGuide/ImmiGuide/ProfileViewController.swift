@@ -15,7 +15,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var collectionView: UICollectionView!
     let imageNames = ["Spain", "china", "united-states"]
     var currentLanguage: String!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,14 +50,14 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         let language = Translation.languageFrom(imageName: imageName)
         currentLanguage = Translation.getLanguageFromDefauls()
         if language == currentLanguage {
-            cell.layoutIfNeeded()
             cell.flagImage.image = UIImage(named: imageName)
             cell.alpha = 1.0
+            cell.layoutIfNeeded()
             
         } else {
-            cell.layoutIfNeeded()
             cell.flagImage.image = UIImage(named: imageName)
-            cell.flagImage.alpha = 0.40
+            cell.alpha = 0.40
+            cell.layoutIfNeeded()
         }
         return cell
     }
@@ -69,7 +69,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         defaults.setValue(language, forKey: TranslationLanguage.appLanguage.rawValue)
         collectionView.reloadData()
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width = view.frame.width * 0.25
