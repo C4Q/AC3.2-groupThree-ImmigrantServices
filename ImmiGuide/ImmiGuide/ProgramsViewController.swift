@@ -51,6 +51,7 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewWillAppear(animated)
         language = Translation.getLanguageFromDefauls()
         programsTableView.reloadData()
+        animateCells()
     }
     
     func getGEDData() {
@@ -185,18 +186,7 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
             dest.gedLocation = self.gedLocations
         }
     }
-    
-    // MARK: UITabBarController Delegate
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        let tabBarIndex = tabBarController.selectedIndex
-        switch tabBarIndex {
-        case 1:
-            animateBookAndCircle()
-        default:
-            break
-        }
-    }
-    
+  
     // MARK: Animation
     func animateCells() {
         let allVisibleCells = self.programsTableView.visibleCells
