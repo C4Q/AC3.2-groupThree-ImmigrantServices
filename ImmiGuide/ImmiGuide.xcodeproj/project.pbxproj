@@ -26,6 +26,9 @@
 		9B8932A71E57AF4F002C13E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8932A61E57AF4F002C13E8 /* ViewController.swift */; };
 		9B8932AA1E57AF4F002C13E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8932A81E57AF4F002C13E8 /* Main.storyboard */; };
 		9B8932AF1E57AF4F002C13E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8932AD1E57AF4F002C13E8 /* LaunchScreen.storyboard */; };
+		9BC6D7361E5BF3260026B0CE /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC6D7351E5BF3260026B0CE /* ContactUsViewController.swift */; };
+		9BC6D73A1E5BFE0A0026B0CE /* TeamDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC6D7391E5BFE0A0026B0CE /* TeamDetailCollectionViewCell.swift */; };
+		9BC6D73C1E5BFE0F0026B0CE /* TeamDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BC6D73B1E5BFE0F0026B0CE /* TeamDetailCollectionViewCell.xib */; };
 		9C06211F1E5A576B001768D0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C06211E1E5A576B001768D0 /* ProfileViewController.swift */; };
 		9C0621211E5A578B001768D0 /* SettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0621201E5A578B001768D0 /* SettingCollectionViewCell.swift */; };
 		9C0621231E5A64DD001768D0 /* MeetTheTeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0621221E5A64DD001768D0 /* MeetTheTeamTableViewCell.swift */; };
@@ -69,6 +72,9 @@
 		9B8932A91E57AF4F002C13E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B8932AE1E57AF4F002C13E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B8932B01E57AF50002C13E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BC6D7351E5BF3260026B0CE /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		9BC6D7391E5BFE0A0026B0CE /* TeamDetailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		9BC6D73B1E5BFE0F0026B0CE /* TeamDetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		9C06211E1E5A576B001768D0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9C0621201E5A578B001768D0 /* SettingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCollectionViewCell.swift; sourceTree = "<group>"; };
 		9C0621221E5A64DD001768D0 /* MeetTheTeamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetTheTeamTableViewCell.swift; sourceTree = "<group>"; };
@@ -139,6 +145,7 @@
 				9CBC3DEC1E59665C000B2AF1 /* TourPageViewController.swift */,
 				9B7AD2E81E59050D008BA7A8 /* SupportProgramListViewController.swift */,
 				2DC845871E58EFD500E0A6EB /* ProgramsViewController.swift */,
+				9BC6D7351E5BF3260026B0CE /* ContactUsViewController.swift */,
 				9C06211E1E5A576B001768D0 /* ProfileViewController.swift */,
 				9C0621241E5A671D001768D0 /* TeamViewController.swift */,
 			);
@@ -206,6 +213,8 @@
 				9C63AE181E58D6ED00CAFC4B /* Tour Cell.swift */,
 				9B1CD6631E58EBFF004854AB /* SupportProgramTableViewCell.swift */,
 				9B7AD2EA1E590697008BA7A8 /* ProgramListTableViewCell.swift */,
+				9BC6D7391E5BFE0A0026B0CE /* TeamDetailCollectionViewCell.swift */,
+				9BC6D73B1E5BFE0F0026B0CE /* TeamDetailCollectionViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -245,7 +254,7 @@
 				TargetAttributes = {
 					9B8932A01E57AF4F002C13E8 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = G6ZU47QNTF;
+						DevelopmentTeam = 9F7X637BX9;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -277,6 +286,7 @@
 				9C63AE111E58C3DF00CAFC4B /* Montserrat-Thin.otf in Resources */,
 				CCECACAD1E5A1A3000E86E60 /* Circle.json in Resources */,
 				CC8AA4FF1E5B9E6C00A4167F /* GrayCircle.json in Resources */,
+				9BC6D73C1E5BFE0F0026B0CE /* TeamDetailCollectionViewCell.xib in Resources */,
 				CC8AA4FE1E5B9E6C00A4167F /* BluePenGrayBook.json in Resources */,
 				9B8932AF1E57AF4F002C13E8 /* LaunchScreen.storyboard in Resources */,
 				9B8932AA1E57AF4F002C13E8 /* Main.storyboard in Resources */,
@@ -344,6 +354,7 @@
 			files = (
 				2DC8458A1E58F6A900E0A6EB /* GED.swift in Sources */,
 				9C0621251E5A671D001768D0 /* TeamViewController.swift in Sources */,
+				9BC6D7361E5BF3260026B0CE /* ContactUsViewController.swift in Sources */,
 				9C63AE141E58D49300CAFC4B /* Base Cell.swift in Sources */,
 				9B1CD6541E58A22E004854AB /* APIRequestManager.swift in Sources */,
 				2DC8458C1E58FE9C00E0A6EB /* GEDTableViewCell.swift in Sources */,
@@ -361,6 +372,7 @@
 				9B8932A71E57AF4F002C13E8 /* ViewController.swift in Sources */,
 				9C0621231E5A64DD001768D0 /* MeetTheTeamTableViewCell.swift in Sources */,
 				2DC845861E58EFC600E0A6EB /* ProgramTableViewCell.swift in Sources */,
+				9BC6D73A1E5BFE0A0026B0CE /* TeamDetailCollectionViewCell.swift in Sources */,
 				2DA6367C1E58AC8200D5AADE /* Geolocation.swift in Sources */,
 				9C63AE191E58D6ED00CAFC4B /* Tour Cell.swift in Sources */,
 				9C06211F1E5A576B001768D0 /* ProfileViewController.swift in Sources */,
@@ -489,7 +501,7 @@
 			baseConfigurationReference = 11173EAE0C3CDD6B8A97D8F3 /* Pods-ImmiGuide.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = G6ZU47QNTF;
+				DEVELOPMENT_TEAM = 9F7X637BX9;
 				INFOPLIST_FILE = ImmiGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.madushanilekamwasamliyanage.ImmiGuide;
@@ -503,7 +515,7 @@
 			baseConfigurationReference = 6245EB85FAAC33A747535239 /* Pods-ImmiGuide.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = G6ZU47QNTF;
+				DEVELOPMENT_TEAM = 9F7X637BX9;
 				INFOPLIST_FILE = ImmiGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nyc.c4q.madushanilekamwasamliyanage.ImmiGuide;

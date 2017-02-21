@@ -62,6 +62,7 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewWillAppear(animated)
         language = Translation.getLanguageFromDefauls()
         programsTableView.reloadData()
+        animateCells()
     }
     
     func getGEDData() {
@@ -148,7 +149,7 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
         case 0:
             cell = programsTableView.dequeueReusableCell(withIdentifier: gedCellID, for: indexPath)
             if let cell = cell as? GEDTableViewCell {
-                guard let languageDict = Translation.programVC["English"] as? [String : String],
+                guard let languageDict = Translation.programVC[language] as? [String : String],
                     let labelText = languageDict["GED"] else { return cell }
                 cell.gedLabel.text = ("\(labelText)/ College Prep")
                 cell.gedLabel.font = UIFont(name: "Montserrat-Light", size: 25)
@@ -171,6 +172,7 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
                             if let ageText = languageDict[age] {
                                 cell.subtitleProgram.text = ageText
                                 cell.subtitleProgram.textColor = UIColor.darkGray
+                                cell.subtitleProgram.font = UIFont(name: "Montserrat-Light", size: 20)
                             }
                         }
                     }

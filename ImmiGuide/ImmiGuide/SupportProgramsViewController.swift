@@ -12,7 +12,6 @@ import SnapKit
 
 class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UITabBarControllerDelegate {
     
-    
     @IBOutlet weak var contanierView: UIView!
     @IBOutlet weak var supportProgramsTableView: UITableView!
     
@@ -67,12 +66,17 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
                 }
             }
         }
+      
+        setupViewHierarchy()
+        configureConstraints()
+        animateFamilyIcon()
     }
-    
+  
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         language = Translation.getLanguageFromDefauls()
         supportProgramsTableView.reloadData()
+        animateCells()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -135,7 +139,7 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
             }
         }
     }
-    
+  
     // MARK: Animation
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -165,8 +169,9 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
             self.familyImageView.alpha = 1.0
         }, completion: nil)
     }
-    
+  
     // MARK: Setup
+  
     func setupViewHierarchy() {
         view.addSubview(circleAndFamilyView)
         view.addSubview(familyImageView)
@@ -183,7 +188,7 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
         circleAnimationView.snp.makeConstraints { (view) in
             view.centerX.equalTo(circleAndFamilyView.snp.centerX)
             view.centerY.equalTo(circleAndFamilyView.snp.centerY)
-            view.height.width.equalTo(300)
+            view.height.width.equalTo(self.view.snp.height).multipliedBy(0.47)
         }
         
         familyImageView.snp.makeConstraints { (view) in
@@ -195,6 +200,7 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     // MARK: Lazy Vars
+  
     //Views
     internal lazy var circleAndFamilyView: UIView = {
         let view: UIView = UIView()

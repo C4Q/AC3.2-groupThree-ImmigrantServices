@@ -52,7 +52,7 @@ class TourCell: BaseCell {
             imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             textView.leftAnchor.constraint(equalTo: leftAnchor),
             textView.rightAnchor.constraint(equalTo: rightAnchor),
-            textView.topAnchor.constraint(equalTo: topAnchor, constant: 50),
+            textView.topAnchor.constraint(equalTo: topAnchor, constant: 60),
             textView.bottomAnchor.constraint(equalTo: bottomAnchor)
             ].map {$0.isActive = true}
     }
@@ -63,7 +63,7 @@ class TourCell: BaseCell {
         if let boldFont = UIFont(name: "Montserrat-Medium", size: 40), let regularFont = UIFont(name: "Montserrat-Light", size: 20) {
             
             let attributedString = NSMutableAttributedString(string: tour.title, attributes: [NSForegroundColorAttributeName:UIColor.white, NSFontAttributeName: boldFont])
-            let descriptionString = NSMutableAttributedString(string: "\n\n\n" + tour.description, attributes: [NSForegroundColorAttributeName:UIColor.white, NSFontAttributeName: regularFont])
+            let descriptionString = NSMutableAttributedString(string: "\n\n" + tour.description, attributes: [NSForegroundColorAttributeName:UIColor.white, NSFontAttributeName: regularFont])
             
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.alignment = .center
