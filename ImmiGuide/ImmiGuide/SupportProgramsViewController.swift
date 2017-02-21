@@ -84,7 +84,7 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
         //        cell.titleLabel.layer.borderWidth = 2.0
         //        cell.titleLabel.layer.borderColor = UIColor.blue.cgColor
         
-        cell.titleLabel.font = UIFont(name: "Montserrat-Light", size: 25)
+        cell.titleLabel.font = UIFont(name: "Montserrat-Light", size: 24)
         cell.titleLabel?.textColor = UIColor.darkGray
         let labelName = programCatogories[indexPath.row]
         guard let languageDict = Translation.supportVC[language] as? [String : String],

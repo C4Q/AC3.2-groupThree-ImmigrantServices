@@ -67,20 +67,34 @@ class SupportProgramListViewController: UIViewController, UITableViewDataSource,
             cell.siteNameLabel.text = index.siteName
             cell.addressLabel.text = description
             cell.phoneNumberLabel.setTitle("\(index.contactNumber)", for: .normal)
+            
+            cell.siteNameLabel.font = UIFont(name: "Montserrat-Medium", size: 17)
+            cell.addressLabel.font = UIFont(name: "Montserrat-Light", size: 16)
+            let _ = [cell.siteNameLabel, cell.addressLabel].map{$0?.textColor = UIColor.darkGray}
+            
         } else if !categoryChosen.isEmpty {
             let site = categoryChosen[indexPath.row]
             let description = site.agencyLocation?.description
             cell.siteNameLabel.text = site.agencyName
             cell.addressLabel.text = description
             cell.phoneNumberLabel.setTitle("\(site.agencyPhoneNumber)", for: .normal)
+            
+            cell.siteNameLabel.font = UIFont(name: "Montserrat-Medium", size: 17)
+            cell.addressLabel.font = UIFont(name: "Montserrat-Light", size: 16)
+            let _ = [cell.siteNameLabel, cell.addressLabel].map{$0?.textColor = UIColor.darkGray}
+            
         } else if !gedLocation.isEmpty {
             let site = gedLocation[indexPath.row]
             let description = site.description
             cell.siteNameLabel.text = site.siteName
             cell.addressLabel.text = description
             cell.phoneNumberLabel.setTitle("\(site.contactNumber)", for: .normal)
+            
+            cell.siteNameLabel.font = UIFont(name: "Montserrat-Medium", size: 17)
+            cell.addressLabel.font = UIFont(name: "Montserrat-Light", size: 16)
+            let _ = [cell.siteNameLabel, cell.addressLabel].map{$0?.textColor = UIColor.darkGray}
         }
-    
+        
         return cell
     }
     
@@ -117,7 +131,7 @@ class SupportProgramListViewController: UIViewController, UITableViewDataSource,
             completionHandler((lat: lat, long: long))
         }
     }
-
+    
     
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,

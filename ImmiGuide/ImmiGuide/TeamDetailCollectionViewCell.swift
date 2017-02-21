@@ -12,11 +12,15 @@ class TeamDetailCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
+        nameLabel.font = UIFont(name: "Montserrat-Medium", size: 17)
+        nameLabel.textColor = UIColor.darkGray
+        titleLabel.font = UIFont(name: "Montserrat-Light", size: 17)
+        titleLabel.textColor = UIColor.darkGray
     }
 
     
