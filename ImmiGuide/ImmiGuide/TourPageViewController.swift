@@ -17,13 +17,11 @@ class TourPageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupTourData()
         setupCollectionView()
         setupPageController()
         setupButton()
         loadUserDefaults()
-        
     }
     
     func saveUserDefaults() {
@@ -40,8 +38,7 @@ class TourPageViewController: UIViewController, UICollectionViewDelegate, UIColl
         else {
             defaults.set(true, forKey: "FirstTime")
             print("FirstTime\(defaults.value(forKey: "FirstTime"))")
-        }
-        
+        }   
     }
     // MARK: - Methods
     
