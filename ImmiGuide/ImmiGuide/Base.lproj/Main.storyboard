@@ -264,7 +264,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="QE8-7O-j90">
                         <nil key="title"/>
-                        <barButtonItem key="backBarButtonItem" title="  " id="ECg-tJ-fVZ"/>
                     </navigationItem>
                     <connections>
                         <outlet property="progressView" destination="gCf-hD-MBD" id="03e-5R-CqK"/>
@@ -449,7 +448,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GuT-w3-Dlq">
-                        <barButtonItem key="backBarButtonItem" title=" " id="vcX-1S-cTO"/>
+                        <barButtonItem key="backBarButtonItem" title="  " id="vcX-1S-cTO"/>
                     </navigationItem>
                     <connections>
                         <outlet property="contanierView" destination="C9x-QB-Epd" id="rth-2v-nGb"/>
@@ -492,7 +491,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OAq-lA-aKh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="COMMUNITY" image="Home" selectedImage="Home" id="2zi-q9-ABp"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" backIndicatorImage="Delete" backIndicatorTransitionMaskImage="Delete" id="Mbi-Yn-wEZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" backIndicatorImage=" " id="Mbi-Yn-wEZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -513,7 +512,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="blZ-jr-gAG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="EDUCATION" image="Education" selectedImage="Education" id="2vD-8w-WzN"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" backIndicatorImage="Delete" backIndicatorTransitionMaskImage="Delete" id="MFM-ME-lm4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" backIndicatorImage=" " id="MFM-ME-lm4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -537,7 +536,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ITm-xt-Wrg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="SETTINGS" image="Settings-50" selectedImage="Settings-50" id="elb-yl-tOb"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" backIndicatorImage="Delete" backIndicatorTransitionMaskImage="Delete" id="ADO-wc-xpH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" backIndicatorImage=" " id="ADO-wc-xpH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -666,7 +665,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZY5-Cj-2BT">
-                        <barButtonItem key="backBarButtonItem" title=" " id="Spc-vu-d2u"/>
+                        <barButtonItem key="backBarButtonItem" title="  " id="Spc-vu-d2u"/>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="sLJ-fZ-WSl" id="4fe-Bz-DPS"/>
@@ -679,7 +678,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Delete" width="25" height="25"/>
+        <image name=" " width="16" height="16"/>
         <image name="Directions" width="25" height="25"/>
         <image name="Education" width="25" height="25"/>
         <image name="Feedback" width="50" height="50"/>
@@ -690,7 +689,7 @@
         <image name="Settings-50" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hQF-C9-dBB"/>
+        <segue reference="ZrJ-aX-PSw"/>
         <segue reference="G8o-vZ-Xfq"/>
     </inferredMetricsTieBreakers>
 </document>
