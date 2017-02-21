@@ -17,11 +17,11 @@ class ContactUsViewController: UIViewController, WKUIDelegate, WKNavigationDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let myURL = URL(string: url)
         let myRequest = URLRequest(url: myURL!)
         setupWebView()
         webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
+     
         webView.navigationDelegate = self
         webView.load(myRequest)
         
