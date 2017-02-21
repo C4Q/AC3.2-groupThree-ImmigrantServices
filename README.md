@@ -1,5 +1,5 @@
 # AC3.2-groupThree-ImmigrantServices
-# We are ImmiGuide
+# ImmiGuide
 
 NYC Population is about 8.5 million, and approximately 37% of the population consist of immigrants. Our team are all immigrants and we share similar experiences. Our parents did not have many resources available when they first arrived here, not to mention that they were not used to the technology of the time.
 
@@ -13,7 +13,7 @@ App shown in Chinese:
 https://goo.gl/photos/eUkJ1Pqxd7gcSysP6
 App shown in Spanish:
 https://goo.gl/photos/XBrQJtc1H5rFs2Tz6
-##Team ImmiGuide
+## Meet our team
 https://goo.gl/photos/guLVyWakRCwmYYqg7
 ##Feel free to send us feedbacks through the app!
 https://goo.gl/photos/KA2zW8ek5sLRQ4ph8
