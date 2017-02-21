@@ -13,6 +13,7 @@ class TeamViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var teamCollectionView: UICollectionView!
     
     let teamArray = ["Annie Tung","Christopher Chavez", "Eashir Arafat", "Madushani Lekam Wasam Liyanage"]
+    let titleArray = ["Design Lead", "Project Manager", "Demo Lead", "Technical Lead"]
     let teamDict = ["Annie Tung":"https://www.linkedin.com/in/tungannie/", "Christopher Chavez": "https://www.linkedin.com/in/cristopher-chavez-6693b965/", "Eashir Arafat":"https://www.linkedin.com/in/eashirarafat/", "Madushani Lekam Wasam Liyanage":"https://www.linkedin.com/in/madushani-lekam-wasam-liyanage-74319bb5/"]
     var selectedTeamMember = ""
     
@@ -20,6 +21,8 @@ class TeamViewController: UIViewController, UICollectionViewDelegate, UICollecti
         super.viewDidLoad()
         teamCollectionView.delegate = self
         teamCollectionView.dataSource = self
+        
+        self.navigationItem.titleView = UIImageView(image: UIImage(named: "TeamIcon"))
         
         teamCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "teamCellIdentifier")
         let nib = UINib(nibName: "TeamDetailCollectionViewCell", bundle:nil)
@@ -38,6 +41,7 @@ class TeamViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "teamCellIdentifier", for: indexPath) as! TeamDetailCollectionViewCell
         cell.nameLabel.text = teamArray[indexPath.row]
+        cell.titleLabel.text = titleArray[indexPath.row]
         cell.imageView.image = UIImage(named: teamArray[indexPath.row])
         cell.setNeedsLayout()
         return cell

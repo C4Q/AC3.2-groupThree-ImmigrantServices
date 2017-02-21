@@ -74,7 +74,18 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = supportProgramsTableView.dequeueReusableCell(withIdentifier: "supportPraogramCellIdentifier", for: indexPath) as! SupportProgramTableViewCell
+<<<<<<< HEAD
         cell.titleLabel.font = UIFont(name: "Montserrat-Light", size: 25)
+=======
+        //        cell.layer.cornerRadius = 25.0
+        //        cell.layer.borderWidth = 2.0
+        //        cell.layer.borderColor = UIColor.blue.cgColor
+        //        cell.titleLabel.layer.cornerRadius = 25.0
+        //        cell.titleLabel.layer.borderWidth = 2.0
+        //        cell.titleLabel.layer.borderColor = UIColor.blue.cgColor
+        
+        cell.titleLabel.font = UIFont(name: "Montserrat-Light", size: 24)
+>>>>>>> 52ec8b33ee9955565c6cf3911c0044c4c74a4e89
         cell.titleLabel?.textColor = UIColor.darkGray
         let labelName = programCatogories[indexPath.row]
         guard let languageDict = Translation.supportVC[language] as? [String : String],
