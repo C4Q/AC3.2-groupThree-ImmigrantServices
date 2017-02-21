@@ -87,9 +87,9 @@ class Translation {
             "Settings" : "Preferencias"
         ],
         TranslationLanguage.english.rawValue : [
-            "Community" : "Community",
-            "Education" : "Education",
-            "Settings" : "Settings"
+            "Community" : "COMMUNITY",
+            "Education" : "EDUCATION",
+            "Settings" : "SETTINGS"
         ],
         TranslationLanguage.chinese.rawValue : [
             "Community" : "社区",
