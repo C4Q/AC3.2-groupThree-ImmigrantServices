@@ -12,5 +12,6 @@ With technology of today, we researched apps to try and solve this problem. We f
 
 ## Meet our team
 ![ScreenShot](https://lh3.googleusercontent.com/or3-5PSyAtJlU9AiHWu1LyeYD4x9pc07Ei5JT1a1MsJWT20mwGBEbRXMLTJuqO0RM3-j3m9gQbKBEBGcd5YuMt8kyF-eW-5XqRYWWYv_asTBK9NkdRNVCBFjxZM2Ad3GJf5chPAW3qx-VQl-edS7Z9ILW1GQ0aV3sR1eVXwT0VDrv0OmxY266OAe1799JL98vVvicgnKE9u8IBSXE1AsL0bDSk78P92otiNqAwP5CBS-UaEJltXBGDENzoo-slVTD0ZQsElWjxg_D0xZ-15NXvpPqDsy9gl77bULxuJHcSz-sOkF2gYNonQgWiT-Dn9q6l8Gnc34poMvbZXEuY2Q9ac476oxYiuq1BAL6jgnvSmOwYSaLOMWZA6tnSEijjYFIZNrypmnCfenrSJi_QDiQAeIMAw4Q-gA_i7HBKU7PYsoofq-A_5Brn1-DZ8Vy_HqbErZ15zWcUY6y3J4OQj5KzVmfJl64Q57yz6VvqtZL-RQZdirDp8KWPR3xKD9Oyv158-FmkPasuo6lbGU7t_oOrAKGYCp6NEi0crR3iITQNbnL9htXlom4vOBaYT66OprbTAZ1vV2VyK5F-Ftfj0V_xnSjw_tW3uG6D2qiAxMDcXqLTLryVoY=w280-h499-no)
+
 ## Feel free to send us your feedback - we are looking forward to hearing from you!
 https://docs.google.com/forms/d/e/1FAIpQLSc4fVNv7jHBJemmRgPOvdavjWsAZf3gZ221U6aR6BjLHK5llA/viewform
