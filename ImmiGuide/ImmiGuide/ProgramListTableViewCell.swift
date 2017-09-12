@@ -27,7 +27,7 @@ class ProgramListTableViewCell: UITableViewCell {
     @IBAction func contactNumberButton(_ sender: UIButton) {
         guard let phoneNumber = phoneNumberLabel.title(for: .normal) else { return }
         let validPhoneNumber = phoneNumber.replacingOccurrences(of: "Contact: ", with: "").replacingOccurrences(of: "-", with: "").replacingOccurrences(of: " ", with: "")
-        UIApplication.shared.open(NSURL(string: "tel://\(validPhoneNumber)") as! URL, options: [:], completionHandler: nil)
+        UIApplication.shared.open(NSURL(string: "tel://\(validPhoneNumber)")! as URL, options: [:], completionHandler: nil)
     }
     
     override func awakeFromNib() {

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="w3f-ns-2K3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="w3f-ns-2K3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -512,7 +512,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="blZ-jr-gAG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="EDUCATION" image="Education" selectedImage="Education" id="2vD-8w-WzN"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" backIndicatorImage=" " id="MFM-ME-lm4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" backIndicatorImage=" " id="MFM-ME-lm4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -536,7 +536,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ITm-xt-Wrg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="SETTINGS" image="Settings-50" selectedImage="Settings-50" id="elb-yl-tOb"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" backIndicatorImage=" " id="ADO-wc-xpH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" backIndicatorImage=" " id="ADO-wc-xpH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -575,23 +575,23 @@
                                         <rect key="frame" x="0.0" y="28" width="1000" height="138"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j9K-Ow-66f" id="3zj-9n-umW">
-                                            <rect key="frame" x="0.0" y="0.0" width="1000" height="137.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1000" height="138"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZZ-Ni-2cx">
-                                                    <rect key="frame" x="16" y="16" width="984" height="20.5"/>
+                                                    <rect key="frame" x="16" y="16" width="984" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amx-a8-yih">
-                                                    <rect key="frame" x="16" y="44.5" width="968" height="44"/>
+                                                    <rect key="frame" x="16" y="45" width="968" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UP9-yS-V2S">
-                                                    <rect key="frame" x="861" y="96.5" width="90" height="25"/>
+                                                    <rect key="frame" x="861" y="97" width="90" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="90" id="pRu-V8-Agp"/>
                                                     </constraints>
@@ -601,21 +601,21 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vay-RV-Nsy">
-                                                    <rect key="frame" x="49" y="96.5" width="804" height="25"/>
+                                                    <rect key="frame" x="49" y="97" width="804" height="25"/>
                                                     <state key="normal" title="Phone Number"/>
                                                     <connections>
                                                         <action selector="contactNumberButton:" destination="j9K-Ow-66f" eventType="touchUpInside" id="khk-vF-h7r"/>
                                                     </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone" translatesAutoresizingMaskIntoConstraints="NO" id="Unx-Qs-w9S">
-                                                    <rect key="frame" x="16" y="96.5" width="25" height="25"/>
+                                                    <rect key="frame" x="16" y="97" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="Pxg-oi-nPP"/>
                                                         <constraint firstAttribute="height" constant="25" id="mjQ-8j-4Mh"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Directions" translatesAutoresizingMaskIntoConstraints="NO" id="IPI-Qw-nXf">
-                                                    <rect key="frame" x="959" y="96.5" width="25" height="25"/>
+                                                    <rect key="frame" x="959" y="97" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="cxb-iM-PDn"/>
                                                         <constraint firstAttribute="height" constant="25" id="t9u-g0-p36"/>
@@ -690,6 +690,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ZrJ-aX-PSw"/>
-        <segue reference="G8o-vZ-Xfq"/>
+        <segue reference="lSX-dU-nQ3"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -17,6 +17,7 @@ class TourPageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .white
         setupTourData()
         setupCollectionView()
         setupPageController()
@@ -37,7 +38,7 @@ class TourPageViewController: UIViewController, UICollectionViewDelegate, UIColl
         }
         else {
             defaults.set(true, forKey: "FirstTime")
-            print("FirstTime\(defaults.value(forKey: "FirstTime"))")
+            print("FirstTime\(String(describing: defaults.value(forKey: "FirstTime")))")
         }   
     }
     // MARK: - Methods

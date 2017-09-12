@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+//        application.sts
         let userDefaults = UserDefaults.standard
         let appLanguage = userDefaults.object(forKey: TranslationLanguage.appLanguage.rawValue)
         if appLanguage == nil {
