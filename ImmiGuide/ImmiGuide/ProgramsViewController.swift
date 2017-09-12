@@ -320,19 +320,19 @@ class ProgramsViewController: UIViewController, UITableViewDelegate, UITableView
     }()
     
     //Animation views
-    internal lazy var bookAnimationView: LAAnimationView = {
-        var view: LAAnimationView = LAAnimationView()
+    internal lazy var bookAnimationView: LOTAnimationView = {
+        var view: LOTAnimationView = LOTAnimationView()
         
-        view = LAAnimationView.animationNamed("BluePenGrayBook")
+        view = LOTAnimationView(name: "BluePenGrayBook")
         view.contentMode = .scaleAspectFill
         
         return view
     }()
     
-    internal lazy var circleAnimationView: LAAnimationView = {
-        var view: LAAnimationView = LAAnimationView()
+    internal lazy var circleAnimationView: LOTAnimationView = {
+        var view: LOTAnimationView = LOTAnimationView()
         
-        view = LAAnimationView.animationNamed("GrayCircle")
+        view = LOTAnimationView(name: "GrayCircle")
         view.contentMode = .scaleAspectFill
         
         return view

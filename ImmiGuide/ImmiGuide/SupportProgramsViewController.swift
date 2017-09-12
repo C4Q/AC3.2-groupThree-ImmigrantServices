@@ -200,10 +200,10 @@ class SupportProgramsViewController: UIViewController, UITableViewDelegate, UITa
         return view
     }()
     
-    internal lazy var circleAnimationView: LAAnimationView = {
-        var view: LAAnimationView = LAAnimationView()
+    internal lazy var circleAnimationView: LOTAnimationView = {
+        var view: LOTAnimationView = LOTAnimationView()
         
-        view = LAAnimationView.animationNamed("GrayCircle")
+        view = LOTAnimationView(name: "GrayCircle")
         view.contentMode = .scaleAspectFill
         
         return view
